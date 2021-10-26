@@ -1,9 +1,10 @@
 // Row
 //
 // Rows contain your columns.
+@import "monsta";
 
 @if $enable-grid-classes {
-  .row {
+  .#{$prefix}row {
     @include make-row();
 
     > * {
@@ -13,7 +14,7 @@
 }
 
 @if $enable-cssgrid {
-  .grid {
+  .#{$prefix}grid {
     display: grid;
     grid-template-rows: repeat(var(--#{$variable-prefix}rows, 1), 1fr);
     grid-template-columns: repeat(var(--#{$variable-prefix}columns, #{$grid-columns}), 1fr);

@@ -1,6 +1,7 @@
 //
 // Rotating border
 //
+@import "monsta";
 
 // scss-docs-start spinner-border-keyframes
 @keyframes spinner-border {
@@ -8,7 +9,7 @@
 }
 // scss-docs-end spinner-border-keyframes
 
-.spinner-border {
+.#{$prefix}spinner-border {
   display: inline-block;
   width: $spinner-width;
   height: $spinner-height;
@@ -20,7 +21,7 @@
   animation: $spinner-animation-speed linear infinite spinner-border;
 }
 
-.spinner-border-sm {
+.#{$prefix}spinner-border-sm {
   width: $spinner-width-sm;
   height: $spinner-height-sm;
   border-width: $spinner-border-width-sm;
@@ -42,7 +43,7 @@
 }
 // scss-docs-end spinner-grow-keyframes
 
-.spinner-grow {
+.#{$prefix}spinner-grow {
   display: inline-block;
   width: $spinner-width;
   height: $spinner-height;
@@ -54,15 +55,15 @@
   animation: $spinner-animation-speed linear infinite spinner-grow;
 }
 
-.spinner-grow-sm {
+.#{$prefix}spinner-grow-sm {
   width: $spinner-width-sm;
   height: $spinner-height-sm;
 }
 
 @if $enable-reduced-motion {
   @media (prefers-reduced-motion: reduce) {
-    .spinner-border,
-    .spinner-grow {
+    .#{$prefix}spinner-border,
+    .#{$prefix}spinner-grow {
       animation-duration: $spinner-animation-speed * 2;
     }
   }

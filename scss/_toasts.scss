@@ -1,4 +1,6 @@
-.toast {
+@import "monsta";
+
+.#{$prefix}toast {
   width: $toast-max-width;
   max-width: 100%;
   @include font-size($toast-font-size);
@@ -10,16 +12,16 @@
   box-shadow: $toast-box-shadow;
   @include border-radius($toast-border-radius);
 
-  &.showing {
+  &.#{$prefix}showing {
     opacity: 0;
   }
 
-  &:not(.show) {
+  &:not(.#{$prefix}show) {
     display: none;
   }
 }
 
-.toast-container {
+.#{$prefix}toast-container {
   width: max-content;
   max-width: 100%;
   pointer-events: none;
@@ -29,7 +31,7 @@
   }
 }
 
-.toast-header {
+.#{$prefix}toast-header {
   display: flex;
   align-items: center;
   padding: $toast-padding-y $toast-padding-x;
@@ -39,13 +41,13 @@
   border-bottom: $toast-border-width solid $toast-header-border-color;
   @include border-top-radius(subtract($toast-border-radius, $toast-border-width));
 
-  .btn-close {
+  .#{$prefix}btn-close {
     margin-right: $toast-padding-x * -.5;
     margin-left: $toast-padding-x;
   }
 }
 
-.toast-body {
+.#{$prefix}toast-body {
   padding: $toast-padding-x; // apply to both vertical and horizontal
   word-wrap: break-word;
 }

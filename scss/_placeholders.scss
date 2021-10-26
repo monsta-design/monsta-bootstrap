@@ -1,4 +1,6 @@
-.placeholder {
+@import "monsta";
+
+.#{$prefix}placeholder {
   display: inline-block;
   min-height: 1em;
   vertical-align: middle;
@@ -6,28 +8,28 @@
   background-color: currentColor;
   opacity: $placeholder-opacity-max;
 
-  &.btn::before {
+  &.#{$prefix}btn::before {
     display: inline-block;
     content: "";
   }
 }
 
 // Sizing
-.placeholder-xs {
+.#{$prefix}placeholder-xs {
   min-height: .6em;
 }
 
-.placeholder-sm {
+.#{$prefix}placeholder-sm {
   min-height: .8em;
 }
 
-.placeholder-lg {
+.#{$prefix}placeholder-lg {
   min-height: 1.2em;
 }
 
 // Animation
-.placeholder-glow {
-  .placeholder {
+.#{$prefix}placeholder-glow {
+  .#{$prefix}placeholder {
     animation: placeholder-glow 2s ease-in-out infinite;
   }
 }
@@ -38,7 +40,7 @@
   }
 }
 
-.placeholder-wave {
+.#{$prefix}placeholder-wave {
   mask-image: linear-gradient(130deg, $black 55%, rgba(0, 0, 0, (1 - $placeholder-opacity-min)) 75%, $black 95%);
   mask-size: 200% 100%;
   animation: placeholder-wave 2s linear infinite;

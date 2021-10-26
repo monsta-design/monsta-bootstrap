@@ -1,4 +1,5 @@
 // Disable animation if transitions are disabled
+@import "monsta";
 
 // scss-docs-start progress-keyframes
 @if $enable-transitions {
@@ -8,7 +9,7 @@
 }
 // scss-docs-end progress-keyframes
 
-.progress {
+.#{$prefix}progress {
   display: flex;
   height: $progress-height;
   overflow: hidden; // force rounded corners by cropping it
@@ -18,7 +19,7 @@
   @include box-shadow($progress-box-shadow);
 }
 
-.progress-bar {
+.#{$prefix}progress-bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,13 +31,13 @@
   @include transition($progress-bar-transition);
 }
 
-.progress-bar-striped {
+.#{$prefix}progress-bar-striped {
   @include gradient-striped();
   background-size: $progress-height $progress-height;
 }
 
 @if $enable-transitions {
-  .progress-bar-animated {
+  .#{$prefix}progress-bar-animated {
     animation: $progress-bar-animation-timing progress-bar-stripes;
 
     @if $enable-reduced-motion {

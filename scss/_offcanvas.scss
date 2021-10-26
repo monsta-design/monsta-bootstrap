@@ -1,4 +1,6 @@
-.offcanvas {
+@import "monsta";
+
+.#{$prefix}offcanvas {
   position: fixed;
   bottom: 0;
   z-index: $zindex-offcanvas;
@@ -14,17 +16,17 @@
   @include transition(transform $offcanvas-transition-duration ease-in-out);
 }
 
-.offcanvas-backdrop {
+.#{$prefix}offcanvas-backdrop {
   @include overlay-backdrop($zindex-offcanvas-backdrop, $offcanvas-backdrop-bg, $offcanvas-backdrop-opacity);
 }
 
-.offcanvas-header {
+.#{$prefix}offcanvas-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: $offcanvas-padding-y $offcanvas-padding-x;
 
-  .btn-close {
+  .#{$prefix}btn-close {
     padding: ($offcanvas-padding-y * .5) ($offcanvas-padding-x * .5);
     margin-top: $offcanvas-padding-y * -.5;
     margin-right: $offcanvas-padding-x * -.5;
@@ -32,18 +34,18 @@
   }
 }
 
-.offcanvas-title {
+.#{$prefix}offcanvas-title {
   margin-bottom: 0;
   line-height: $offcanvas-title-line-height;
 }
 
-.offcanvas-body {
+.#{$prefix}offcanvas-body {
   flex-grow: 1;
   padding: $offcanvas-padding-y $offcanvas-padding-x;
   overflow-y: auto;
 }
 
-.offcanvas-start {
+.#{$prefix}offcanvas-start {
   top: 0;
   left: 0;
   width: $offcanvas-horizontal-width;
@@ -51,7 +53,7 @@
   transform: translateX(-100%);
 }
 
-.offcanvas-end {
+.#{$prefix}offcanvas-end {
   top: 0;
   right: 0;
   width: $offcanvas-horizontal-width;
@@ -59,7 +61,7 @@
   transform: translateX(100%);
 }
 
-.offcanvas-top {
+.#{$prefix}offcanvas-top {
   top: 0;
   right: 0;
   left: 0;
@@ -69,7 +71,7 @@
   transform: translateY(-100%);
 }
 
-.offcanvas-bottom {
+.#{$prefix}offcanvas-bottom {
   right: 0;
   left: 0;
   height: $offcanvas-vertical-height;
@@ -78,6 +80,6 @@
   transform: translateY(100%);
 }
 
-.offcanvas.show {
+.#{$prefix}offcanvas.#{$prefix}show {
   transform: none;
 }

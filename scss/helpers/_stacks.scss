@@ -1,12 +1,13 @@
 // scss-docs-start stacks
-.hstack {
+@import "../monsta";
+.#{$prefix}hstack {
   display: flex;
   flex-direction: row;
   align-items: center;
   align-self: stretch;
 }
 
-.vstack {
+.#{$prefix}vstack {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;

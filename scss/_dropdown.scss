@@ -1,12 +1,14 @@
 // The dropdown wrapper (`<div>`)
-.dropup,
-.dropend,
-.dropdown,
-.dropstart {
+@import "monsta";
+
+.#{$prefix}dropup,
+.#{$prefix}dropend,
+.#{$prefix}dropdown,
+.#{$prefix}dropstart {
   position: relative;
 }
 
-.dropdown-toggle {
+.#{$prefix}dropdown-toggle {
   white-space: nowrap;
 
   // Generate the caret automatically
@@ -14,7 +16,7 @@
 }
 
 // The dropdown menu
-.dropdown-menu {
+.#{$prefix}dropdown-menu {
   position: absolute;
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
@@ -46,7 +48,7 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .dropdown-menu#{$infix}-start {
+    .#{$prefix}dropdown-menu#{$infix}-start {
       --bs-position: start;
 
       &[data-bs-popper] {
@@ -55,7 +57,7 @@
       }
     }
 
-    .dropdown-menu#{$infix}-end {
+    .#{$prefix}dropdown-menu#{$infix}-end {
       --bs-position: end;
 
       &[data-bs-popper] {
@@ -69,21 +71,21 @@
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
 // Just add .dropup after the standard .dropdown class and you're set.
-.dropup {
-  .dropdown-menu[data-bs-popper] {
+.#{$prefix}dropup {
+  .#{$prefix}dropdown-menu[data-bs-popper] {
     top: auto;
     bottom: 100%;
     margin-top: 0;
     margin-bottom: $dropdown-spacer;
   }
 
-  .dropdown-toggle {
+  .#{$prefix}dropdown-toggle {
     @include caret(up);
   }
 }
 
-.dropend {
-  .dropdown-menu[data-bs-popper] {
+.#{$prefix}dropend {
+  .#{$prefix}dropdown-menu[data-bs-popper] {
     top: 0;
     right: auto;
     left: 100%;
@@ -91,7 +93,7 @@
     margin-left: $dropdown-spacer;
   }
 
-  .dropdown-toggle {
+  .#{$prefix}dropdown-toggle {
     @include caret(end);
     &::after {
       vertical-align: 0;
@@ -99,8 +101,8 @@
   }
 }
 
-.dropstart {
-  .dropdown-menu[data-bs-popper] {
+.#{$prefix}dropstart {
+  .#{$prefix}dropdown-menu[data-bs-popper] {
     top: 0;
     right: 100%;
     left: auto;
@@ -108,7 +110,7 @@
     margin-right: $dropdown-spacer;
   }
 
-  .dropdown-toggle {
+  .#{$prefix}dropdown-toggle {
     @include caret(start);
     &::before {
       vertical-align: 0;
@@ -118,7 +120,7 @@
 
 
 // Dividers (basically an `<hr>`) within the dropdown
-.dropdown-divider {
+.#{$prefix}dropdown-divider {
   height: 0;
   margin: $dropdown-divider-margin-y 0;
   overflow: hidden;
@@ -128,7 +130,7 @@
 // Links, buttons, and more within the dropdown menu
 //
 // `<button>`-specific styles are denoted with `// For <button>s`
-.dropdown-item {
+.#{$prefix}dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
   padding: $dropdown-item-padding-y $dropdown-item-padding-x;
@@ -160,14 +162,14 @@
     @include gradient-bg($dropdown-link-hover-bg);
   }
 
-  &.active,
+  &.#{$prefix}active,
   &:active {
     color: $dropdown-link-active-color;
     text-decoration: none;
     @include gradient-bg($dropdown-link-active-bg);
   }
 
-  &.disabled,
+  &.#{$prefix}disabled,
   &:disabled {
     color: $dropdown-link-disabled-color;
     pointer-events: none;
@@ -177,12 +179,12 @@
   }
 }
 
-.dropdown-menu.show {
+.#{$prefix}dropdown-menu.#{$prefix}show {
   display: block;
 }
 
 // Dropdown section headers
-.dropdown-header {
+.#{$prefix}dropdown-header {
   display: block;
   padding: $dropdown-header-padding;
   margin-bottom: 0; // for use with heading elements
@@ -192,20 +194,20 @@
 }
 
 // Dropdown text
-.dropdown-item-text {
+.#{$prefix}dropdown-item-text {
   display: block;
   padding: $dropdown-item-padding-y $dropdown-item-padding-x;
   color: $dropdown-link-color;
 }
 
 // Dark dropdowns
-.dropdown-menu-dark {
+.#{$prefix}dropdown-menu-dark {
   color: $dropdown-dark-color;
   background-color: $dropdown-dark-bg;
   border-color: $dropdown-dark-border-color;
   @include box-shadow($dropdown-dark-box-shadow);
 
-  .dropdown-item {
+  .#{$prefix}dropdown-item {
     color: $dropdown-dark-link-color;
 
     &:hover,
@@ -214,27 +216,27 @@
       @include gradient-bg($dropdown-dark-link-hover-bg);
     }
 
-    &.active,
+    &.#{$prefix}active,
     &:active {
       color: $dropdown-dark-link-active-color;
       @include gradient-bg($dropdown-dark-link-active-bg);
     }
 
-    &.disabled,
+    &.#{$prefix}disabled,
     &:disabled {
       color: $dropdown-dark-link-disabled-color;
     }
   }
 
-  .dropdown-divider {
+  .#{$prefix}dropdown-divider {
     border-color: $dropdown-dark-divider-bg;
   }
 
-  .dropdown-item-text {
+  .#{$prefix}dropdown-item-text {
     color: $dropdown-dark-link-color;
   }
 
-  .dropdown-header {
+  .#{$prefix}dropdown-header {
     color: $dropdown-dark-header-color;
   }
 }

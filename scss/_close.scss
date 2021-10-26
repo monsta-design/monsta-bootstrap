@@ -2,8 +2,9 @@
 // iOS requires the button element instead of an anchor tag.
 // If you want the anchor version, it requires `href="#"`.
 // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+@import "monsta";
 
-.btn-close {
+.#{$prefix}btn-close {
   box-sizing: content-box;
   width: $btn-close-width;
   height: $btn-close-height;
@@ -28,13 +29,13 @@
   }
 
   &:disabled,
-  &.disabled {
+  &.#{$prefix}disabled {
     pointer-events: none;
     user-select: none;
     opacity: $btn-close-disabled-opacity;
   }
 }
 
-.btn-close-white {
+.#{$prefix}btn-close-white {
   filter: $btn-close-white-filter;
 }

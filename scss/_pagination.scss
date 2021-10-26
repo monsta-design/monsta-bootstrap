@@ -1,9 +1,11 @@
-.pagination {
+@import "monsta";
+
+.#{$prefix}pagination {
   display: flex;
   @include list-unstyled();
 }
 
-.page-link {
+.#{$prefix}page-link {
   position: relative;
   display: block;
   color: $pagination-color;
@@ -29,19 +31,19 @@
   }
 }
 
-.page-item {
-  &:not(:first-child) .page-link {
+.#{$prefix}page-item {
+  &:not(:first-child) .#{$prefix}page-link {
     margin-left: $pagination-margin-start;
   }
 
-  &.active .page-link {
+  &.#{$prefix}active .#{$prefix}page-link {
     z-index: 3;
     color: $pagination-active-color;
     @include gradient-bg($pagination-active-bg);
     border-color: $pagination-active-border-color;
   }
 
-  &.disabled .page-link {
+  &.#{$prefix}disabled .#{$prefix}page-link {
     color: $pagination-disabled-color;
     pointer-events: none;
     background-color: $pagination-disabled-bg;
@@ -55,10 +57,10 @@
 //
 @include pagination-size($pagination-padding-y, $pagination-padding-x, null, $pagination-border-radius);
 
-.pagination-lg {
+.#{$prefix}pagination-lg {
   @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $pagination-border-radius-lg);
 }
 
-.pagination-sm {
+.#{$prefix}pagination-sm {
   @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $pagination-border-radius-sm);
 }

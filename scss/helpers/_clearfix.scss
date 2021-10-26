@@ -1,3 +1,5 @@
-.clearfix {
+@import "../monsta";
+
+.#{$prefix}clearfix {
   @include clearfix();
 }

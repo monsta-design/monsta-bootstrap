@@ -13,8 +13,9 @@
 //
 // Provide a static navbar from which we expand to create full-width, fixed, and
 // other navbar variations.
+@import "monsta";
 
-.navbar {
+.#{$prefix}navbar {
   position: relative;
   display: flex;
   flex-wrap: wrap; // allow us to do the line break for collapsing content
@@ -36,13 +37,13 @@
     justify-content: space-between;
   }
 
-  > .container,
-  > .container-fluid {
+  > .#{$prefix}container,
+  > .#{$prefix}container-fluid {
     @extend %container-flex-properties;
   }
 
   @each $breakpoint, $container-max-width in $container-max-widths {
-    > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
+    > .#{$prefix}container#{breakpoint-infix($breakpoint, $container-max-widths)} {
       @extend %container-flex-properties;
     }
   }
@@ -53,7 +54,7 @@
 //
 // Used for brand, project, or site names.
 
-.navbar-brand {
+.#{$prefix}navbar-brand {
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
   margin-right: $navbar-brand-margin-end;
@@ -72,19 +73,19 @@
 //
 // Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
 
-.navbar-nav {
+.#{$prefix}navbar-nav {
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
 
-  .nav-link {
+  .#{$prefix}nav-link {
     padding-right: 0;
     padding-left: 0;
   }
 
-  .dropdown-menu {
+  .#{$prefix}dropdown-menu {
     position: static;
   }
 }
@@ -94,7 +95,7 @@
 //
 //
 
-.navbar-text {
+.#{$prefix}navbar-text {
   padding-top: $nav-link-padding-y;
   padding-bottom: $nav-link-padding-y;
 }
@@ -108,7 +109,7 @@
 // When collapsed, prevent the toggleable navbar contents from appearing in
 // the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
 // on the `.navbar` parent.
-.navbar-collapse {
+.#{$prefix}navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
   // For always expanded or extra full navbars, ensure content aligns itself
@@ -117,7 +118,7 @@
 }
 
 // Button for toggling the navbar when in its collapsed state
-.navbar-toggler {
+.#{$prefix}navbar-toggler {
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
   @include font-size($navbar-toggler-font-size);
   line-height: 1;
@@ -139,7 +140,7 @@
 
 // Keep as a separate element so folks can easily override it with another icon
 // or image file as needed.
-.navbar-toggler-icon {
+.#{$prefix}navbar-toggler-icon {
   display: inline-block;
   width: 1.5em;
   height: 1.5em;
@@ -149,7 +150,7 @@
   background-size: 100%;
 }
 
-.navbar-nav-scroll {
+.#{$prefix}navbar-nav-scroll {
   max-height: var(--#{$variable-prefix}scroll-height, 75vh);
   overflow-y: auto;
 }
@@ -157,7 +158,7 @@
 // scss-docs-start navbar-expand-loop
 // Generate series of `.navbar-expand-*` responsive classes for configuring
 // where your navbar collapses.
-.navbar-expand {
+.#{$prefix}navbar-expand {
   @each $breakpoint in map-keys($grid-breakpoints) {
     $next: breakpoint-next($breakpoint, $grid-breakpoints);
     $infix: breakpoint-infix($next, $grid-breakpoints);
@@ -168,37 +169,37 @@
         flex-wrap: nowrap;
         justify-content: flex-start;
 
-        .navbar-nav {
+        .#{$prefix}navbar-nav {
           flex-direction: row;
 
-          .dropdown-menu {
+          .#{$prefix}dropdown-menu {
             position: absolute;
           }
 
-          .nav-link {
+          .#{$prefix}nav-link {
             padding-right: $navbar-nav-link-padding-x;
             padding-left: $navbar-nav-link-padding-x;
           }
         }
 
-        .navbar-nav-scroll {
+        .#{$prefix}navbar-nav-scroll {
           overflow: visible;
         }
 
-        .navbar-collapse {
+        .#{$prefix}navbar-collapse {
           display: flex !important; // stylelint-disable-line declaration-no-important
           flex-basis: auto;
         }
 
-        .navbar-toggler {
+        .#{$prefix}navbar-toggler {
           display: none;
         }
 
-        .offcanvas-header {
+        .#{$prefix}offcanvas-header {
           display: none;
         }
 
-        .offcanvas {
+        .#{$prefix}offcanvas {
           position: inherit;
           bottom: 0;
           z-index: 1000;
@@ -210,14 +211,14 @@
           @include transition(none);
           transform: none;
         }
-        .offcanvas-top,
-        .offcanvas-bottom {
+        .#{$prefix}offcanvas-top,
+        .#{$prefix}offcanvas-bottom {
           height: auto;
           border-top: 0;
           border-bottom: 0;
         }
 
-        .offcanvas-body {
+        .#{$prefix}offcanvas-body {
           display: flex;
           flex-grow: 0;
           padding: 0;
@@ -234,8 +235,8 @@
 // Styles for switching between navbars with light or dark background.
 
 // Dark links against a light background
-.navbar-light {
-  .navbar-brand {
+.#{$prefix}navbar-light {
+  .#{$prefix}navbar-brand {
     color: $navbar-light-brand-color;
 
     &:hover,
@@ -244,8 +245,8 @@
     }
   }
 
-  .navbar-nav {
-    .nav-link {
+  .#{$prefix}navbar-nav {
+    .#{$prefix}nav-link {
       color: $navbar-light-color;
 
       &:hover,
@@ -253,27 +254,27 @@
         color: $navbar-light-hover-color;
       }
 
-      &.disabled {
+      &.#{$prefix}disabled {
         color: $navbar-light-disabled-color;
       }
     }
 
-    .show > .nav-link,
-    .nav-link.active {
+    .#{$prefix}show > .#{$prefix}nav-link,
+    .#{$prefix}nav-link.#{$prefix}active {
       color: $navbar-light-active-color;
     }
   }
 
-  .navbar-toggler {
+  .#{$prefix}navbar-toggler {
     color: $navbar-light-color;
     border-color: $navbar-light-toggler-border-color;
   }
 
-  .navbar-toggler-icon {
+  .#{$prefix}navbar-toggler-icon {
     background-image: escape-svg($navbar-light-toggler-icon-bg);
   }
 
-  .navbar-text {
+  .#{$prefix}navbar-text {
     color: $navbar-light-color;
 
     a,
@@ -285,8 +286,8 @@
 }
 
 // White links against a dark background
-.navbar-dark {
-  .navbar-brand {
+.#{$prefix}navbar-dark {
+  .#{$prefix}navbar-brand {
     color: $navbar-dark-brand-color;
 
     &:hover,
@@ -295,8 +296,8 @@
     }
   }
 
-  .navbar-nav {
-    .nav-link {
+  .#{$prefix}navbar-nav {
+    .#{$prefix}nav-link {
       color: $navbar-dark-color;
 
       &:hover,
@@ -304,27 +305,27 @@
         color: $navbar-dark-hover-color;
       }
 
-      &.disabled {
+      &.#{$prefix}disabled {
         color: $navbar-dark-disabled-color;
       }
     }
 
-    .show > .nav-link,
-    .nav-link.active {
+    .#{$prefix}show > .#{$prefix}nav-link,
+    .#{$prefix}nav-link.#{$prefix}active {
       color: $navbar-dark-active-color;
     }
   }
 
-  .navbar-toggler {
+  .#{$prefix}navbar-toggler {
     color: $navbar-dark-color;
     border-color: $navbar-dark-toggler-border-color;
   }
 
-  .navbar-toggler-icon {
+  .#{$prefix}navbar-toggler-icon {
     background-image: escape-svg($navbar-dark-toggler-icon-bg);
   }
 
-  .navbar-text {
+  .#{$prefix}navbar-text {
     color: $navbar-dark-color;
     a,
     a:hover,

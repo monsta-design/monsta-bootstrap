@@ -1,8 +1,10 @@
-.form-floating {
+@import "../monsta";
+
+.#{$prefix}form-floating {
   position: relative;
 
-  > .form-control,
-  > .form-select {
+  > .#{$prefix}form-control,
+  > .#{$prefix}form-select {
     height: $form-floating-height;
     line-height: $form-floating-line-height;
   }
@@ -20,7 +22,7 @@
   }
 
   // stylelint-disable no-duplicate-selectors
-  > .form-control {
+  > .#{$prefix}form-control {
     padding: $form-floating-padding-y $form-floating-padding-x;
 
     &::placeholder {
@@ -39,21 +41,21 @@
     }
   }
 
-  > .form-select {
+  > .#{$prefix}form-select {
     padding-top: $form-floating-input-padding-t;
     padding-bottom: $form-floating-input-padding-b;
   }
 
-  > .form-control:focus,
-  > .form-control:not(:placeholder-shown),
-  > .form-select {
+  > .#{$prefix}form-control:focus,
+  > .#{$prefix}form-control:not(:placeholder-shown),
+  > .#{$prefix}form-select {
     ~ label {
       opacity: $form-floating-label-opacity;
       transform: $form-floating-label-transform;
     }
   }
   // Duplicated because `:-webkit-autofill` invalidates other selectors when grouped
-  > .form-control:-webkit-autofill {
+  > .#{$prefix}form-control:-webkit-autofill {
     ~ label {
       opacity: $form-floating-label-opacity;
       transform: $form-floating-label-transform;

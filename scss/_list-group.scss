@@ -1,8 +1,9 @@
 // Base class
 //
 // Easily usable on <ul>, <ol>, or <div>.
+@import "monsta";
 
-.list-group {
+.#{$prefix}list-group {
   display: flex;
   flex-direction: column;
 
@@ -12,7 +13,7 @@
   @include border-radius($list-group-border-radius);
 }
 
-.list-group-numbered {
+.#{$prefix}list-group-numbered {
   list-style-type: none;
   counter-reset: section;
 
@@ -29,7 +30,7 @@
 // Use anchor or button elements instead of `li`s or `div`s to create interactive
 // list items. Includes an extra `.active` modifier class for selected items.
 
-.list-group-item-action {
+.#{$prefix}list-group-item-action {
   width: 100%; // For `<button>`s (anchors become 100% by default though)
   color: $list-group-action-color;
   text-align: inherit; // For `<button>`s (anchors inherit)
@@ -54,7 +55,7 @@
 //
 // Use on `li`s or `div`s within the `.list-group` parent.
 
-.list-group-item {
+.#{$prefix}list-group-item {
   position: relative;
   display: block;
   padding: $list-group-item-padding-y $list-group-item-padding-x;
@@ -71,7 +72,7 @@
     @include border-bottom-radius(inherit);
   }
 
-  &.disabled,
+  &.#{$prefix}disabled,
   &:disabled {
     color: $list-group-disabled-color;
     pointer-events: none;
@@ -79,7 +80,7 @@
   }
 
   // Include both here for `<a>`s and `<button>`s
-  &.active {
+  &.#{$prefix}active {
     z-index: 2; // Place active items above their siblings for proper border styling
     color: $list-group-active-color;
     background-color: $list-group-active-bg;
@@ -89,7 +90,7 @@
   & + & {
     border-top-width: 0;
 
-    &.active {
+    &.#{$prefix}active {
       margin-top: -$list-group-border-width;
       border-top-width: $list-group-border-width;
     }
@@ -105,10 +106,10 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .list-group-horizontal#{$infix} {
+    .#{$prefix}list-group-horizontal#{$infix} {
       flex-direction: row;
 
-      > .list-group-item {
+      > .#{$prefix}list-group-item {
         &:first-child {
           @include border-bottom-start-radius($list-group-border-radius);
           @include border-top-end-radius(0);
@@ -119,15 +120,15 @@
           @include border-bottom-start-radius(0);
         }
 
-        &.active {
+        &.#{$prefix}active {
           margin-top: 0;
         }
 
-        + .list-group-item {
+        + .#{$prefix}list-group-item {
           border-top-width: $list-group-border-width;
           border-left-width: 0;
 
-          &.active {
+          &.#{$prefix}active {
             margin-left: -$list-group-border-width;
             border-left-width: $list-group-border-width;
           }
@@ -143,10 +144,10 @@
 // Remove borders and border-radius to keep list group items edge-to-edge. Most
 // useful within other components (e.g., cards).
 
-.list-group-flush {
+.#{$prefix}list-group-flush {
   @include border-radius(0);
 
-  > .list-group-item {
+  > .#{$prefix}list-group-item {
     border-width: 0 0 $list-group-border-width;
 
     &:last-child {

@@ -1,8 +1,9 @@
 //
 // Base styles
 //
+@import "monsta";
 
-.btn {
+.#{$prefix}btn {
   display: inline-block;
   font-family: $btn-font-family;
   font-weight: $btn-font-weight;
@@ -24,16 +25,16 @@
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
-  .btn-check:focus + &,
+  .#{$prefix}btn-check:focus + &,
   &:focus {
     outline: 0;
     box-shadow: $btn-focus-box-shadow;
   }
 
-  .btn-check:checked + &,
-  .btn-check:active + &,
+  .#{$prefix}btn-check:checked + &,
+  .#{$prefix}btn-check:active + &,
   &:active,
-  &.active {
+  &.#{$prefix}active {
     @include box-shadow($btn-active-box-shadow);
 
     &:focus {
@@ -42,7 +43,7 @@
   }
 
   &:disabled,
-  &.disabled,
+  &.#{$prefix}disabled,
   fieldset:disabled & {
     pointer-events: none;
     opacity: $btn-disabled-opacity;
@@ -57,13 +58,13 @@
 
 // scss-docs-start btn-variant-loops
 @each $color, $value in $theme-colors {
-  .btn-#{$color} {
+  .#{$prefix}btn-#{$color} {
     @include button-variant($value, $value);
   }
 }
 
 @each $color, $value in $theme-colors {
-  .btn-outline-#{$color} {
+  .#{$prefix}btn-outline-#{$color} {
     @include button-outline-variant($value);
   }
 }
@@ -75,7 +76,7 @@
 //
 
 // Make a button look and behave like a link
-.btn-link {
+.#{$prefix}btn-link {
   font-weight: $font-weight-normal;
   color: $btn-link-color;
   text-decoration: $link-decoration;
@@ -90,7 +91,7 @@
   }
 
   &:disabled,
-  &.disabled {
+  &.#{$prefix}disabled {
     color: $btn-link-disabled-color;
   }
 
@@ -102,10 +103,10 @@
 // Button Sizes
 //
 
-.btn-lg {
+.#{$prefix}btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
 }
 
-.btn-sm {
+.#{$prefix}btn-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
 }

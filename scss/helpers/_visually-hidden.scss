@@ -1,8 +1,9 @@
 //
 // Visually hidden
 //
+@import "../monsta";
 
-.visually-hidden,
-.visually-hidden-focusable:not(:focus):not(:focus-within) {
+.#{$prefix}visually-hidden,
+.#{$prefix}visually-hidden-focusable:not(:focus):not(:focus-within) {
   @include visually-hidden();
 }

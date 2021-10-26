@@ -1,7 +1,7 @@
 //
 // Text truncation
 //
-
-.text-truncate {
+@import "../monsta";
+.#{$prefix}text-truncate {
   @include text-truncate();
 }

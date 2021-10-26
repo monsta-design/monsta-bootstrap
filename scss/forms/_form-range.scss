@@ -3,8 +3,8 @@
 // Style range inputs the same across browsers. Vendor-specific rules for pseudo
 // elements cannot be mixed. As such, there are no shared styles for focus or
 // active states on prefixed selectors.
-
-.form-range {
+@import "../monsta";
+.#{$prefix}form-range {
   width: 100%;
   height: add($form-range-thumb-height, $form-range-thumb-focus-box-shadow-width * 2);
   padding: 0; // Need to reset padding

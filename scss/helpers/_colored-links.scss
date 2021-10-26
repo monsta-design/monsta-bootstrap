@@ -1,5 +1,6 @@
+@import "../monsta";
 @each $color, $value in $theme-colors {
-  .link-#{$color} {
+  .#{$prefix}link-#{$color} {
     color: $value;
 
     @if $link-shade-percentage != 0 {

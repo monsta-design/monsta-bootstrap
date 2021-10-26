@@ -1,20 +1,20 @@
 //
 // Check/radio
 //
-
-.form-check {
+@import "../monsta";
+.#{$prefix}form-check {
   display: block;
   min-height: $form-check-min-height;
   padding-left: $form-check-padding-start;
   margin-bottom: $form-check-margin-bottom;
 
-  .form-check-input {
+  .#{$prefix}form-check-input {
     float: left;
     margin-left: $form-check-padding-start * -1;
   }
 }
 
-.form-check-input {
+.#{$prefix}form-check-input {
   width: $form-check-input-width;
   height: $form-check-input-width;
   margin-top: ($line-height-base - $form-check-input-width) * .5; // line-height minus check height
@@ -89,13 +89,13 @@
   // See: https://github.com/twbs/bootstrap/issues/28247
   &[disabled],
   &:disabled {
-    ~ .form-check-label {
+    ~ .#{$prefix}form-check-label {
       opacity: $form-check-label-disabled-opacity;
     }
   }
 }
 
-.form-check-label {
+.#{$prefix}form-check-label {
   color: $form-check-label-color;
   cursor: $form-check-label-cursor;
 }
@@ -104,10 +104,10 @@
 // Switch
 //
 
-.form-switch {
+.#{$prefix}form-switch {
   padding-left: $form-switch-padding-start;
 
-  .form-check-input {
+  .#{$prefix}form-check-input {
     width: $form-switch-width;
     margin-left: $form-switch-padding-start * -1;
     background-image: escape-svg($form-switch-bg-image);
@@ -131,19 +131,19 @@
   }
 }
 
-.form-check-inline {
+.#{$prefix}form-check-inline {
   display: inline-block;
   margin-right: $form-check-inline-margin-end;
 }
 
-.btn-check {
+.#{$prefix}btn-check {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 
   &[disabled],
   &:disabled {
-    + .btn {
+    + .#{$prefix}btn {
       pointer-events: none;
       filter: none;
       opacity: $form-check-btn-check-disabled-opacity;

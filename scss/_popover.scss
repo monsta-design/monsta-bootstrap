@@ -1,4 +1,6 @@
-.popover {
+@import "monsta";
+
+.#{$prefix}popover {
   position: absolute;
   top: 0;
   left: 0 #{"/* rtl:ignore */"};
@@ -17,7 +19,7 @@
   @include border-radius($popover-border-radius);
   @include box-shadow($popover-box-shadow);
 
-  .popover-arrow {
+  .#{$prefix}popover-arrow {
     position: absolute;
     display: block;
     width: $popover-arrow-width;
@@ -34,8 +36,8 @@
   }
 }
 
-.bs-popover-top {
-  > .popover-arrow {
+.#{$prefix}bs-popover-top {
+  > .#{$prefix}popover-arrow {
     bottom: subtract(-$popover-arrow-height, $popover-border-width);
 
     &::before {
@@ -52,8 +54,8 @@
   }
 }
 
-.bs-popover-end {
-  > .popover-arrow {
+.#{$prefix}bs-popover-end {
+  > .#{$prefix}popover-arrow {
     left: subtract(-$popover-arrow-height, $popover-border-width);
     width: $popover-arrow-height;
     height: $popover-arrow-width;
@@ -72,8 +74,8 @@
   }
 }
 
-.bs-popover-bottom {
-  > .popover-arrow {
+.#{$prefix}bs-popover-bottom {
+  > .#{$prefix}popover-arrow {
     top: subtract(-$popover-arrow-height, $popover-border-width);
 
     &::before {
@@ -90,7 +92,7 @@
   }
 
   // This will remove the popover-header's border just below the arrow
-  .popover-header::before {
+  .#{$prefix}popover-header::before {
     position: absolute;
     top: 0;
     left: 50%;
@@ -102,8 +104,8 @@
   }
 }
 
-.bs-popover-start {
-  > .popover-arrow {
+.#{$prefix}bs-popover-start {
+  > .#{$prefix}popover-arrow {
     right: subtract(-$popover-arrow-height, $popover-border-width);
     width: $popover-arrow-height;
     height: $popover-arrow-width;
@@ -122,23 +124,23 @@
   }
 }
 
-.bs-popover-auto {
+.#{$prefix}bs-popover-auto {
   &[data-popper-placement^="top"] {
-    @extend .bs-popover-top;
+    @extend .#{$prefix}bs-popover-top;
   }
   &[data-popper-placement^="right"] {
-    @extend .bs-popover-end;
+    @extend .#{$prefix}bs-popover-end;
   }
   &[data-popper-placement^="bottom"] {
-    @extend .bs-popover-bottom;
+    @extend .#{$prefix}bs-popover-bottom;
   }
   &[data-popper-placement^="left"] {
-    @extend .bs-popover-start;
+    @extend .#{$prefix}bs-popover-start;
   }
 }
 
 // Offset the popover to account for the popover arrow
-.popover-header {
+.#{$prefix}popover-header {
   padding: $popover-header-padding-y $popover-header-padding-x;
   margin-bottom: 0; // Reset the default from Reboot
   @include font-size($font-size-base);
@@ -152,7 +154,7 @@
   }
 }
 
-.popover-body {
+.#{$prefix}popover-body {
   padding: $popover-body-padding-y $popover-body-padding-x;
   color: $popover-body-color;
 }

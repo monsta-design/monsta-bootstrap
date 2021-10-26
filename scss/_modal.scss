@@ -5,7 +5,9 @@
 
 
 // Container that the modal scrolls within
-.modal {
+@import "monsta";
+
+.#{$prefix}modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -24,7 +26,7 @@
 }
 
 // Shell div to position the modal with bottom padding
-.modal-dialog {
+.#{$prefix}modal-dialog {
   position: relative;
   width: auto;
   margin: $modal-dialog-margin;
@@ -32,41 +34,41 @@
   pointer-events: none;
 
   // When fading in the modal, animate it to slide down
-  .modal.fade & {
+  .#{$prefix}modal.#{$prefix}fade & {
     @include transition($modal-transition);
     transform: $modal-fade-transform;
   }
-  .modal.show & {
+  .#{$prefix}modal.#{$prefix}show & {
     transform: $modal-show-transform;
   }
 
   // When trying to close, animate focus to scale
-  .modal.modal-static & {
+  .#{$prefix}modal.#{$prefix}modal-static & {
     transform: $modal-scale-transform;
   }
 }
 
-.modal-dialog-scrollable {
+.#{$prefix}modal-dialog-scrollable {
   height: subtract(100%, $modal-dialog-margin * 2);
 
-  .modal-content {
+  .#{$prefix}modal-content {
     max-height: 100%;
     overflow: hidden;
   }
 
-  .modal-body {
+  .#{$prefix}modal-body {
     overflow-y: auto;
   }
 }
 
-.modal-dialog-centered {
+.#{$prefix}modal-dialog-centered {
   display: flex;
   align-items: center;
   min-height: subtract(100%, $modal-dialog-margin * 2);
 }
 
 // Actual modal
-.modal-content {
+.#{$prefix}modal-content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -84,13 +86,13 @@
 }
 
 // Modal background
-.modal-backdrop {
+.#{$prefix}modal-backdrop {
   @include overlay-backdrop($zindex-modal-backdrop, $modal-backdrop-bg, $modal-backdrop-opacity);
 }
 
 // Modal header
 // Top section of the modal w/ title and dismiss
-.modal-header {
+.#{$prefix}modal-header {
   display: flex;
   flex-shrink: 0;
   align-items: center;
@@ -99,21 +101,21 @@
   border-bottom: $modal-header-border-width solid $modal-header-border-color;
   @include border-top-radius($modal-content-inner-border-radius);
 
-  .btn-close {
+  .#{$prefix}btn-close {
     padding: ($modal-header-padding-y * .5) ($modal-header-padding-x * .5);
     margin: ($modal-header-padding-y * -.5) ($modal-header-padding-x * -.5) ($modal-header-padding-y * -.5) auto;
   }
 }
 
 // Title text within header
-.modal-title {
+.#{$prefix}modal-title {
   margin-bottom: 0;
   line-height: $modal-title-line-height;
 }
 
 // Modal body
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
-.modal-body {
+.#{$prefix}modal-body {
   position: relative;
   // Enable `flex-grow: 1` so that the body take up as much space as possible
   // when there should be a fixed height on `.modal-dialog`.
@@ -122,7 +124,7 @@
 }
 
 // Footer (for actions)
-.modal-footer {
+.#{$prefix}modal-footer {
   display: flex;
   flex-wrap: wrap;
   flex-shrink: 0;
@@ -143,35 +145,35 @@
 // Scale up the modal
 @include media-breakpoint-up(sm) {
   // Automatically set modal's width for larger viewports
-  .modal-dialog {
+  .#{$prefix}modal-dialog {
     max-width: $modal-md;
     margin: $modal-dialog-margin-y-sm-up auto;
   }
 
-  .modal-dialog-scrollable {
+  .#{$prefix}modal-dialog-scrollable {
     height: subtract(100%, $modal-dialog-margin-y-sm-up * 2);
   }
 
-  .modal-dialog-centered {
+  .#{$prefix}modal-dialog-centered {
     min-height: subtract(100%, $modal-dialog-margin-y-sm-up * 2);
   }
 
-  .modal-content {
+  .#{$prefix}modal-content {
     @include box-shadow($modal-content-box-shadow-sm-up);
   }
 
-  .modal-sm { max-width: $modal-sm; }
+  .#{$prefix}modal-sm { max-width: $modal-sm; }
 }
 
 @include media-breakpoint-up(lg) {
-  .modal-lg,
-  .modal-xl {
+  .#{$prefix}modal-lg,
+  .#{$prefix}modal-xl {
     max-width: $modal-lg;
   }
 }
 
 @include media-breakpoint-up(xl) {
-  .modal-xl { max-width: $modal-xl; }
+  .#{$prefix}modal-xl { max-width: $modal-xl; }
 }
 
 // scss-docs-start modal-fullscreen-loop
@@ -180,27 +182,27 @@
   $postfix: if($infix != "", $infix + "-down", "");
 
   @include media-breakpoint-down($breakpoint) {
-    .modal-fullscreen#{$postfix} {
+    .#{$prefix}modal-fullscreen#{$postfix} {
       width: 100vw;
       max-width: none;
       height: 100%;
       margin: 0;
 
-      .modal-content {
+      .#{$prefix}modal-content {
         height: 100%;
         border: 0;
         @include border-radius(0);
       }
 
-      .modal-header {
+      .#{$prefix}modal-header {
         @include border-radius(0);
       }
 
-      .modal-body {
+      .#{$prefix}modal-body {
         overflow-y: auto;
       }
 
-      .modal-footer {
+      .#{$prefix}modal-footer {
         @include border-radius(0);
       }
     }

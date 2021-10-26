@@ -2,8 +2,9 @@
 //
 // Kickstart any navigation component with a set of style resets. Works with
 // `<nav>`s, `<ul>`s or `<ol>`s.
+@import "monsta";
 
-.nav {
+.#{$prefix}nav {
   display: flex;
   flex-wrap: wrap;
   padding-left: 0;
@@ -11,7 +12,7 @@
   list-style: none;
 }
 
-.nav-link {
+.#{$prefix}nav-link {
   display: block;
   padding: $nav-link-padding-y $nav-link-padding-x;
   @include font-size($nav-link-font-size);
@@ -27,7 +28,7 @@
   }
 
   // Disabled state lightens text
-  &.disabled {
+  &.#{$prefix}disabled {
     color: $nav-link-disabled-color;
     pointer-events: none;
     cursor: default;
@@ -38,10 +39,10 @@
 // Tabs
 //
 
-.nav-tabs {
+.#{$prefix}nav-tabs {
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 
-  .nav-link {
+  .#{$prefix}nav-link {
     margin-bottom: -$nav-tabs-border-width;
     background: none;
     border: $nav-tabs-border-width solid transparent;
@@ -54,21 +55,21 @@
       isolation: isolate;
     }
 
-    &.disabled {
+    &.#{$prefix}disabled {
       color: $nav-link-disabled-color;
       background-color: transparent;
       border-color: transparent;
     }
   }
 
-  .nav-link.active,
-  .nav-item.show .nav-link {
+  .#{$prefix}nav-link.#{$prefix}active,
+  .#{$prefix}nav-item.#{$prefix}show .#{$prefix}nav-link {
     color: $nav-tabs-link-active-color;
     background-color: $nav-tabs-link-active-bg;
     border-color: $nav-tabs-link-active-border-color;
   }
 
-  .dropdown-menu {
+  .#{$prefix}dropdown-menu {
     // Make dropdown border overlap tab border
     margin-top: -$nav-tabs-border-width;
     // Remove the top rounded corners here since there is a hard edge above the menu
@@ -81,15 +82,15 @@
 // Pills
 //
 
-.nav-pills {
-  .nav-link {
+.#{$prefix}nav-pills {
+  .#{$prefix}nav-link {
     background: none;
     border: 0;
     @include border-radius($nav-pills-border-radius);
   }
 
-  .nav-link.active,
-  .show > .nav-link {
+  .#{$prefix}nav-link.#{$prefix}active,
+  .#{$prefix}show > .#{$prefix}nav-link {
     color: $nav-pills-link-active-color;
     @include gradient-bg($nav-pills-link-active-bg);
   }
@@ -100,26 +101,26 @@
 // Justified variants
 //
 
-.nav-fill {
-  > .nav-link,
-  .nav-item {
+.#{$prefix}nav-fill {
+  > .#{$prefix}nav-link,
+  .#{$prefix}nav-item {
     flex: 1 1 auto;
     text-align: center;
   }
 }
 
-.nav-justified {
-  > .nav-link,
-  .nav-item {
+.#{$prefix}nav-justified {
+  > .#{$prefix}nav-link,
+  .#{$prefix}nav-item {
     flex-basis: 0;
     flex-grow: 1;
     text-align: center;
   }
 }
 
-.nav-fill,
-.nav-justified {
-  .nav-item .nav-link {
+.#{$prefix}nav-fill,
+.#{$prefix}nav-justified {
+  .#{$prefix}nav-item .#{$prefix}nav-link {
     width: 100%; // Make sure button will grow
   }
 }
@@ -129,11 +130,11 @@
 //
 // Hide tabbable panes to start, show them when `.active`
 
-.tab-content {
-  > .tab-pane {
+.#{$prefix}tab-content {
+  > .#{$prefix}tab-pane {
     display: none;
   }
-  > .active {
+  > .#{$prefix}active {
     display: block;
   }
 }

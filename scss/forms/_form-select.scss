@@ -2,8 +2,8 @@
 //
 // Replaces the browser default select with a custom one, mostly pulled from
 // https://primer.github.io/.
-
-.form-select {
+@import "../monsta";
+.#{$prefix}form-select {
   display: block;
   width: 100%;
   padding: $form-select-padding-y $form-select-indicator-padding $form-select-padding-y $form-select-padding-x;
@@ -55,7 +55,7 @@
   }
 }
 
-.form-select-sm {
+.#{$prefix}form-select-sm {
   padding-top: $form-select-padding-y-sm;
   padding-bottom: $form-select-padding-y-sm;
   padding-left: $form-select-padding-x-sm;
@@ -63,7 +63,7 @@
   @include border-radius($form-select-border-radius-sm);
 }
 
-.form-select-lg {
+.#{$prefix}form-select-lg {
   padding-top: $form-select-padding-y-lg;
   padding-bottom: $form-select-padding-y-lg;
   padding-left: $form-select-padding-x-lg;

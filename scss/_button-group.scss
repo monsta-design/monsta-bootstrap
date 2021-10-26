@@ -1,48 +1,50 @@
 // Make the div behave like a button
-.btn-group,
-.btn-group-vertical {
+@import "monsta";
+
+.#{$prefix}btn-group,
+.#{$prefix}btn-group-vertical {
   position: relative;
   display: inline-flex;
   vertical-align: middle; // match .btn alignment given font-size hack above
 
-  > .btn {
+  > .#{$prefix}btn {
     position: relative;
     flex: 1 1 auto;
   }
 
   // Bring the hover, focused, and "active" buttons to the front to overlay
   // the borders properly
-  > .btn-check:checked + .btn,
-  > .btn-check:focus + .btn,
-  > .btn:hover,
-  > .btn:focus,
-  > .btn:active,
-  > .btn.active {
+  > .#{$prefix}btn-check:checked + .#{$prefix}btn,
+  > .#{$prefix}btn-check:focus + .#{$prefix}btn,
+  > .#{$prefix}btn:hover,
+  > .#{$prefix}btn:focus,
+  > .#{$prefix}btn:active,
+  > .#{$prefix}btn.#{$prefix}active {
     z-index: 1;
   }
 }
 
 // Optional: Group multiple button groups together for a toolbar
-.btn-toolbar {
+.#{$prefix}btn-toolbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 
-  .input-group {
+  .#{$prefix}input-group {
     width: auto;
   }
 }
 
-.btn-group {
+.#{$prefix}btn-group {
   // Prevent double borders when buttons are next to each other
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) {
+  > .#{$prefix}btn:not(:first-child),
+  > .#{$prefix}btn-group:not(:first-child) {
     margin-left: -$btn-border-width;
   }
 
   // Reset rounded corners
-  > .btn:not(:last-child):not(.dropdown-toggle),
-  > .btn-group:not(:last-child) > .btn {
+  > .#{$prefix}btn:not(:last-child):not(.#{$prefix}dropdown-toggle),
+  > .#{$prefix}btn-group:not(:last-child) > .#{$prefix}btn {
     @include border-end-radius(0);
   }
 
@@ -50,9 +52,9 @@
   // - the "third or more" child
   // - the second child and the previous element isn't `.btn-check` (making it the first child visually)
   // - part of a btn-group which isn't the first child
-  > .btn:nth-child(n + 3),
-  > :not(.btn-check) + .btn,
-  > .btn-group:not(:first-child) > .btn {
+  > .#{$prefix}btn:nth-child(n + 3),
+  > :not(.#{$prefix}btn-check) + .#{$prefix}btn,
+  > .#{$prefix}btn-group:not(:first-child) > .#{$prefix}btn {
     @include border-start-radius(0);
   }
 }
@@ -61,35 +63,35 @@
 //
 // Remix the default button sizing classes into new ones for easier manipulation.
 
-.btn-group-sm > .btn { @extend .btn-sm; }
-.btn-group-lg > .btn { @extend .btn-lg; }
+.#{$prefix}btn-group-sm > .#{$prefix}btn { @extend .#{$prefix}btn-sm; }
+.#{$prefix}btn-group-lg > .#{$prefix}btn { @extend .#{$prefix}btn-lg; }
 
 
 //
 // Split button dropdowns
 //
 
-.dropdown-toggle-split {
+.#{$prefix}dropdown-toggle-split {
   padding-right: $btn-padding-x * .75;
   padding-left: $btn-padding-x * .75;
 
   &::after,
-  .dropup &::after,
-  .dropend &::after {
+  .#{$prefix}dropup &::after,
+  .#{$prefix}dropend &::after {
     margin-left: 0;
   }
 
-  .dropstart &::before {
+  .#{$prefix}dropstart &::before {
     margin-right: 0;
   }
 }
 
-.btn-sm + .dropdown-toggle-split {
+.#{$prefix}btn-sm + .#{$prefix}dropdown-toggle-split {
   padding-right: $btn-padding-x-sm * .75;
   padding-left: $btn-padding-x-sm * .75;
 }
 
-.btn-lg + .dropdown-toggle-split {
+.#{$prefix}btn-lg + .#{$prefix}dropdown-toggle-split {
   padding-right: $btn-padding-x-lg * .75;
   padding-left: $btn-padding-x-lg * .75;
 }
@@ -97,11 +99,11 @@
 
 // The clickable button for toggling the menu
 // Set the same inset shadow as the :active state
-.btn-group.show .dropdown-toggle {
+.#{$prefix}btn-group.#{$prefix}show .#{$prefix}dropdown-toggle {
   @include box-shadow($btn-active-box-shadow);
 
   // Show no shadow for `.btn-link` since it has no other button styles.
-  &.btn-link {
+  &.#{$prefix}btn-link {
     @include box-shadow(none);
   }
 }
@@ -111,29 +113,29 @@
 // Vertical button groups
 //
 
-.btn-group-vertical {
+.#{$prefix}btn-group-vertical {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 
-  > .btn,
-  > .btn-group {
+  > .#{$prefix}btn,
+  > .#{$prefix}btn-group {
     width: 100%;
   }
 
-  > .btn:not(:first-child),
-  > .btn-group:not(:first-child) {
+  > .#{$prefix}btn:not(:first-child),
+  > .#{$prefix}btn-group:not(:first-child) {
     margin-top: -$btn-border-width;
   }
 
   // Reset rounded corners
-  > .btn:not(:last-child):not(.dropdown-toggle),
-  > .btn-group:not(:last-child) > .btn {
+  > .#{$prefix}btn:not(:last-child):not(.#{$prefix}dropdown-toggle),
+  > .#{$prefix}btn-group:not(:last-child) > .#{$prefix}btn {
     @include border-bottom-radius(0);
   }
 
-  > .btn ~ .btn,
-  > .btn-group:not(:first-child) > .btn {
+  > .#{$prefix}btn ~ .#{$prefix}btn,
+  > .#{$prefix}btn-group:not(:first-child) > .#{$prefix}btn {
     @include border-top-radius(0);
   }
 }

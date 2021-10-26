@@ -1,16 +1,17 @@
 //
 // Base styles
 //
+@import "../monsta";
 
-.input-group {
+.#{$prefix}input-group {
   position: relative;
   display: flex;
   flex-wrap: wrap; // For form validation feedback
   align-items: stretch;
   width: 100%;
 
-  > .form-control,
-  > .form-select {
+  > .#{$prefix}form-control,
+  > .#{$prefix}form-select {
     position: relative; // For focus state's z-index
     flex: 1 1 auto;
     width: 1%;
@@ -18,15 +19,15 @@
   }
 
   // Bring the "active" form control to the top of surrounding elements
-  > .form-control:focus,
-  > .form-select:focus {
+  > .#{$prefix}form-control:focus,
+  > .#{$prefix}form-select:focus {
     z-index: 3;
   }
 
   // Ensure buttons are always above inputs for more visually pleasing borders.
   // This isn't needed for `.input-group-text` since it shares the same border-color
   // as our inputs.
-  .btn {
+  .#{$prefix}btn {
     position: relative;
     z-index: 2;
 
@@ -42,7 +43,7 @@
 // Serves as a catch-all element for any text or radio/checkbox input you wish
 // to prepend or append to an input.
 
-.input-group-text {
+.#{$prefix}input-group-text {
   display: flex;
   align-items: center;
   padding: $input-group-addon-padding-y $input-group-addon-padding-x;
@@ -63,26 +64,26 @@
 // Remix the default form control sizing classes into new ones for easier
 // manipulation.
 
-.input-group-lg > .form-control,
-.input-group-lg > .form-select,
-.input-group-lg > .input-group-text,
-.input-group-lg > .btn {
+.#{$prefix}input-group-lg > .#{$prefix}form-control,
+.#{$prefix}input-group-lg > .#{$prefix}form-select,
+.#{$prefix}input-group-lg > .#{$prefix}input-group-text,
+.#{$prefix}input-group-lg > .#{$prefix}btn {
   padding: $input-padding-y-lg $input-padding-x-lg;
   @include font-size($input-font-size-lg);
   @include border-radius($input-border-radius-lg);
 }
 
-.input-group-sm > .form-control,
-.input-group-sm > .form-select,
-.input-group-sm > .input-group-text,
-.input-group-sm > .btn {
+.#{$prefix}input-group-sm > .#{$prefix}form-control,
+.#{$prefix}input-group-sm > .#{$prefix}form-select,
+.#{$prefix}input-group-sm > .#{$prefix}input-group-text,
+.#{$prefix}input-group-sm > .#{$prefix}btn {
   padding: $input-padding-y-sm $input-padding-x-sm;
   @include font-size($input-font-size-sm);
   @include border-radius($input-border-radius-sm);
 }
 
-.input-group-lg > .form-select,
-.input-group-sm > .form-select {
+.#{$prefix}input-group-lg > .#{$prefix}form-select,
+.#{$prefix}input-group-sm > .#{$prefix}form-select {
   padding-right: $form-select-padding-x + $form-select-indicator-padding;
 }
 
@@ -94,27 +95,27 @@
 // with the `.input-group >` part, but without it, we cannot override the sizing.
 
 // stylelint-disable-next-line no-duplicate-selectors
-.input-group {
-  &:not(.has-validation) {
-    > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
-    > .dropdown-toggle:nth-last-child(n + 3) {
+.#{$prefix}input-group {
+  &:not(.#{$prefix}has-validation) {
+    > :not(:last-child):not(.#{$prefix}dropdown-toggle):not(.#{$prefix}dropdown-menu),
+    > .#{$prefix}dropdown-toggle:nth-last-child(n + 3) {
       @include border-end-radius(0);
     }
   }
 
-  &.has-validation {
-    > :nth-last-child(n + 3):not(.dropdown-toggle):not(.dropdown-menu),
-    > .dropdown-toggle:nth-last-child(n + 4) {
+  &.#{$prefix}has-validation {
+    > :nth-last-child(n + 3):not(.#{$prefix}dropdown-toggle):not(.#{$prefix}dropdown-menu),
+    > .#{$prefix}dropdown-toggle:nth-last-child(n + 4) {
       @include border-end-radius(0);
     }
   }
 
   $validation-messages: "";
   @each $state in map-keys($form-validation-states) {
-    $validation-messages: $validation-messages + ":not(." + unquote($state) + "-tooltip)" + ":not(." + unquote($state) + "-feedback)";
+    $validation-messages: $validation-messages + ":not(." +$prefix+ unquote($state) + "-tooltip)" + ":not(." +$prefix+ unquote($state) + "-feedback)";
   }
 
-  > :not(:first-child):not(.dropdown-menu)#{$validation-messages} {
+  > :not(:first-child):not(.#{$prefix}dropdown-menu)#{$validation-messages} {
     margin-left: -$input-border-width;
     @include border-start-radius(0);
   }
