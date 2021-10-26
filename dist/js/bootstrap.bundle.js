@@ -3743,21 +3743,21 @@
   const EVENT_CLICK_DATA_API$3 = `click${EVENT_KEY$8}${DATA_API_KEY$4}`;
   const EVENT_KEYDOWN_DATA_API = `keydown${EVENT_KEY$8}${DATA_API_KEY$4}`;
   const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY$8}${DATA_API_KEY$4}`;
-  const CLASS_NAME_SHOW$6 = 'show';
-  const CLASS_NAME_DROPUP = 'dropup';
-  const CLASS_NAME_DROPEND = 'dropend';
-  const CLASS_NAME_DROPSTART = 'dropstart';
-  const CLASS_NAME_NAVBAR = 'navbar';
+  const CLASS_NAME_SHOW$6 = 'ns-show';
+  const CLASS_NAME_DROPUP = 'ns-dropup';
+  const CLASS_NAME_DROPEND = 'ns-dropend';
+  const CLASS_NAME_DROPSTART = 'ns-dropstart';
+  const CLASS_NAME_NAVBAR = 'ns-navbar';
   const SELECTOR_DATA_TOGGLE$3 = '[data-bs-toggle="dropdown"]';
-  const SELECTOR_MENU = '.dropdown-menu';
-  const SELECTOR_NAVBAR_NAV = '.navbar-nav';
-  const SELECTOR_VISIBLE_ITEMS = '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)';
-  const PLACEMENT_TOP = isRTL() ? 'top-end' : 'top-start';
-  const PLACEMENT_TOPEND = isRTL() ? 'top-start' : 'top-end';
-  const PLACEMENT_BOTTOM = isRTL() ? 'bottom-end' : 'bottom-start';
-  const PLACEMENT_BOTTOMEND = isRTL() ? 'bottom-start' : 'bottom-end';
-  const PLACEMENT_RIGHT = isRTL() ? 'left-start' : 'right-start';
-  const PLACEMENT_LEFT = isRTL() ? 'right-start' : 'left-start';
+  const SELECTOR_MENU = '.ns-dropdown-menu';
+  const SELECTOR_NAVBAR_NAV = '.ns-navbar-nav';
+  const SELECTOR_VISIBLE_ITEMS = '.ns-dropdown-menu .ns-dropdown-item:not(.ns-disabled):not(:ns-disabled)';
+  const PLACEMENT_TOP = isRTL() ? 'ns-top-end' : 'ns-top-start';
+  const PLACEMENT_TOPEND = isRTL() ? 'ns-top-start' : 'ns-top-end';
+  const PLACEMENT_BOTTOM = isRTL() ? 'ns-bottom-end' : 'ns-bottom-start';
+  const PLACEMENT_BOTTOMEND = isRTL() ? 'ns-bottom-start' : 'ns-bottom-end';
+  const PLACEMENT_RIGHT = isRTL() ? 'ns-left-start' : 'ns-right-start';
+  const PLACEMENT_LEFT = isRTL() ? 'ns-right-start' : 'ns-left-start';
   const Default$8 = {
     offset: [0, 2],
     boundary: 'clippingParents',

@@ -23,6 +23,9 @@ import EventHandler from './dom/event-handler'
 import Manipulator from './dom/manipulator'
 import SelectorEngine from './dom/selector-engine'
 import BaseComponent from './base-component'
+import {
+  classPrefix
+} from './monsta'
 
 /**
  * ------------------------------------------------------------------------
@@ -52,23 +55,23 @@ const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_KEYDOWN_DATA_API = `keydown${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY}${DATA_API_KEY}`
 
-const CLASS_NAME_SHOW = 'show'
-const CLASS_NAME_DROPUP = 'dropup'
-const CLASS_NAME_DROPEND = 'dropend'
-const CLASS_NAME_DROPSTART = 'dropstart'
-const CLASS_NAME_NAVBAR = 'navbar'
+const CLASS_NAME_SHOW = 'ns-show'
+const CLASS_NAME_DROPUP = 'ns-dropup'
+const CLASS_NAME_DROPEND = 'ns-dropend'
+const CLASS_NAME_DROPSTART = 'ns-dropstart'
+const CLASS_NAME_NAVBAR = 'ns-navbar'
 
 const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="dropdown"]'
-const SELECTOR_MENU = '.dropdown-menu'
-const SELECTOR_NAVBAR_NAV = '.navbar-nav'
-const SELECTOR_VISIBLE_ITEMS = '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)'
+const SELECTOR_MENU = '.ns-dropdown-menu'
+const SELECTOR_NAVBAR_NAV = '.ns-navbar-nav'
+const SELECTOR_VISIBLE_ITEMS = '.ns-dropdown-menu .ns-dropdown-item:not(.ns-disabled):not(:ns-disabled)'
 
-const PLACEMENT_TOP = isRTL() ? 'top-end' : 'top-start'
-const PLACEMENT_TOPEND = isRTL() ? 'top-start' : 'top-end'
-const PLACEMENT_BOTTOM = isRTL() ? 'bottom-end' : 'bottom-start'
-const PLACEMENT_BOTTOMEND = isRTL() ? 'bottom-start' : 'bottom-end'
-const PLACEMENT_RIGHT = isRTL() ? 'left-start' : 'right-start'
-const PLACEMENT_LEFT = isRTL() ? 'right-start' : 'left-start'
+const PLACEMENT_TOP = isRTL() ? 'ns-top-end' : 'ns-top-start'
+const PLACEMENT_TOPEND = isRTL() ? 'ns-top-start' : 'ns-top-end'
+const PLACEMENT_BOTTOM = isRTL() ? 'ns-bottom-end' : 'ns-bottom-start'
+const PLACEMENT_BOTTOMEND = isRTL() ? 'ns-bottom-start' : 'ns-bottom-end'
+const PLACEMENT_RIGHT = isRTL() ? 'ns-left-start' : 'ns-right-start'
+const PLACEMENT_LEFT = isRTL() ? 'ns-right-start' : 'ns-left-start'
 
 const Default = {
   offset: [0, 2],
@@ -296,7 +299,7 @@ class Dropdown extends BaseComponent {
   }
 
   _getOffset() {
-    const { offset } = this._config
+    const {offset} = this._config
 
     if (typeof offset === 'string') {
       return offset.split(',').map(val => Number.parseInt(val, 10))
@@ -318,12 +321,12 @@ class Dropdown extends BaseComponent {
           boundary: this._config.boundary
         }
       },
-      {
-        name: 'offset',
-        options: {
-          offset: this._getOffset()
-        }
-      }]
+        {
+          name: 'offset',
+          options: {
+            offset: this._getOffset()
+          }
+        }]
     }
 
     // Disable Popper if we have a static display
@@ -340,7 +343,7 @@ class Dropdown extends BaseComponent {
     }
   }
 
-  _selectMenuItem({ key, target }) {
+  _selectMenuItem({key, target}) {
     const items = SelectorEngine.find(SELECTOR_VISIBLE_ITEMS, this._menu).filter(isVisible)
 
     if (!items.length) {
@@ -430,8 +433,8 @@ class Dropdown extends BaseComponent {
     //    - If trigger inside the menu => not a dropdown command
     if (/input|textarea/i.test(event.target.tagName) ?
       event.key === SPACE_KEY || (event.key !== ESCAPE_KEY &&
-      ((event.key !== ARROW_DOWN_KEY && event.key !== ARROW_UP_KEY) ||
-        event.target.closest(SELECTOR_MENU))) :
+        ((event.key !== ARROW_DOWN_KEY && event.key !== ARROW_UP_KEY) ||
+          event.target.closest(SELECTOR_MENU))) :
       !REGEXP_KEYDOWN.test(event.key)) {
       return
     }
