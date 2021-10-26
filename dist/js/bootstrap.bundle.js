@@ -1607,6 +1607,10 @@
 
   defineJQueryPlugin(Carousel);
 
+  const classPrefix = name => {
+    return "ns-" + name;
+  };
+
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): collapse.js
@@ -1636,15 +1640,15 @@
   const EVENT_HIDE$5 = `hide${EVENT_KEY$9}`;
   const EVENT_HIDDEN$5 = `hidden${EVENT_KEY$9}`;
   const EVENT_CLICK_DATA_API$4 = `click${EVENT_KEY$9}${DATA_API_KEY$5}`;
-  const CLASS_NAME_SHOW$7 = 'show';
-  const CLASS_NAME_COLLAPSE = 'collapse';
-  const CLASS_NAME_COLLAPSING = 'collapsing';
-  const CLASS_NAME_COLLAPSED = 'collapsed';
+  const CLASS_NAME_SHOW$7 = classPrefix('show');
+  const CLASS_NAME_COLLAPSE = classPrefix('collapse');
+  const CLASS_NAME_COLLAPSING = classPrefix('collapsing');
+  const CLASS_NAME_COLLAPSED = classPrefix('collapsed');
   const CLASS_NAME_DEEPER_CHILDREN = `:scope .${CLASS_NAME_COLLAPSE} .${CLASS_NAME_COLLAPSE}`;
-  const CLASS_NAME_HORIZONTAL = 'collapse-horizontal';
+  const CLASS_NAME_HORIZONTAL = classPrefix('collapse-horizontal');
   const WIDTH = 'width';
   const HEIGHT = 'height';
-  const SELECTOR_ACTIVES = '.collapse.show, .collapse.collapsing';
+  const SELECTOR_ACTIVES = `.${classPrefix('collapse')}.${classPrefix('show')}, .${classPrefix('collapse')}.${classPrefix('collapsing')}`;
   const SELECTOR_DATA_TOGGLE$4 = '[data-bs-toggle="collapse"]';
   /**
    * ------------------------------------------------------------------------

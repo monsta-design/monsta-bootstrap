@@ -170,6 +170,10 @@
     });
   };
 
+  const classPrefix = name => {
+    return "ns-" + name;
+  };
+
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): collapse.js
@@ -199,15 +203,15 @@
   const EVENT_HIDE = `hide${EVENT_KEY}`;
   const EVENT_HIDDEN = `hidden${EVENT_KEY}`;
   const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
-  const CLASS_NAME_SHOW = 'show';
-  const CLASS_NAME_COLLAPSE = 'collapse';
-  const CLASS_NAME_COLLAPSING = 'collapsing';
-  const CLASS_NAME_COLLAPSED = 'collapsed';
+  const CLASS_NAME_SHOW = classPrefix('show');
+  const CLASS_NAME_COLLAPSE = classPrefix('collapse');
+  const CLASS_NAME_COLLAPSING = classPrefix('collapsing');
+  const CLASS_NAME_COLLAPSED = classPrefix('collapsed');
   const CLASS_NAME_DEEPER_CHILDREN = `:scope .${CLASS_NAME_COLLAPSE} .${CLASS_NAME_COLLAPSE}`;
-  const CLASS_NAME_HORIZONTAL = 'collapse-horizontal';
+  const CLASS_NAME_HORIZONTAL = classPrefix('collapse-horizontal');
   const WIDTH = 'width';
   const HEIGHT = 'height';
-  const SELECTOR_ACTIVES = '.collapse.show, .collapse.collapsing';
+  const SELECTOR_ACTIVES = `.${classPrefix('collapse')}.${classPrefix('show')}, .${classPrefix('collapse')}.${classPrefix('collapsing')}`;
   const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="collapse"]';
   /**
    * ------------------------------------------------------------------------

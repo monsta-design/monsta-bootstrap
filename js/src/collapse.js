@@ -18,6 +18,7 @@ import EventHandler from './dom/event-handler'
 import Manipulator from './dom/manipulator'
 import SelectorEngine from './dom/selector-engine'
 import BaseComponent from './base-component'
+import {classPrefix} from "./monsta";
 
 /**
  * ------------------------------------------------------------------------
@@ -46,17 +47,17 @@ const EVENT_HIDE = `hide${EVENT_KEY}`
 const EVENT_HIDDEN = `hidden${EVENT_KEY}`
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
-const CLASS_NAME_SHOW = 'show'
-const CLASS_NAME_COLLAPSE = 'collapse'
-const CLASS_NAME_COLLAPSING = 'collapsing'
-const CLASS_NAME_COLLAPSED = 'collapsed'
+const CLASS_NAME_SHOW = classPrefix('show')
+const CLASS_NAME_COLLAPSE = classPrefix('collapse')
+const CLASS_NAME_COLLAPSING = classPrefix('collapsing')
+const CLASS_NAME_COLLAPSED = classPrefix('collapsed')
 const CLASS_NAME_DEEPER_CHILDREN = `:scope .${CLASS_NAME_COLLAPSE} .${CLASS_NAME_COLLAPSE}`
-const CLASS_NAME_HORIZONTAL = 'collapse-horizontal'
+const CLASS_NAME_HORIZONTAL = classPrefix('collapse-horizontal')
 
 const WIDTH = 'width'
 const HEIGHT = 'height'
 
-const SELECTOR_ACTIVES = '.collapse.show, .collapse.collapsing'
+const SELECTOR_ACTIVES = `.${classPrefix('collapse')}.${classPrefix('show')}, .${classPrefix('collapse')}.${classPrefix('collapsing')}`
 const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="collapse"]'
 
 /**
@@ -148,7 +149,7 @@ class Collapse extends BaseComponent {
 
     actives.forEach(elemActive => {
       if (container !== elemActive) {
-        Collapse.getOrCreateInstance(elemActive, { toggle: false }).hide()
+        Collapse.getOrCreateInstance(elemActive, {toggle: false}).hide()
       }
 
       if (!activesData) {
@@ -319,7 +320,7 @@ EventHandler.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (
   const selectorElements = SelectorEngine.find(selector)
 
   selectorElements.forEach(element => {
-    Collapse.getOrCreateInstance(element, { toggle: false }).toggle()
+    Collapse.getOrCreateInstance(element, {toggle: false}).toggle()
   })
 })
 
