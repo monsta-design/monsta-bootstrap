@@ -1,8 +1,9 @@
 //
 // Base styles
 //
+@import "monsta";
 
-.card {
+.#{$prefix}card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -20,7 +21,7 @@
     margin-left: 0;
   }
 
-  > .list-group {
+  > .#{$prefix}list-group {
     border-top: inherit;
     border-bottom: inherit;
 
@@ -29,7 +30,7 @@
       @include border-top-radius($card-inner-border-radius);
     }
 
-    &:last-child  {
+    &:last-child {
       border-bottom-width: 0;
       @include border-bottom-radius($card-inner-border-radius);
     }
@@ -37,13 +38,13 @@
 
   // Due to specificity of the above selector (`.card > .list-group`), we must
   // use a child selector here to prevent double borders.
-  > .card-header + .list-group,
-  > .list-group + .card-footer {
+  > .#{$prefix}card-header + .#{$prefix}list-group,
+  > .#{$prefix}list-group + .#{$prefix}card-footer {
     border-top: 0;
   }
 }
 
-.card-body {
+.#{$prefix}card-body {
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
   // as much space as possible, ensuring footers are aligned to the bottom.
   flex: 1 1 auto;
@@ -51,25 +52,25 @@
   color: $card-color;
 }
 
-.card-title {
+.#{$prefix}card-title {
   margin-bottom: $card-title-spacer-y;
 }
 
-.card-subtitle {
+.#{$prefix}card-subtitle {
   margin-top: -$card-title-spacer-y * .5;
   margin-bottom: 0;
 }
 
-.card-text:last-child {
+.#{$prefix}card-text:last-child {
   margin-bottom: 0;
 }
 
-.card-link {
+.#{$prefix}card-link {
   &:hover {
     text-decoration: if($link-hover-decoration == underline, none, null);
   }
 
-  + .card-link {
+  + .#{$prefix}card-link {
     margin-left: $card-spacer-x;
   }
 }
@@ -78,7 +79,7 @@
 // Optional textual caps
 //
 
-.card-header {
+.#{$prefix}card-header {
   padding: $card-cap-padding-y $card-cap-padding-x;
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
   color: $card-cap-color;
@@ -90,7 +91,7 @@
   }
 }
 
-.card-footer {
+.#{$prefix}card-footer {
   padding: $card-cap-padding-y $card-cap-padding-x;
   color: $card-cap-color;
   background-color: $card-cap-bg;
@@ -106,27 +107,27 @@
 // Header navs
 //
 
-.card-header-tabs {
+.#{$prefix}card-header-tabs {
   margin-right: -$card-cap-padding-x * .5;
   margin-bottom: -$card-cap-padding-y;
   margin-left: -$card-cap-padding-x * .5;
   border-bottom: 0;
 
   @if $nav-tabs-link-active-bg != $card-bg {
-    .nav-link.active {
+    .#{$prefix}nav-link.active {
       background-color: $card-bg;
       border-bottom-color: $card-bg;
     }
   }
 }
 
-.card-header-pills {
+.#{$prefix}card-header-pills {
   margin-right: -$card-cap-padding-x * .5;
   margin-left: -$card-cap-padding-x * .5;
 }
 
 // Card image
-.card-img-overlay {
+.#{$prefix}card-img-overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -136,19 +137,19 @@
   @include border-radius($card-inner-border-radius);
 }
 
-.card-img,
-.card-img-top,
-.card-img-bottom {
+.#{$prefix}card-img,
+.#{$prefix}card-img-top,
+.#{$prefix}card-img-bottom {
   width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
 }
 
-.card-img,
-.card-img-top {
+.#{$prefix}card-img,
+.#{$prefix}card-img-top {
   @include border-top-radius($card-inner-border-radius);
 }
 
-.card-img,
-.card-img-bottom {
+.#{$prefix}card-img,
+.#{$prefix}card-img-bottom {
   @include border-bottom-radius($card-inner-border-radius);
 }
 
@@ -157,10 +158,10 @@
 // Card groups
 //
 
-.card-group {
+.#{$prefix}card-group {
   // The child selector allows nested `.card` within `.card-group`
   // to display properly.
-  > .card {
+  > .#{$prefix}card {
     margin-bottom: $card-group-margin;
   }
 
@@ -169,12 +170,12 @@
     flex-flow: row wrap;
     // The child selector allows nested `.card` within `.card-group`
     // to display properly.
-    > .card {
+    > .#{$prefix}card {
       // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
       flex: 1 0 0%;
       margin-bottom: 0;
 
-      + .card {
+      + .#{$prefix}card {
         margin-left: 0;
         border-left: 0;
       }
@@ -184,13 +185,14 @@
         &:not(:last-child) {
           @include border-end-radius(0);
 
-          .card-img-top,
-          .card-header {
+          .#{$prefix}card-img-top,
+          .#{$prefix}card-header {
             // stylelint-disable-next-line property-disallowed-list
             border-top-right-radius: 0;
           }
-          .card-img-bottom,
-          .card-footer {
+
+          .#{$prefix}card-img-bottom,
+          .#{$prefix}card-footer {
             // stylelint-disable-next-line property-disallowed-list
             border-bottom-right-radius: 0;
           }
@@ -199,13 +201,14 @@
         &:not(:first-child) {
           @include border-start-radius(0);
 
-          .card-img-top,
-          .card-header {
+          .#{$prefix}card-img-top,
+          .#{$prefix}card-header {
             // stylelint-disable-next-line property-disallowed-list
             border-top-left-radius: 0;
           }
-          .card-img-bottom,
-          .card-footer {
+
+          .#{$prefix}card-img-bottom,
+          .#{$prefix}card-footer {
             // stylelint-disable-next-line property-disallowed-list
             border-bottom-left-radius: 0;
           }

@@ -4484,7 +4484,7 @@ textarea.form-control-lg {
   color: #fff;
 }
 
-.card {
+.ns-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -4495,83 +4495,83 @@ textarea.form-control-lg {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
-.card > hr {
+.ns-card > hr {
   margin-left: 0;
   margin-right: 0;
 }
-.card > .list-group {
+.ns-card > .ns-list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
-.card > .list-group:first-child {
+.ns-card > .ns-list-group:first-child {
   border-top-width: 0;
   border-top-right-radius: calc(0.25rem - 1px);
   border-top-left-radius: calc(0.25rem - 1px);
 }
-.card > .list-group:last-child {
+.ns-card > .ns-list-group:last-child {
   border-bottom-width: 0;
   border-bottom-left-radius: calc(0.25rem - 1px);
   border-bottom-right-radius: calc(0.25rem - 1px);
 }
-.card > .card-header + .list-group,
-.card > .list-group + .card-footer {
+.ns-card > .ns-card-header + .ns-list-group,
+.ns-card > .ns-list-group + .ns-card-footer {
   border-top: 0;
 }
 
-.card-body {
+.ns-card-body {
   flex: 1 1 auto;
   padding: 1rem 1rem;
 }
 
-.card-title {
+.ns-card-title {
   margin-bottom: 0.5rem;
 }
 
-.card-subtitle {
+.ns-card-subtitle {
   margin-top: -0.25rem;
   margin-bottom: 0;
 }
 
-.card-text:last-child {
+.ns-card-text:last-child {
   margin-bottom: 0;
 }
 
-.card-link + .card-link {
+.ns-card-link + .ns-card-link {
   margin-right: 1rem;
 }
 
-.card-header {
+.ns-card-header {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
-.card-header:first-child {
+.ns-card-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
 
-.card-footer {
+.ns-card-footer {
   padding: 0.5rem 1rem;
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
-.card-footer:last-child {
+.ns-card-footer:last-child {
   border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
 }
 
-.card-header-tabs {
+.ns-card-header-tabs {
   margin-left: -0.5rem;
   margin-bottom: -0.5rem;
   margin-right: -0.5rem;
   border-bottom: 0;
 }
 
-.card-header-pills {
+.ns-card-header-pills {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 }
 
-.card-img-overlay {
+.ns-card-img-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -4581,62 +4581,62 @@ textarea.form-control-lg {
   border-radius: calc(0.25rem - 1px);
 }
 
-.card-img,
-.card-img-top,
-.card-img-bottom {
+.ns-card-img,
+.ns-card-img-top,
+.ns-card-img-bottom {
   width: 100%;
 }
 
-.card-img,
-.card-img-top {
+.ns-card-img,
+.ns-card-img-top {
   border-top-right-radius: calc(0.25rem - 1px);
   border-top-left-radius: calc(0.25rem - 1px);
 }
 
-.card-img,
-.card-img-bottom {
+.ns-card-img,
+.ns-card-img-bottom {
   border-bottom-left-radius: calc(0.25rem - 1px);
   border-bottom-right-radius: calc(0.25rem - 1px);
 }
 
-.card-group > .card {
+.ns-card-group > .ns-card {
   margin-bottom: 0.75rem;
 }
 @media (min-width: 576px) {
-  .card-group {
+  .ns-card-group {
     display: flex;
     flex-flow: row wrap;
   }
-  .card-group > .card {
+  .ns-card-group > .ns-card {
     flex: 1 0 0%;
     margin-bottom: 0;
   }
-  .card-group > .card + .card {
+  .ns-card-group > .ns-card + .ns-card {
     margin-right: 0;
     border-right: 0;
   }
-  .card-group > .card:not(:last-child) {
+  .ns-card-group > .ns-card:not(:last-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top,
-.card-group > .card:not(:last-child) .card-header {
+  .ns-card-group > .ns-card:not(:last-child) .ns-card-img-top,
+.ns-card-group > .ns-card:not(:last-child) .ns-card-header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom,
-.card-group > .card:not(:last-child) .card-footer {
+  .ns-card-group > .ns-card:not(:last-child) .ns-card-img-bottom,
+.ns-card-group > .ns-card:not(:last-child) .ns-card-footer {
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) {
+  .ns-card-group > .ns-card:not(:first-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-top,
-.card-group > .card:not(:first-child) .card-header {
+  .ns-card-group > .ns-card:not(:first-child) .ns-card-img-top,
+.ns-card-group > .ns-card:not(:first-child) .ns-card-header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-bottom,
-.card-group > .card:not(:first-child) .card-footer {
+  .ns-card-group > .ns-card:not(:first-child) .ns-card-img-bottom,
+.ns-card-group > .ns-card:not(:first-child) .ns-card-footer {
     border-bottom-right-radius: 0;
   }
 }
