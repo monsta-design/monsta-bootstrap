@@ -11,147 +11,147 @@ toc: true
 The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.
 
 {{< example >}}
-<ul class="list-group">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
+<ul class="ns-list-group">
+  <li class="ns-list-group-item">An item</li>
+  <li class="ns-list-group-item">A second item</li>
+  <li class="ns-list-group-item">A third item</li>
+  <li class="ns-list-group-item">A fourth item</li>
+  <li class="ns-list-group-item">And a fifth one</li>
 </ul>
 {{< /example >}}
 
 ## Active items
 
-Add `.active` to a `.list-group-item` to indicate the current active selection.
+Add `.active` to a `.ns-list-group-item` to indicate the current active selection.
 
 {{< example >}}
-<ul class="list-group">
-  <li class="list-group-item active" aria-current="true">An active item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
+<ul class="ns-list-group">
+  <li class="ns-list-group-item active" aria-current="true">An active item</li>
+  <li class="ns-list-group-item">A second item</li>
+  <li class="ns-list-group-item">A third item</li>
+  <li class="ns-list-group-item">A fourth item</li>
+  <li class="ns-list-group-item">And a fifth one</li>
 </ul>
 {{< /example >}}
 
 ## Disabled items
 
-Add `.disabled` to a `.list-group-item` to make it _appear_ disabled. Note that some elements with `.disabled` will also require custom JavaScript to fully disable their click events (e.g., links).
+Add `.disabled` to a `.ns-list-group-item` to make it _appear_ disabled. Note that some elements with `.disabled` will also require custom JavaScript to fully disable their click events (e.g., links).
 
 {{< example >}}
-<ul class="list-group">
-  <li class="list-group-item disabled" aria-disabled="true">A disabled item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
+<ul class="ns-list-group">
+  <li class="ns-list-group-item disabled" aria-disabled="true">A disabled item</li>
+  <li class="ns-list-group-item">A second item</li>
+  <li class="ns-list-group-item">A third item</li>
+  <li class="ns-list-group-item">A fourth item</li>
+  <li class="ns-list-group-item">And a fifth one</li>
 </ul>
 {{< /example >}}
 
 ## Links and buttons
 
-Use `<a>`s or `<button>`s to create _actionable_ list group items with hover, disabled, and active states by adding `.list-group-item-action`. We separate these pseudo-classes to ensure list groups made of non-interactive elements (like `<li>`s or `<div>`s) don't provide a click or tap affordance.
+Use `<a>`s or `<button>`s to create _actionable_ list group items with hover, disabled, and active states by adding `.ns-list-group-item-action`. We separate these pseudo-classes to ensure list groups made of non-interactive elements (like `<li>`s or `<div>`s) don't provide a click or tap affordance.
 
 Be sure to **not use the standard `.btn` classes here**.
 
 {{< example >}}
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+<div class="ns-list-group">
+  <a href="#" class="ns-list-group-item ns-list-group-item-action active" aria-current="true">
     The current link item
   </a>
-  <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-  <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-  <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-  <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
+  <a href="#" class="ns-list-group-item ns-list-group-item-action">A second link item</a>
+  <a href="#" class="ns-list-group-item ns-list-group-item-action">A third link item</a>
+  <a href="#" class="ns-list-group-item ns-list-group-item-action">A fourth link item</a>
+  <a class="ns-list-group-item ns-list-group-item-action ns-disabled">A disabled link item</a>
 </div>
 {{< /example >}}
 
 With `<button>`s, you can also make use of the `disabled` attribute instead of the `.disabled` class. Sadly, `<a>`s don't support the disabled attribute.
 
 {{< example >}}
-<div class="list-group">
-  <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+<div class="ns-list-group">
+  <button type="button" class="ns-list-group-item ns-list-group-item-action active" aria-current="true">
     The current button
   </button>
-  <button type="button" class="list-group-item list-group-item-action">A second item</button>
-  <button type="button" class="list-group-item list-group-item-action">A third button item</button>
-  <button type="button" class="list-group-item list-group-item-action">A fourth button item</button>
-  <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item</button>
+  <button type="button" class="ns-list-group-item ns-list-group-item-action">A second item</button>
+  <button type="button" class="ns-list-group-item ns-list-group-item-action">A third button item</button>
+  <button type="button" class="ns-list-group-item ns-list-group-item-action">A fourth button item</button>
+  <button type="button" class="ns-list-group-item ns-list-group-item-action" disabled>A disabled button item</button>
 </div>
 {{< /example >}}
 
 ## Flush
 
-Add `.list-group-flush` to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).
+Add `.ns-list-group-flush` to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).
 
 {{< example >}}
-<ul class="list-group list-group-flush">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
+<ul class="ns-list-group ns-list-group-flush">
+  <li class="ns-list-group-item">An item</li>
+  <li class="ns-list-group-item">A second item</li>
+  <li class="ns-list-group-item">A third item</li>
+  <li class="ns-list-group-item">A fourth item</li>
+  <li class="ns-list-group-item">And a fifth one</li>
 </ul>
 {{< /example >}}
 
 ## Numbered
 
-Add the `.list-group-numbered` modifier class (and optionally use an `<ol>` element) to opt into numbered list group items. Numbers are generated via CSS (as opposed to a `<ol>`s default browser styling) for better placement inside list group items and to allow for better customization.
+Add the `.ns-list-group-numbered` modifier class (and optionally use an `<ol>` element) to opt into numbered list group items. Numbers are generated via CSS (as opposed to a `<ol>`s default browser styling) for better placement inside list group items and to allow for better customization.
 
 Numbers are generated by `counter-reset` on the `<ol>`, and then styled and placed with a `::before` pseudo-element on the `<li>` with `counter-increment` and `content`.
 
 {{< example >}}
-<ol class="list-group list-group-numbered">
-  <li class="list-group-item">A list item</li>
-  <li class="list-group-item">A list item</li>
-  <li class="list-group-item">A list item</li>
+<ol class="ns-list-group ns-list-group-numbered">
+  <li class="ns-list-group-item">A list item</li>
+  <li class="ns-list-group-item">A list item</li>
+  <li class="ns-list-group-item">A list item</li>
 </ol>
 {{< /example >}}
 
 These work great with custom content as well.
 
 {{< example >}}
-<ol class="list-group list-group-numbered">
-  <li class="list-group-item d-flex justify-content-between align-items-start">
-    <div class="ms-2 me-auto">
-      <div class="fw-bold">Subheading</div>
+<ol class="ns-list-group ns-list-group-numbered">
+  <li class="ns-list-group-item ns-d-flex ns-justify-content-between ns-align-items-start">
+    <div class="ns-ms-2 me-auto">
+      <div class="ns-fw-bold">Subheading</div>
       Content for list item
     </div>
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="ns-badge ns-bg-primary ns-rounded-pill">14</span>
   </li>
-  <li class="list-group-item d-flex justify-content-between align-items-start">
-    <div class="ms-2 me-auto">
-      <div class="fw-bold">Subheading</div>
+  <li class="ns-list-group-item ns-d-flex ns-justify-content-between ns-align-items-start">
+    <div class="ns-ms-2 ns-me-auto">
+      <div class="ns-fw-bold">Subheading</div>
       Content for list item
     </div>
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="ns-badge ns-bg-primary ns-rounded-pill">14</span>
   </li>
-  <li class="list-group-item d-flex justify-content-between align-items-start">
-    <div class="ms-2 me-auto">
-      <div class="fw-bold">Subheading</div>
+  <li class="ns-list-group-item ns-d-flex ns-justify-content-between ns-align-items-start">
+    <div class="ns-ms-2 me-auto">
+      <div class="ns-fw-bold">Subheading</div>
       Content for list item
     </div>
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="ns-badge ns-bg-primary rounded-pill">14</span>
   </li>
 </ol>
 {{< /example >}}
 
 ## Horizontal
 
-Add `.list-group-horizontal` to change the layout of list group items from vertical to horizontal across all breakpoints. Alternatively, choose a responsive variant `.list-group-horizontal-{sm|md|lg|xl|xxl}` to make a list group horizontal starting at that breakpoint's `min-width`. Currently **horizontal list groups cannot be combined with flush list groups.**
+Add `.ns-list-group-horizontal` to change the layout of list group items from vertical to horizontal across all breakpoints. Alternatively, choose a responsive variant `.ns-list-group-horizontal-{sm|md|lg|xl|xxl}` to make a list group horizontal starting at that breakpoint's `min-width`. Currently **horizontal list groups cannot be combined with flush list groups.**
 
 **ProTip:** Want equal-width list group items when horizontal? Add `.flex-fill` to each list group item.
 
 {{< example >}}
-{{< list-group.inline >}}
+{{< ns-list-group.inline >}}
 {{- range $.Site.Data.breakpoints }}
-<ul class="list-group list-group-horizontal{{ .abbr }}">
-  <li class="list-group-item">An item</li>
-  <li class="list-group-item">A second item</li>
-  <li class="list-group-item">A third item</li>
+<ul class="ns-list-group ns-list-group-horizontal{{ .abbr }}">
+  <li class="ns-list-group-item">An item</li>
+  <li class="ns-list-group-item">A second item</li>
+  <li class="ns-list-group-item">A third item</li>
 </ul>
 {{- end -}}
-{{< /list-group.inline >}}
+{{< /ns-list-group.inline >}}
 {{< /example >}}
 
 ## Contextual classes
@@ -159,24 +159,24 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 Use contextual classes to style list items with a stateful background and color.
 
 {{< example >}}
-<ul class="list-group">
-  <li class="list-group-item">A simple default list group item</li>
+<ul class="ns-list-group">
+  <li class="ns-list-group-item">A simple default list group item</li>
 {{< list.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-  <li class="list-group-item list-group-item-{{ .name }}">A simple {{ .name }} list group item</li>
+  <li class="ns-list-group-item ns-list-group-item-{{ .name }}">A simple {{ .name }} list group item</li>
 {{- end -}}
 {{< /list.inline >}}
 </ul>
 {{< /example >}}
 
-Contextual classes also work with `.list-group-item-action`. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
+Contextual classes also work with `.ns-list-group-item-action`. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
 
 {{< example >}}
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
+<div class="ns-list-group">
+  <a href="#" class="ns-list-group-item ns-list-group-item-action">A simple default list group item</a>
 {{< list.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-  <a href="#" class="list-group-item list-group-item-action list-group-item-{{ .name }}">A simple {{ .name }} list group item</a>
+  <a href="#" class="ns-list-group-item ns-list-group-item-action ns-list-group-item-{{ .name }}">A simple {{ .name }} list group item</a>
 {{- end -}}
 {{< /list.inline >}}
 </div>
@@ -191,18 +191,18 @@ Contextual classes also work with `.list-group-item-action`. Note the addition o
 Add badges to any list group item to show unread counts, activity, and more with the help of some [utilities]({{< docsref "/utilities/flex" >}}).
 
 {{< example >}}
-<ul class="list-group">
-  <li class="list-group-item d-flex justify-content-between align-items-center">
+<ul class="ns-list-group">
+  <li class="ns-list-group-item d-flex justify-content-between align-items-center">
     A list item
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="ns-badge ns-bg-primary ns-rounded-pill">14</span>
   </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
+  <li class="ns-list-group-item ns-d-flex ns-justify-content-between ns-align-items-center">
     A second list item
-    <span class="badge bg-primary rounded-pill">2</span>
+    <span class="ns-badge ns-bg-primary ns-rounded-pill">2</span>
   </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center">
+  <li class="ns-list-group-item ns-d-flex ns-justify-content-between ns-align-items-center">
     A third list item
-    <span class="badge bg-primary rounded-pill">1</span>
+    <span class="ns-badge ns-bg-primary ns-rounded-pill">1</span>
   </li>
 </ul>
 {{< /example >}}
@@ -212,30 +212,30 @@ Add badges to any list group item to show unread counts, activity, and more with
 Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{< docsref "/utilities/flex" >}}).
 
 {{< example >}}
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+<div class="ns-list-group">
+  <a href="#" class="ns-list-group-item ns-list-group-item-action ns-active" aria-current="true">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">List group item heading</h5>
       <small>3 days ago</small>
     </div>
-    <p class="mb-1">Some placeholder content in a paragraph.</p>
+    <p class="ns-mb-1">Some placeholder content in a paragraph.</p>
     <small>And some small print.</small>
   </a>
-  <a href="#" class="list-group-item list-group-item-action">
+  <a href="#" class="ns-list-group-item ns-list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">List group item heading</h5>
       <small class="text-muted">3 days ago</small>
     </div>
-    <p class="mb-1">Some placeholder content in a paragraph.</p>
-    <small class="text-muted">And some muted small print.</small>
+    <p class="ns-mb-1">Some placeholder content in a paragraph.</p>
+    <small class="ns-text-muted">And some muted small print.</small>
   </a>
-  <a href="#" class="list-group-item list-group-item-action">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
+  <a href="#" class="ns-list-group-item ns-list-group-item-action">
+    <div class="ns-d-flex ns-w-100 ns-justify-content-between">
+      <h5 class="ns-mb-1">List group item heading</h5>
+      <small class="ns-text-muted">3 days ago</small>
     </div>
-    <p class="mb-1">Some placeholder content in a paragraph.</p>
-    <small class="text-muted">And some muted small print.</small>
+    <p class="ns-mb-1">Some placeholder content in a paragraph.</p>
+    <small class="ns-text-muted">And some muted small print.</small>
   </a>
 </div>
 {{< /example >}}
@@ -245,52 +245,52 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 Place Bootstrap's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
 
 {{< example >}}
-<ul class="list-group">
-  <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+<ul class="ns-list-group">
+  <li class="ns-list-group-item">
+    <input class="ns-form-check-input ns-me-1" type="checkbox" value="" aria-label="...">
     First checkbox
   </li>
-  <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+  <li class="ns-list-group-item">
+    <input class="ns-form-check-input ns-me-1" type="checkbox" value="" aria-label="...">
     Second checkbox
   </li>
-  <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+  <li class="ns-list-group-item">
+    <input class="ns-form-check-ns-input me-1" type="checkbox" value="" aria-label="...">
     Third checkbox
   </li>
-  <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+  <li class="ns-list-group-item">
+    <input class="ns-form-check-input ns-me-1" type="checkbox" value="" aria-label="...">
     Fourth checkbox
   </li>
-  <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+  <li class="ns-list-group-item">
+    <input class="ns-form-check-input ns-me-1" type="checkbox" value="" aria-label="...">
     Fifth checkbox
   </li>
 </ul>
 {{< /example >}}
 
-And if you want `<label>`s as the `.list-group-item` for large hit areas, you can do that, too.
+And if you want `<label>`s as the `.ns-list-group-item` for large hit areas, you can do that, too.
 
 {{< example >}}
-<div class="list-group">
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
+<div class="ns-list-group">
+  <label class="ns-list-group-item">
+    <input class="ns-form-check-input ns-me-1" type="checkbox" value="">
     First checkbox
   </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
+  <label class="ns-list-group-item">
+    <input class="ns-form-check-input ns-me-1" type="checkbox" value="">
     Second checkbox
   </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
+  <label class="ns-list-group-item">
+    <input class="ns-form-check-input ns-me-1" type="checkbox" value="">
     Third checkbox
   </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
+  <label class="ns-list-group-item">
+    <input class="ns-form-check-input ns-me-1" type="checkbox" value="">
     Fourth checkbox
   </label>
-  <label class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="">
+  <label class="ns-list-group-item">
+    <input class="ns-form-check-input ns-me-1" type="checkbox" value="">
     Fifth checkbox
   </label>
 </div>
@@ -304,13 +304,13 @@ And if you want `<label>`s as the `.list-group-item` for large hit areas, you ca
 
 ### Mixins
 
-Used in combination with `$theme-colors` to generate the [contextual variant classes](#contextual-classes) for `.list-group-item`s.
+Used in combination with `$theme-colors` to generate the [contextual variant classes](#contextual-classes) for `.ns-list-group-item`s.
 
 {{< scss-docs name="list-group-mixin" file="scss/mixins/_list-group.scss" >}}
 
 ### Loop
 
-Loop that generates the modifier classes with the `list-group-item-variant()` mixin.
+Loop that generates the modifier classes with the `ns-list-group-item-variant()` mixin.
 
 {{< scss-docs name="list-group-modifiers" file="scss/_list-group.scss" >}}
 
@@ -319,27 +319,27 @@ Loop that generates the modifier classes with the `list-group-item-variant()` mi
 Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our list group to create tabbable panes of local content.
 
 <div class="bd-example" role="tabpanel">
-  <div class="row">
-    <div class="col-4">
-      <div class="list-group" id="list-tab" role="tablist">
-        <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="tab" href="#list-home" role="tab" aria-controls="list-home">Home</a>
-        <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
-        <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages">Messages</a>
-        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>
+  <div class="ns-row">
+    <div class="ns-col-4">
+      <div class="ns-list-group" id="ns-list-tab" role="tablist">
+        <a class="ns-list-group-item ns-list-group-item-action ns-active" id="ns-list-home-list" data-bs-toggle="tab" href="#ns-list-home" role="tab" aria-controls="ns-list-home">Home</a>
+        <a class="ns-list-group-item ns-list-group-item-action" id="ns-list-profile-list" data-bs-toggle="tab" href="#ns-list-profile" role="tab" aria-controls="ns-list-profile">Profile</a>
+        <a class="ns-list-group-item ns-list-group-item-action" id="ns-list-messages-list" data-bs-toggle="tab" href="#ns-list-messages" role="tab" aria-controls="ns-list-messages">Messages</a>
+        <a class="ns-list-group-item ns-list-group-item-action" id="ns-list-settings-list" data-bs-toggle="tab" href="#ns-list-settings" role="tab" aria-controls="ns-list-settings">Settings</a>
       </div>
     </div>
     <div class="col-8">
-      <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+      <div class="ns-tab-content" id="nav-tabContent">
+        <div class="ns-tab-pane ns-fade ns-show ns-active" id="ns-list-home" role="tabpanel" aria-labelledby="ns-list-home-list">
           <p>Some placeholder content in a paragraph relating to "Home". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
         </div>
-        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+        <div class="ns-tab-pane ns-fade" id="ns-list-profile" role="tabpanel" aria-labelledby="ns-list-profile-list">
           <p>Some placeholder content in a paragraph relating to "Profile". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
         </div>
-        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+        <div class="ns-tab-pane ns-fade" id="ns-list-messages" role="tabpanel" aria-labelledby="ns-list-messages-list">
           <p>Some placeholder content in a paragraph relating to "Messages". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
         </div>
-        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+        <div class="ns-tab-pane ns-fade" id="ns-list-settings" role="tabpanel" aria-labelledby="ns-list-settings-list">
           <p>Some placeholder content in a paragraph relating to "Settings". And some more content, used here just to pad out and fill this tab panel. In production, you would obviously have more real content here. And not just text. It could be anything, really. Text, images, forms.</p>
         </div>
       </div>
@@ -348,21 +348,21 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 </div>
 
 ```html
-<div class="row">
-  <div class="col-4">
-    <div class="list-group" id="list-tab" role="tablist">
-      <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="list-home">Home</a>
-      <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
-      <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="list-messages">Messages</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>
+<div class="ns-row">
+  <div class="ns-col-4">
+    <div class="ns-list-group" id="ns-list-tab" role="tablist">
+      <a class="ns-list-group-item ns-list-group-item-action ns-active" id="ns-list-home-list" data-bs-toggle="list" href="#ns-list-home" role="tab" aria-controls="ns-list-home">Home</a>
+      <a class="ns-list-group-item ns-list-group-item-action" id="ns-list-profile-list" data-bs-toggle="list" href="#ns-list-profile" role="tab" aria-controls="ns-list-profile">Profile</a>
+      <a class="ns-list-group-item ns-list-group-item-action" id="ns-list-messages-list" data-bs-toggle="list" href="#ns-list-messages" role="tab" aria-controls="ns-list-messages">Messages</a>
+      <a class="ns-list-group-item ns-list-group-item-action" id="ns-list-settings-list" data-bs-toggle="list" href="#ns-list-settings" role="tab" aria-controls="ns-list-settings">Settings</a>
     </div>
   </div>
-  <div class="col-8">
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">...</div>
-      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
-      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
-      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+  <div class="ns-col-8">
+    <div class="ns-tab-content" id="nav-tabContent">
+      <div class="ns-tab-pane ns-fade ns-show ns-active" id="ns-list-home" role="tabpanel" aria-labelledby="ns-list-home-list">...</div>
+      <div class="ns-tab-pane ns-fade" id="ns-list-profile" role="tabpanel" aria-labelledby="ns-list-profile-list">...</div>
+      <div class="ns-tab-pane ns-fade" id="ns-list-messages" role="tabpanel" aria-labelledby="ns-list-messages-list">...</div>
+      <div class="ns-tab-pane ns-fade" id="ns-list-settings" role="tabpanel" aria-labelledby="ns-list-settings-list">...</div>
     </div>
   </div>
 </div>
@@ -370,24 +370,24 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 
 ### Using data attributes
 
-You can activate a list group navigation without writing any JavaScript by simply specifying `data-bs-toggle="list"` or on an element. Use these data attributes on `.list-group-item`.
+You can activate a list group navigation without writing any JavaScript by simply specifying `data-bs-toggle="list"` or on an element. Use these data attributes on `.ns-list-group-item`.
 
 ```html
 <div role="tabpanel">
   <!-- List group -->
-  <div class="list-group" id="myList" role="tablist">
-    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Home</a>
-    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Profile</a>
-    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Messages</a>
-    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Settings</a>
+  <div class="ns-list-group" id="myList" role="tablist">
+    <a class="ns-list-group-item ns-list-group-item-action ns-active" data-bs-toggle="list" href="#home" role="tab">Home</a>
+    <a class="ns-list-group-item ns-list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Profile</a>
+    <a class="ns-list-group-item ns-list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Messages</a>
+    <a class="ns-list-group-item ns-list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Settings</a>
   </div>
 
   <!-- Tab panes -->
-  <div class="tab-content">
-    <div class="tab-pane active" id="home" role="tabpanel">...</div>
-    <div class="tab-pane" id="profile" role="tabpanel">...</div>
-    <div class="tab-pane" id="messages" role="tabpanel">...</div>
-    <div class="tab-pane" id="settings" role="tabpanel">...</div>
+  <div class="ns-tab-content">
+    <div class="ns-tab-pane ns-active" id="home" role="tabpanel">...</div>
+    <div class="ns-tab-pane" id="profile" role="tabpanel">...</div>
+    <div class="ns-tab-pane" id="messages" role="tabpanel">...</div>
+    <div class="ns-tab-pane" id="settings" role="tabpanel">...</div>
   </div>
 </div>
 ```
@@ -423,11 +423,11 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane must also have `.show` to make the initial content visible.
 
 ```html
-<div class="tab-content">
-  <div class="tab-pane fade show active" id="home" role="tabpanel">...</div>
-  <div class="tab-pane fade" id="profile" role="tabpanel">...</div>
-  <div class="tab-pane fade" id="messages" role="tabpanel">...</div>
-  <div class="tab-pane fade" id="settings" role="tabpanel">...</div>
+<div class="ns-tab-content">
+  <div class="ns-tab-pane ns-fade ns-show ns-active" id="home" role="tabpanel">...</div>
+  <div class="ns-tab-pane fade" id="profile" role="tabpanel">...</div>
+  <div class="ns-tab-pane fade" id="messages" role="tabpanel">...</div>
+  <div class="ns-tab-pane fade" id="settings" role="tabpanel">...</div>
 </div>
 ```
 
@@ -438,18 +438,18 @@ To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane 
 Activates a list item element and content container. Tab should have either a `data-bs-target` or an `href` targeting a container node in the DOM.
 
 ```html
-<div class="list-group" id="myList" role="tablist">
-  <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Home</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Profile</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Messages</a>
-  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Settings</a>
+<div class="ns-list-group" id="myList" role="tablist">
+  <a class="ns-list-group-item ns-list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Home</a>
+  <a class="ns-list-group-item ns-list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Profile</a>
+  <a class="ns-list-group-item ns-list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Messages</a>
+  <a class="ns-list-group-item ns-list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Settings</a>
 </div>
 
-<div class="tab-content">
-  <div class="tab-pane active" id="home" role="tabpanel">...</div>
-  <div class="tab-pane" id="profile" role="tabpanel">...</div>
-  <div class="tab-pane" id="messages" role="tabpanel">...</div>
-  <div class="tab-pane" id="settings" role="tabpanel">...</div>
+<div class="ns-tab-content">
+  <div class="ns-tab-pane ns-active" id="home" role="tabpanel">...</div>
+  <div class="ns-tab-pane" id="profile" role="tabpanel">...</div>
+  <div class="ns-tab-pane" id="messages" role="tabpanel">...</div>
+  <div class="ns-tab-pane" id="settings" role="tabpanel">...</div>
 </div>
 
 <script>

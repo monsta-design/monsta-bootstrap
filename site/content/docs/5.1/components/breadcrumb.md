@@ -12,23 +12,23 @@ Use an ordered or unordered list with linked list items to create a minimally st
 
 {{< example >}}
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Home</li>
+  <ol class="ns-breadcrumb">
+    <li class="ns-breadcrumb-item ns-active" aria-current="page">Home</li>
   </ol>
 </nav>
 
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  <ol class="ns-breadcrumb">
+    <li class="ns-breadcrumb-item"><a href="#">Home</a></li>
+    <li class="ns-breadcrumb-item ns-active" aria-current="page">Library</li>
   </ol>
 </nav>
 
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  <ol class="ns-breadcrumb">
+    <li class="ns-breadcrumb-item"><a href="#">Home</a></li>
+    <li class="ns-breadcrumb-item"><a href="#">Library</a></li>
+    <li class="ns-breadcrumb-item ns-active" aria-current="page">Data</li>
   </ol>
 </nav>
 {{< /example >}}
@@ -39,9 +39,9 @@ Dividers are automatically added in CSS through [`::before`](https://developer.m
 
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  <ol class="ns-breadcrumb">
+    <li class="ns-breadcrumb-item"><a href="#">Home</a></li>
+    <li class="ns-breadcrumb-item ns-active" aria-current="page">Library</li>
   </ol>
 </nav>
 {{< /example >}}
@@ -56,9 +56,9 @@ It's also possible to use an **embedded SVG icon**. Apply it via our CSS custom 
 
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  <ol class="ns-breadcrumb">
+    <li class="ns-breadcrumb-item"><a href="#">Home</a></li>
+    <li class="ns-breadcrumb-item ns-active" aria-current="page">Library</li>
   </ol>
 </nav>
 {{< /example >}}
@@ -71,9 +71,9 @@ You can also remove the divider setting `--bs-breadcrumb-divider: '';` (empty st
 
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+  <ol class="ns-breadcrumb">
+    <li class="ns-breadcrumb-item"><a href="#">Home</a></li>
+    <li class="ns-breadcrumb-item ns-active" aria-current="page">Library</li>
   </ol>
 </nav>
 {{< /example >}}

@@ -13,11 +13,11 @@ Bootstrap includes several predefined button styles, each serving its own semant
 {{< example >}}
 {{< buttons.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<button type="button" class="btn btn-{{ .name }}">{{ .name | title }}</button>
+<button type="button" class="ns-btn ns-btn-{{ .name }}">{{ .name | title }}</button>
 {{- end -}}
 {{< /buttons.inline >}}
 
-<button type="button" class="btn btn-link">Link</button>
+<button type="button" class="ns-btn ns-btn-link">Link</button>
 {{< /example >}}
 
 {{< callout info >}}
@@ -35,11 +35,11 @@ The `.btn` classes are designed to be used with the `<button>` element. However,
 When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
 
 {{< example >}}
-<a class="btn btn-primary" href="#" role="button">Link</a>
-<button class="btn btn-primary" type="submit">Button</button>
-<input class="btn btn-primary" type="button" value="Input">
-<input class="btn btn-primary" type="submit" value="Submit">
-<input class="btn btn-primary" type="reset" value="Reset">
+<a class="ns-btn ns-btn-primary" href="#" role="button">Link</a>
+<button class="ns-btn ns-btn-primary" type="submit">Button</button>
+<input class="ns-btn ns-btn-primary" type="button" value="Input">
+<input class="ns-btn ns-btn-primary" type="submit" value="Submit">
+<input class="ns-btn ns-btn-primary" type="reset" value="Reset">
 {{< /example >}}
 
 ## Outline buttons
@@ -49,7 +49,7 @@ In need of a button, but not the hefty background colors they bring? Replace the
 {{< example >}}
 {{< buttons.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<button type="button" class="btn btn-outline-{{ .name }}">{{ .name | title }}</button>
+<button type="button" class="ns-btn ns-btn-outline-{{ .name }}">{{ .name | title }}</button>
 {{- end -}}
 {{< /buttons.inline >}}
 {{< /example >}}
@@ -63,13 +63,13 @@ Some of the button styles use a relatively light foreground color, and should on
 Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
 
 {{< example >}}
-<button type="button" class="btn btn-primary btn-lg">Large button</button>
-<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+<button type="button" class="ns-btn ns-btn-primary btn-lg">Large button</button>
+<button type="button" class="ns-btn ns-btn-secondary btn-lg">Large button</button>
 {{< /example >}}
 
 {{< example >}}
-<button type="button" class="btn btn-primary btn-sm">Small button</button>
-<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+<button type="button" class="ns-btn ns-btn-primary btn-sm">Small button</button>
+<button type="button" class="ns-btn ns-btn-secondary btn-sm">Small button</button>
 {{< /example >}}
 
 ## Disabled state
@@ -77,8 +77,8 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
 {{< example >}}
-<button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
-<button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+<button type="button" class="ns-btn ns-btn-lg ns-btn-primary" disabled>Primary button</button>
+<button type="button" class="ns-btn ns-btn-secondary ns-btn-lg" disabled>Button</button>
 {{< /example >}}
 
 Disabled buttons using the `<a>` element behave a bit different:
@@ -89,8 +89,8 @@ Disabled buttons using the `<a>` element behave a bit different:
 - Disabled buttons using `<a>` *should not* include the `href` attribute.
 
 {{< example >}}
-<a class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
-<a class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a>
+<a class="ns-btn ns-btn-primary ns-btn-lg ns-disabled" role="button" aria-disabled="true">Primary link</a>
+<a class="ns-btn ns-btn-secondary ns-btn-lg ns-disabled" role="button" aria-disabled="true">Link</a>
 {{< /example >}}
 
 ### Link functionality caveat
@@ -98,8 +98,8 @@ Disabled buttons using the `<a>` element behave a bit different:
 To cover cases where you have to keep the `href` attribute on a disabled link, the `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, in addition to `aria-disabled="true"`, also include a `tabindex="-1"` attribute on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
 
 {{< example >}}
-<a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
-<a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+<a href="#" class="ns-btn ns-btn-primary ns-btn-lg ns-disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+<a href="#" class="ns-btn ns-btn-secondary ns-btn-lg ns-disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
 {{< /example >}}
 
 ## Block buttons
@@ -107,36 +107,36 @@ To cover cases where you have to keep the `href` attribute on a disabled link, t
 Create responsive stacks of full-width, "block buttons" like those in Bootstrap 4 with a mix of our display and gap utilities. By using utilities instead of button specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
 {{< example >}}
-<div class="d-grid gap-2">
-  <button class="btn btn-primary" type="button">Button</button>
-  <button class="btn btn-primary" type="button">Button</button>
+<div class="ns-d-grid gap-2">
+  <button class="ns-btn ns-btn-primary" type="button">Button</button>
+  <button class="ns-btn ns-btn-primary" type="button">Button</button>
 </div>
 {{< /example >}}
 
 Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-2` utility. Resize your browser to see them change.
 
 {{< example >}}
-<div class="d-grid gap-2 d-md-block">
-  <button class="btn btn-primary" type="button">Button</button>
-  <button class="btn btn-primary" type="button">Button</button>
+<div class="ns-d-grid ns-gap-2 ns-d-md-block">
+  <button class="ns-btn ns-btn-primary" type="button">Button</button>
+  <button class="ns-btn ns-btn-primary" type="button">Button</button>
 </div>
 {{< /example >}}
 
 You can adjust the width of your block buttons with grid column width classes. For example, for a half-width "block button", use `.col-6`. Center it horizontally with `.mx-auto`, too.
 
 {{< example >}}
-<div class="d-grid gap-2 col-6 mx-auto">
-  <button class="btn btn-primary" type="button">Button</button>
-  <button class="btn btn-primary" type="button">Button</button>
+<div class="ns-d-grid gap-2 col-6 mx-auto">
+  <button class="ns-btn ns-btn-primary" type="button">Button</button>
+  <button class="ns-btn ns-btn-primary" type="button">Button</button>
 </div>
 {{< /example >}}
 
 Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous responsive example and added some flex utilities and a margin utility on the button to right align the buttons when they're no longer stacked.
 
 {{< example >}}
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary me-md-2" type="button">Button</button>
-  <button class="btn btn-primary" type="button">Button</button>
+<div class="ns-d-grid ns-gap-2 ns-d-md-flex justify-content-md-end">
+  <button class="ns-btn ns-btn-primary ns-me-md-2" type="button">Button</button>
+  <button class="ns-btn ns-btn-primary" type="button">Button</button>
 </div>
 {{< /example >}}
 
@@ -153,15 +153,15 @@ Visually, these toggle buttons are identical to the [checkbox toggle buttons]({{
 Add `data-bs-toggle="button"` to toggle a button's `active` state. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to ensure that it is conveyed appropriately to assistive technologies.
 
 {{< example >}}
-<button type="button" class="btn btn-primary" data-bs-toggle="button" autocomplete="off">Toggle button</button>
-<button type="button" class="btn btn-primary active" data-bs-toggle="button" autocomplete="off" aria-pressed="true">Active toggle button</button>
-<button type="button" class="btn btn-primary" disabled data-bs-toggle="button" autocomplete="off">Disabled toggle button</button>
+<button type="button" class="ns-btn ns-btn-primary" data-bs-toggle="button" autocomplete="off">Toggle button</button>
+<button type="button" class="ns-btn ns-btn-primary active" data-bs-toggle="button" autocomplete="off" aria-pressed="true">Active toggle button</button>
+<button type="button" class="ns-btn ns-btn-primary" disabled data-bs-toggle="button" autocomplete="off">Disabled toggle button</button>
 {{< /example >}}
 
 {{< example >}}
-<a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Toggle link</a>
-<a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle link</a>
-<a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>
+<a href="#" class="ns-btn ns-btn-primary" role="button" data-bs-toggle="button">Toggle link</a>
+<a href="#" class="ns-btn ns-btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle link</a>
+<a class="ns-btn ns-btn-primary ns-disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>
 {{< /example >}}
 
 ### Methods
@@ -173,7 +173,7 @@ var button = document.getElementById('myButton')
 var bsButton = new bootstrap.Button(button)
 ```
 
-<table class="table">
+<table class="ns-table">
   <thead>
     <tr>
       <th>Method</th>
@@ -220,7 +220,7 @@ var bsButton = new bootstrap.Button(button)
 For example, to toggle all buttons
 
 ```js
-var buttons = document.querySelectorAll('.btn')
+var buttons = document.querySelectorAll('.ns-btn')
 buttons.forEach(function (button) {
   var button = new bootstrap.Button(button)
   button.toggle()

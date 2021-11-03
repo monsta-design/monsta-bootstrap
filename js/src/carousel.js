@@ -19,6 +19,7 @@ import EventHandler from './dom/event-handler'
 import Manipulator from './dom/manipulator'
 import SelectorEngine from './dom/selector-engine'
 import BaseComponent from './base-component'
+import {classPrefix} from "./monsta";
 
 /**
  * ------------------------------------------------------------------------
@@ -78,21 +79,21 @@ const EVENT_DRAG_START = `dragstart${EVENT_KEY}`
 const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
-const CLASS_NAME_CAROUSEL = 'carousel'
-const CLASS_NAME_ACTIVE = 'active'
-const CLASS_NAME_SLIDE = 'slide'
-const CLASS_NAME_END = 'carousel-item-end'
-const CLASS_NAME_START = 'carousel-item-start'
-const CLASS_NAME_NEXT = 'carousel-item-next'
+const CLASS_NAME_CAROUSEL = classPrefix('carousel')
+const CLASS_NAME_ACTIVE = classPrefix('active')
+const CLASS_NAME_SLIDE = classPrefix('slide')
+const CLASS_NAME_END = classPrefix('carousel-item-end')
+const CLASS_NAME_START = classPrefix('carousel-item-start')
+const CLASS_NAME_NEXT = classPrefix('carousel-item-next')
 const CLASS_NAME_PREV = 'carousel-item-prev'
-const CLASS_NAME_POINTER_EVENT = 'pointer-event'
+const CLASS_NAME_POINTER_EVENT = classPrefix('pointer-event')
 
-const SELECTOR_ACTIVE = '.active'
-const SELECTOR_ACTIVE_ITEM = '.active.carousel-item'
-const SELECTOR_ITEM = '.carousel-item'
-const SELECTOR_ITEM_IMG = '.carousel-item img'
-const SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev'
-const SELECTOR_INDICATORS = '.carousel-indicators'
+const SELECTOR_ACTIVE = `.${classPrefix('active')}`
+const SELECTOR_ACTIVE_ITEM = `.${classPrefix('active')}.${classPrefix('carousel-item')}`
+const SELECTOR_ITEM = `.${classPrefix('carousel-item')}`
+const SELECTOR_ITEM_IMG = `.${classPrefix('carousel-item')} img`
+const SELECTOR_NEXT_PREV = `.${classPrefix('carousel-item-next')}, .${classPrefix('carousel-item-prev')}`
+const SELECTOR_INDICATORS = `.${classPrefix('carousel-indicators')}`
 const SELECTOR_INDICATOR = '[data-bs-target]'
 const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]'
 const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]'
@@ -506,7 +507,7 @@ class Carousel extends BaseComponent {
   static carouselInterface(element, config) {
     const data = Carousel.getOrCreateInstance(element, config)
 
-    let { _config } = data
+    let {_config} = data
     if (typeof config === 'object') {
       _config = {
         ..._config,

@@ -1078,6 +1078,10 @@
 
   };
 
+  const classPrefix = name => {
+    return "ns-" + name;
+  };
+
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): carousel.js
@@ -1136,20 +1140,20 @@
   const EVENT_DRAG_START = `dragstart${EVENT_KEY$a}`;
   const EVENT_LOAD_DATA_API$2 = `load${EVENT_KEY$a}${DATA_API_KEY$6}`;
   const EVENT_CLICK_DATA_API$5 = `click${EVENT_KEY$a}${DATA_API_KEY$6}`;
-  const CLASS_NAME_CAROUSEL = 'carousel';
-  const CLASS_NAME_ACTIVE$2 = 'active';
-  const CLASS_NAME_SLIDE = 'slide';
-  const CLASS_NAME_END = 'carousel-item-end';
-  const CLASS_NAME_START = 'carousel-item-start';
-  const CLASS_NAME_NEXT = 'carousel-item-next';
+  const CLASS_NAME_CAROUSEL = classPrefix('carousel');
+  const CLASS_NAME_ACTIVE$2 = classPrefix('active');
+  const CLASS_NAME_SLIDE = classPrefix('slide');
+  const CLASS_NAME_END = classPrefix('carousel-item-end');
+  const CLASS_NAME_START = classPrefix('carousel-item-start');
+  const CLASS_NAME_NEXT = classPrefix('carousel-item-next');
   const CLASS_NAME_PREV = 'carousel-item-prev';
-  const CLASS_NAME_POINTER_EVENT = 'pointer-event';
-  const SELECTOR_ACTIVE$1 = '.active';
-  const SELECTOR_ACTIVE_ITEM = '.active.carousel-item';
-  const SELECTOR_ITEM = '.carousel-item';
-  const SELECTOR_ITEM_IMG = '.carousel-item img';
-  const SELECTOR_NEXT_PREV = '.carousel-item-next, .carousel-item-prev';
-  const SELECTOR_INDICATORS = '.carousel-indicators';
+  const CLASS_NAME_POINTER_EVENT = classPrefix('pointer-event');
+  const SELECTOR_ACTIVE$1 = `.${classPrefix('active')}`;
+  const SELECTOR_ACTIVE_ITEM = `.${classPrefix('active')}.${classPrefix('carousel-item')}`;
+  const SELECTOR_ITEM = `.${classPrefix('carousel-item')}`;
+  const SELECTOR_ITEM_IMG = `.${classPrefix('carousel-item')} img`;
+  const SELECTOR_NEXT_PREV = `.${classPrefix('carousel-item-next')}, .${classPrefix('carousel-item-prev')}`;
+  const SELECTOR_INDICATORS = `.${classPrefix('carousel-indicators')}`;
   const SELECTOR_INDICATOR = '[data-bs-target]';
   const SELECTOR_DATA_SLIDE = '[data-bs-slide], [data-bs-slide-to]';
   const SELECTOR_DATA_RIDE = '[data-bs-ride="carousel"]';
@@ -1626,10 +1630,6 @@
    */
 
   defineJQueryPlugin(Carousel);
-
-  const classPrefix = name => {
-    return "ns-" + name;
-  };
 
   /**
    * --------------------------------------------------------------------------

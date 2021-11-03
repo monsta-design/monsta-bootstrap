@@ -13,7 +13,7 @@ Alerts are available for any length of text, as well as an optional close button
 {{< example >}}
 {{< alerts.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<div class="alert alert-{{ .name }}" role="alert">
+<div class="ns-alert ns-alert-{{ .name }}" role="alert">
   A simple {{ .name }} alert—check it out!
 </div>{{- end -}}
 {{< /alerts.inline >}}
@@ -29,7 +29,7 @@ Click the button below to show an alert (hidden with inline styles to start), th
 
 {{< example >}}
 <div id="liveAlertPlaceholder"></div>
-<button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+<button type="button" class="ns-btn ns-btn-primary" id="liveAlertBtn">Show live alert</button>
 {{< /example >}}
 
 We use the following JavaScript to trigger our live alert demo:
@@ -40,7 +40,7 @@ var alertTrigger = document.getElementById('liveAlertBtn')
 
 function alert(message, type) {
   var wrapper = document.createElement('div')
-  wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+  wrapper.innerHTML = '<div class="ns-alert ns-alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="ns-btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
 
   alertPlaceholder.append(wrapper)
 }
@@ -59,8 +59,8 @@ Use the `.alert-link` utility class to quickly provide matching colored links wi
 {{< example >}}
 {{< alerts.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<div class="alert alert-{{ .name }}" role="alert">
-  A simple {{ .name }} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+<div class="ns-alert ns-alert-{{ .name }}" role="alert">
+  A simple {{ .name }} alert with <a href="#" class="ns-alert-link">an example link</a>. Give it a click if you like.
 </div>{{ end -}}
 {{< /alerts.inline >}}
 {{< /example >}}
@@ -70,11 +70,11 @@ Use the `.alert-link` utility class to quickly provide matching colored links wi
 Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
 
 {{< example >}}
-<div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">Well done!</h4>
+<div class="ns-alert ns-alert-success" role="alert">
+  <h4 class="ns-alert-heading">Well done!</h4>
   <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
   <hr>
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  <p class="ns-mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
 </div>
 {{< /example >}}
 
@@ -83,8 +83,8 @@ Alerts can also contain additional HTML elements like headings, paragraphs and d
 Similarly, you can use [flexbox utilities]({{< docsref "/utilities/flex" >}}) and [Bootstrap Icons]({{< param icons >}}) to create alerts with icons. Depending on your icons and content, you may want to add more utilities or custom styles.
 
 {{< example >}}
-<div class="alert alert-primary d-flex align-items-center" role="alert">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+<div class="ns-alert ns-alert-primary d-flex align-items-center" role="alert">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="ns-bi ns-bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
     <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
   </svg>
   <div>
@@ -108,26 +108,26 @@ Need more than one icon for your alerts? Consider using more Bootstrap Icons and
   </symbol>
 </svg>
 
-<div class="alert alert-primary d-flex align-items-center" role="alert">
-  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+<div class="ns-alert ns-alert-primary ns-d-flex ns-align-items-center" role="alert">
+  <svg class="ns-bi ns-flex-shrink-0 ns-me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
   <div>
     An example alert with an icon
   </div>
 </div>
-<div class="alert alert-success d-flex align-items-center" role="alert">
-  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+<div class="ns-alert ns-alert-success d-flex align-items-center" role="alert">
+  <svg class="ns-bi ns-flex-shrink-0 ns-me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
   <div>
     An example success alert with an icon
   </div>
 </div>
-<div class="alert alert-warning d-flex align-items-center" role="alert">
-  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+<div class="ns-alert ns-alert-warning ns-d-flex ns-align-items-center" role="alert">
+  <svg class="ns-bi ns-flex-shrink-0 ns-me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
   <div>
     An example warning alert with an icon
   </div>
 </div>
-<div class="alert alert-danger d-flex align-items-center" role="alert">
-  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+<div class="ns-alert ns-alert-danger ns-d-flex ns-align-items-center" role="alert">
+  <svg class="ns-bi ns-flex-shrink-0 ns-me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
   <div>
     An example danger alert with an icon
   </div>
@@ -146,9 +146,9 @@ Using the alert JavaScript plugin, it's possible to dismiss any alert inline. He
 You can see this in action with a live demo:
 
 {{< example >}}
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<div class="ns-alert ns-alert-warning ns-alert-dismissible ns-fade ns-show" role="alert">
   <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <button type="button" class="ns-btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 {{< /example >}}
 
@@ -201,7 +201,7 @@ See the [triggers](#triggers) section for more details.
 
 ### Methods
 
-<table class="table">
+<table class="ns-table">
   <thead>
     <tr>
       <th>Method</th>
@@ -246,7 +246,7 @@ See the [triggers](#triggers) section for more details.
 </table>
 
 ```js
-var alertNode = document.querySelector('.alert')
+var alertNode = document.querySelector('.ns-alert')
 var alert = bootstrap.Alert.getInstance(alertNode)
 alert.close()
 ```
@@ -255,7 +255,7 @@ alert.close()
 
 Bootstrap's alert plugin exposes a few events for hooking into alert functionality.
 
-<table class="table">
+<table class="ns-table">
   <thead>
     <tr>
       <th>Event</th>

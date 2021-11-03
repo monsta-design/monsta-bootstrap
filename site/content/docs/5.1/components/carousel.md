@@ -29,16 +29,16 @@ Carousels don't automatically normalize slide dimensions. As such, you may need 
 Here's a carousel with slides only. Note the presence of the `.d-block` and `.w-100` on carousel images to prevent browser default image alignment.
 
 {{< example >}}
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+<div id="carouselExampleSlidesOnly" class="ns-carousel ns-slide" data-bs-ride="carousel">
+  <div class="ns-carousel-inner">
+    <div class="ns-carousel-item ns-active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#555" background="#777" text="First slide" >}}
     </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+    <div class="ns-carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#444" background="#666" text="Second slide" >}}
     </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+    <div class="ns-carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#333" background="#555" text="Third slide" >}}
     </div>
   </div>
 </div>
@@ -49,25 +49,25 @@ Here's a carousel with slides only. Note the presence of the `.d-block` and `.w-
 Adding in the previous and next controls. We recommend using `<button>` elements, but you can also use `<a>` elements with `role="button"`.
 
 {{< example >}}
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+<div id="carouselExampleControls" class="ns-carousel ns-slide" data-bs-ride="carousel">
+  <div class="ns-carousel-inner">
+    <div class="ns-carousel-item ns-active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#555" background="#777" text="First slide" >}}
     </div>
     <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#444" background="#666" text="Second slide" >}}
     </div>
     <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#333" background="#555" text="Third slide" >}}
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+  <button class="ns-carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="ns-carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="ns-visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+  <button class="ns-carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="ns-carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="ns-visually-hidden">Next</span>
   </button>
 </div>
 {{< /example >}}
@@ -77,30 +77,30 @@ Adding in the previous and next controls. We recommend using `<button>` elements
 You can also add the indicators to the carousel, alongside the controls, too.
 
 {{< example >}}
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+<div id="carouselExampleIndicators" class="ns-carousel ns-slide" data-bs-ride="carousel">
+  <div class="ns-carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="ns-active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+  <div class="ns-carousel-inner">
+    <div class="ns-carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block w-100" color="#555" background="#777" text="First slide" >}}
     </div>
     <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block w-100" color="#444" background="#666" text="Second slide" >}}
     </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+    <div class="ns-carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block w-100" color="#333" background="#555" text="Third slide" >}}
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+  <button class="ns-carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="ns-carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="ns-visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+  <button class="ns-carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="ns-carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="ns-visually-hidden">Next</span>
   </button>
 </div>
 {{< /example >}}
@@ -110,42 +110,42 @@ You can also add the indicators to the carousel, alongside the controls, too.
 Add captions to your slides easily with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{< docsref "/utilities/display" >}}). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.
 
 {{< example >}}
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+<div id="carouselExampleCaptions" class="ns-carousel ns-slide" data-bs-ride="carousel">
+  <div class="ns-carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="ns-active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
-      <div class="carousel-caption d-none d-md-block">
+  <div class="ns-carousel-inner">
+    <div class="ns-carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#555" background="#777" text="First slide" >}}
+      <div class="ns-carousel-caption ns-d-none ns-d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+    <div class="ns-carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block w-100" color="#444" background="#666" text="Second slide" >}}
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
-      <div class="carousel-caption d-none d-md-block">
+    <div class="ns-carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block w-100" color="#333" background="#555" text="Third slide" >}}
+      <div class="ns-carousel-caption ns-d-none ns-d-md-block">
         <h5>Third slide label</h5>
         <p>Some representative placeholder content for the third slide.</p>
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+  <button class="ns-carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="ns-carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="ns-visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+  <button class="ns-carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="ns-carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="ns-visually-hidden">Next</span>
   </button>
 </div>
 {{< /example >}}
@@ -155,25 +155,25 @@ Add captions to your slides easily with the `.carousel-caption` element within a
 Add `.carousel-fade` to your carousel to animate slides with a fade transition instead of a slide.
 
 {{< example >}}
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+<div id="carouselExampleFade" class="ns-carousel ns-slide ns-carousel-fade" data-bs-ride="carousel">
+  <div class="ns-carousel-inner">
+    <div class="ns-carousel-item ns-active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#555" background="#777" text="First slide" >}}
     </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+    <div class="ns-carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#444" background="#666" text="Second slide" >}}
     </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+    <div class="ns-carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#333" background="#555" text="Third slide" >}}
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+  <button class="ns-carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="ns-carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="ns-visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+  <button class="ns-carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="ns-carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="ns-visually-hidden">Next</span>
   </button>
 </div>
 {{< /example >}}
@@ -183,25 +183,25 @@ Add `.carousel-fade` to your carousel to animate slides with a fade transition i
 Add `data-bs-interval=""` to a `.carousel-item` to change the amount of time to delay between automatically cycling to the next item.
 
 {{< example >}}
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+<div id="carouselExampleInterval" class="ns-carousel ns-slide" data-bs-ride="carousel">
+  <div class="ns-carousel-inner">
+    <div class="ns-carousel-item ns-active" data-bs-interval="10000">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#555" background="#777" text="First slide" >}}
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+    <div class="ns-carousel-item" data-bs-interval="2000">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#444" background="#666" text="Second slide" >}}
     </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+    <div class="ns-carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#333" background="#555" text="Third slide" >}}
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+  <button class="ns-carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="ns-carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="ns-visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+  <button class="ns-carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="ns-carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="ns-visually-hidden">Next</span>
   </button>
 </div>
 {{< /example >}}
@@ -211,25 +211,25 @@ Add `data-bs-interval=""` to a `.carousel-item` to change the amount of time to 
 Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled using the `data-bs-touch` attribute. The example below also does not include the `data-bs-ride` attribute and has `data-bs-interval="false"` so it doesn't autoplay.
 
 {{< example >}}
-<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#555" background="#777" text="First slide" >}}
+<div id="carouselExampleControlsNoTouching" class="ns-carousel ns-slide" data-bs-touch="false" data-bs-interval="false">
+  <div class="ns-carousel-inner">
+    <div class="ns-carousel-item active">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#555" background="#777" text="First slide" >}}
     </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#444" background="#666" text="Second slide" >}}
+    <div class="ns-carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#444" background="#666" text="Second slide" >}}
     </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#333" background="#555" text="Third slide" >}}
+    <div class="ns-carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#333" background="#555" text="Third slide" >}}
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+  <button class="ns-carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+    <span class="ns-carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="ns-visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+  <button class="ns-carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+    <span class="ns-carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="ns-visually-hidden">Next</span>
   </button>
 </div>
 {{< /example >}}
@@ -239,42 +239,42 @@ Carousels support swiping left/right on touchscreen devices to move between slid
 Add `.carousel-dark` to the `.carousel` for darker controls, indicators, and captions. Controls have been inverted from their default white fill with the `filter` CSS property. Captions and controls have additional Sass variables that customize the `color` and `background-color`.
 
 {{< example >}}
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+<div id="carouselExampleDark" class="ns-carousel ns-carousel-dark ns-slide" data-bs-ride="carousel">
+  <div class="ns-carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="ns-active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#aaa" background="#f5f5f5" text="First slide" >}}
-      <div class="carousel-caption d-none d-md-block">
+  <div class="ns-carousel-inner">
+    <div class="ns-carousel-item ns-active" data-bs-interval="10000">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#aaa" background="#f5f5f5" text="First slide" >}}
+      <div class="ns-carousel-caption ns-d-none ns-d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#bbb" background="#eee" text="Second slide" >}}
-      <div class="carousel-caption d-none d-md-block">
+    <div class="ns-carousel-item" data-bs-interval="2000">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#bbb" background="#eee" text="Second slide" >}}
+      <div class="ns-carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
-    <div class="carousel-item">
-      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg d-block w-100" color="#999" background="#e5e5e5" text="Third slide" >}}
-      <div class="carousel-caption d-none d-md-block">
+    <div class="ns-carousel-item">
+      {{< placeholder width="800" height="400" class="bd-placeholder-img-lg ns-d-block ns-w-100" color="#999" background="#e5e5e5" text="Third slide" >}}
+      <div class="ns-carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
         <p>Some representative placeholder content for the third slide.</p>
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+  <button class="ns-carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="ns-carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="ns-visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+  <button class="ns-carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="ns-carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="ns-visually-hidden">Next</span>
   </button>
 </div>
 {{< /example >}}
@@ -310,7 +310,7 @@ var carousel = new bootstrap.Carousel(myCarousel)
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-interval=""`.
 
-<table class="table">
+<table class="ns-table">
   <thead>
     <tr>
       <th style="width: 100px;">Name</th>
@@ -376,7 +376,7 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 })
 ```
 
-<table class="table">
+<table class="ns-table">
   <thead>
     <tr>
       <th>Method</th>
@@ -441,9 +441,9 @@ Bootstrap's carousel class exposes two events for hooking into carousel function
 - `from`: The index of the current item
 - `to`: The index of the next item
 
-All carousel events are fired at the carousel itself (i.e. at the `<div class="carousel">`).
+All carousel events are fired at the carousel itself (i.e. at the `<div class="ns-carousel">`).
 
-<table class="table">
+<table class="ns-table">
   <thead>
     <tr>
       <th style="width: 150px;">Event type</th>
