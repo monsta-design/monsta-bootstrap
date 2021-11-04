@@ -23,21 +23,21 @@
   border-radius: .75rem;
 }
 
-.icon-link {
+.bs-icon-link {
   display: inline-flex;
   align-items: center;
 }
-.icon-link > .bi {
+.bs-icon-link > .bi {
   margin-top: .125rem;
   margin-left: .125rem;
   transition: transform .25s ease-in-out;
   fill: currentColor;
 }
-.icon-link:hover > .bi {
+.bs-icon-link:hover > .bi {
   transform: translate(.25rem);
 }
 
-.icon-square {
+.bs-icon-square {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -47,14 +47,14 @@
   border-radius: .75rem;
 }
 
-.rounded-4 { border-radius: .5rem; }
-.rounded-5 { border-radius: 1rem; }
+.bs-rounded-4 { border-radius: .5rem; }
+.bs-rounded-5 { border-radius: 1rem; }
 
-.text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
-.text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
-.text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+.bs-text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+.bs-text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+.bs-text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
 
-.card-cover {
+.bs-card-cover {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

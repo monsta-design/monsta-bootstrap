@@ -15,7 +15,7 @@ Download ready-to-use compiled code for **Bootstrap v{{< param current_version >
 
 This doesn't include documentation, source files, or any optional JavaScript dependencies like Popper.
 
-<a href="{{< param "download.dist" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">Download</a>
+<a href="{{< param "download.dist" >}}" class="bs-btn bs-btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">Download</a>
 
 ## Source files
 
@@ -26,13 +26,13 @@ Compile Bootstrap with your own asset pipeline by downloading our source Sass, J
 
 Should you require our full set of [build tools]({{< docsref "/getting-started/contribute#tooling-setup" >}}), they are included for developing Bootstrap and its docs, but they're likely unsuitable for your own purposes.
 
-<a href="{{< param "download.source" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download source</a>
+<a href="{{< param "download.source" >}}" class="bs-btn bs-btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download source</a>
 
 ## Examples
 
 If you want to download and examine our [examples]({{< docsref "/examples" >}}), you can grab the already built examples:
 
-<a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Examples');">Download Examples</a>
+<a href="{{< param "download.dist_examples" >}}" class="bs-btn bs-btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Examples');">Download Examples</a>
 
 ## CDN via jsDelivr
 
@@ -79,7 +79,7 @@ Bootstrap's `package.json` contains some additional metadata under the following
 Install Bootstrap in your Node.js powered apps with [the yarn package](https://yarnpkg.com/en/package/bootstrap):
 
 ```sh
-yarn add bootstrap
+yarn add monsta-bootstrap
 ```
 
 ### RubyGems
@@ -93,7 +93,7 @@ gem 'bootstrap', '~> {{< param current_ruby_version >}}'
 Alternatively, if you're not using Bundler, you can install the gem by running this command:
 
 ```sh
-gem install bootstrap -v {{< param current_ruby_version >}}
+gem install monsta-bootstrap -v {{< param current_ruby_version >}}
 ```
 
 [See the gem's README](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md) for further details.

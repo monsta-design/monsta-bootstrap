@@ -1,4 +1,4 @@
-.container {
+.bs-container {
   max-width: 960px;
 }
 
@@ -59,11 +59,11 @@
  * Extra utilities
  */
 
-.flex-equal > * {
+.bs-flex-equal > * {
   flex: 1;
 }
 @media (min-width: 768px) {
-  .flex-md-equal > * {
+  .bs-flex-md-equal > * {
     flex: 1;
   }
 }

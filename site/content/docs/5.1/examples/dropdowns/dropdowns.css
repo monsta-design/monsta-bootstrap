@@ -11,42 +11,42 @@
   fill: currentColor;
 }
 
-.dropdown-menu {
+.bs-dropdown-menu {
   position: static;
   display: block;
   width: auto;
   margin: 4rem auto;
 }
 
-.dropdown-menu-macos {
+.bs-dropdown-menu-macos {
   display: grid;
   gap: .25rem;
   padding: .5rem;
   border-radius: .5rem;
 }
-.dropdown-menu-macos .dropdown-item {
+.bs-dropdown-menu-macos .bs-dropdown-item {
   border-radius: .25rem;
 }
 
-.dropdown-item-danger {
+.bs-dropdown-item-danger {
   color: var(--bs-red);
 }
-.dropdown-item-danger:hover,
-.dropdown-item-danger:focus {
+.bs-dropdown-item-danger:hover,
+.bs-dropdown-item-danger:focus {
   color: #fff;
   background-color: var(--bs-red);
 }
-.dropdown-item-danger.active {
+.bs-dropdown-item-danger.active {
   background-color: var(--bs-red);
 }
 
-.btn-hover-light {
+.bs-btn-hover-light {
   text-align: left;
   background-color: var(--bs-white);
   border-radius: .25rem;
 }
-.btn-hover-light:hover,
-.btn-hover-light:focus {
+.bs-btn-hover-light:hover,
+.bs-btn-hover-light:focus {
   color: var(--bs-blue);
   background-color: var(--bs-light);
 }
@@ -83,7 +83,7 @@
   opacity: .5;
 }
 
-.form-control-dark {
+.bs-form-control-dark {
   background-color: rgba(255, 255, 255, .05);
   border-color: rgba(255, 255, 255, .15);
 }

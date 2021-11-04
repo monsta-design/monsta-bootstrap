@@ -4,32 +4,32 @@ title: Album example
 ---
 
 <header>
-  <div class="collapse bg-dark" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">About</h4>
-          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+  <div class="bs-collapse bs-bg-dark" id="navbarHeader">
+    <div class="bs-container">
+      <div class="bs-row">
+        <div class="bs-col-sm-8 bs-col-md-7 bs-py-4">
+          <h4 class="bs-text-white">About</h4>
+          <p class="bs-text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
         </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-white">Follow on Twitter</a></li>
-            <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="#" class="text-white">Email me</a></li>
+        <div class="bs-col-sm-4 bs-offset-md-1 bs-py-4">
+          <h4 class="bs-text-white">Contact</h4>
+          <ul class="bs-list-unstyled">
+            <li><a href="#" class="bs-text-white">Follow on Twitter</a></li>
+            <li><a href="#" class="bs-text-white">Like on Facebook</a></li>
+            <li><a href="#" class="bs-text-white">Email me</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
-    <div class="container">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+  <div class="bs-navbar bs-navbar-dark bs-bg-dark bs-shadow-sm">
+    <div class="bs-container">
+      <a href="#" class="bs-navbar-brand bs-d-flex bs-align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="bs-me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
         <strong>Album</strong>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="bs-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="bs-navbar-toggler-icon"></span>
       </button>
     </div>
   </div>
@@ -37,156 +37,158 @@ title: Album example
 
 <main>
 
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Album example</h1>
-        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+  <section class="bs-py-5 bs-text-center bs-container">
+    <div class="bs-row bs-py-lg-5">
+      <div class="bs-col-lg-6 bs-col-md-8 bs-mx-auto">
+        <h1 class="bs-fw-light">Album example</h1>
+        <p class="bs-lead bs-text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
         <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          <a href="#" class="bs-btn bs-btn-primary bs-my-2">Main call to action</a>
+          <a href="#" class="bs-btn bs-btn-secondary bs-my-2">Secondary action</a>
         </p>
       </div>
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
-    <div class="container">
+  <div class="bs-album bs-py-5 bs-bg-light">
+    <div class="bs-container">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" >}}
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
+      <div class="bs-row bs-row-cols-1 bs-row-cols-sm-2 bs-row-cols-md-3 bs-g-3">
+        <div class="bs-col">
+          <div class="bs-card bs-shadow-sm">
+            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="bs-card-img-top" text="Thumbnail" >}}
+            <div class="bs-card-body">
+              <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="bs-d-flex bs-justify-content-between bs-align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <button type="button" class="bs-btn bs-btn-sm bs-btn-outline-secondary">View</button>
+                  <button type="button" class="bs-btn bs-btn-sm bs-btn-outline-secondary">Edit</button>
                 </div>
-                <small class="text-muted">9 mins</small>
+                <small class="bs-text-muted">9 mins</small>
               </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
+        <div class="bs-col">
+          <div class="bs-card bs-shadow-sm">
             {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" >}}
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
+            <div class="bs-card-body">
+              <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="bs-d-flex bs-justify-content-between bs-align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <button type="button" class="bs-btn bs-btn-sm bs-btn-outline-secondary">View</button>
+                  <button type="button" class="bs-btn bs-btn-sm bs-btn-outline-secondary">Edit</button>
                 </div>
-                <small class="text-muted">9 mins</small>
+                <small class="bs-text-muted">9 mins</small>
               </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" >}}
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+        <div class="bs-col">
+          <div class="bs-card bs-shadow-sm">
+            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="bs-card-img-top" text="Thumbnail" >}}
+            <div class="bs-card-body">
+              <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="bs-d-flex bs-justify-content-between bs-align-items-center">
+                <div class="bs-btn-group">
+                  <button type="button" class="bs-btn bs-btn-sm bs-btn-outline-secondary">View</button>
+                  <button type="button" class="bs-btn bs-btn-sm bs-btn-outline-secondary">Edit</button>
                 </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" >}}
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" >}}
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" >}}
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
+                <small class="bs-text-muted">9 mins</small>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col">
-          <div class="card shadow-sm">
-            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" >}}
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+        <div class="bs-col">
+          <div class="bs-card bs-shadow-sm">
+            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="bs-card-img-top" text="Thumbnail" >}}
+            <div class="bs-card-body">
+              <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="bs-d-flex bs-justify-content-between bs-align-items-center">
+                <div class="bs-btn-group">
+                  <button type="button" class="bs-btn bs-btn-sm bs-btn-outline-secondary">View</button>
+                  <button type="button" class="bs-btn bs-btn-sm bs-btn-outline-secondary">Edit</button>
                 </div>
-                <small class="text-muted">9 mins</small>
+                <small class="bs-text-muted">9 mins</small>
               </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" >}}
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+        <div class="bs-col">
+          <div class="bs-card bs-shadow-sm">
+            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="bs-card-img-top" text="Thumbnail" >}}
+            <div class="bs-card-body">
+              <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="bs-d-flex bs-justify-content-between bs-align-items-center">
+                <div class="bs-btn-group">
+                  <button type="button" class="bs-btn bs-btn-sm bs-btn-outline-secondary">View</button>
+                  <button type="button" class="bs-btn bs-btn-sm bs-btn-outline-secondary">Edit</button>
                 </div>
-                <small class="text-muted">9 mins</small>
+                <small class="bs-text-muted">9 mins</small>
               </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="card-img-top" text="Thumbnail" >}}
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+        <div class="bs-col">
+          <div class="bs-card bs-shadow-sm">
+            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="bs-card-img-top" text="Thumbnail" >}}
+            <div class="bs-card-body">
+              <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="bs-d-flex bs-justify-content-between bs-align-items-center">
+                <div class="bs-btn-group">
+                  <button type="button" class="bs-btn bs-btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="bs-btn bs-btn-sm btn-outline-secondary">Edit</button>
                 </div>
-                <small class="text-muted">9 mins</small>
+                <small class="bs-text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bs-col">
+          <div class="bs-card bs-shadow-sm">
+            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="bs-card-img-top" text="Thumbnail" >}}
+            <div class="bs-card-body">
+              <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="bs-d-flex bs-justify-content-between bs-align-items-center">
+                <div class="bs-btn-group">
+                  <button type="button" class="bs-btn bs-btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="bs-btn bs-btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="bs-text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bs-col">
+          <div class="bs-card bs-shadow-sm">
+            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="bs-card-img-top" text="Thumbnail" >}}
+            <div class="bs-card-body">
+              <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="bs-d-flex bs-justify-content-between bs-align-items-center">
+                <div class="bs-btn-group">
+                  <button type="button" class="bs-btn bs-btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="bs-btn bs-btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="bs-text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bs-col">
+          <div class="bs-card bs-shadow-sm">
+            {{< placeholder width="100%" height="225" background="#55595c" color="#eceeef" class="bs-card-img-top" text="Thumbnail" >}}
+            <div class="bs-card-body">
+              <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="bs-d-flex bs-justify-content-between bs-align-items-center">
+                <div class="bs-btn-group">
+                  <button type="button" class="bs-btn bs-btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="bs-btn bs-btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="bs-text-muted">9 mins</small>
               </div>
             </div>
           </div>
@@ -197,12 +199,12 @@ title: Album example
 
 </main>
 
-<footer class="text-muted py-5">
-  <div class="container">
-    <p class="float-end mb-1">
+<footer class="bs-text-muted bs-py-5">
+  <div class="bs-container">
+    <p class="bs-float-end bs-mb-1">
       <a href="#">Back to top</a>
     </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="{{< docsref "/getting-started/introduction" >}}">getting started guide</a>.</p>
+    <p class="bs-mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="bs-mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="{{< docsref "/getting-started/introduction" >}}">getting started guide</a>.</p>
   </div>
 </footer>

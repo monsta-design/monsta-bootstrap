@@ -18,11 +18,11 @@ body {
   margin: auto;
 }
 
-.form-signin .checkbox {
+.form-signin .bs-checkbox {
   font-weight: 400;
 }
 
-.form-signin .form-floating:focus-within {
+.form-signin .bs-form-floating:focus-within {
   z-index: 2;
 }
 
