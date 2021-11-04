@@ -1,15 +1,15 @@
 {{ define "main" }}
   {{ partial "docs-subnav" . }}
 
-  <div class="ns-container-xxl ns-my-md-4 bd-layout">
+  <div class="bs-container-xxl bs-my-md-4 bd-layout">
     <aside class="bd-sidebar">
       {{ partial "docs-sidebar" . }}
     </aside>
 
-    <main class="bd-main ns-order-1">
-      <div class="bd-intro ns-ps-lg-4">
-        <div class="ns-d-md-flex ns-flex-md-row-reverse ns-align-items-center ns-justify-content-between">
-          <a class="ns-btn ns-btn-sm btn-bd-light ns-mb-2 ns-mb-md-0" href="{{ .Site.Params.repo }}/blob/main/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+    <main class="bd-main bs-order-1">
+      <div class="bd-intro bs-ps-lg-4">
+        <div class="bs-d-md-flex bs-flex-md-row-reverse bs-align-items-center bs-justify-content-between">
+          <a class="bs-btn bs-btn-sm bs-btn-bd-light bs-mb-2 bs-mb-md-0" href="{{ .Site.Params.repo }}/blob/main/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
           <h1 class="bd-title" id="content">{{ .Title | markdownify }}</h1>
         </div>
         <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
@@ -17,20 +17,20 @@
       </div>
 
       {{ if (eq .Page.Params.toc true) }}
-        <div class="bd-toc ns-mt-4 ns-mb-5 ns-my-md-0 ns-ps-xl-3 ns-mb-lg-5 ns-text-muted">
-          <strong class="ns-d-block ns-h6 ns-my-2 ns-pb-2 ns-border-bottom">On this page</strong>
+        <div class="bd-toc bs-mt-4 bs-mb-5 bs-my-md-0 bs-ps-xl-3 bs-mb-lg-5 bs-text-muted">
+          <strong class="bs-d-block bs-h6 bs-my-2 bs-pb-2 bs-border-bottom">On this page</strong>
           {{ .TableOfContents }}
         </div>
       {{ end }}
 
-      <div class="bd-content ns-ps-lg-4">
+      <div class="bd-content bs-ps-lg-4">
         {{ if .Page.Params.sections }}
-          <div class="ns-row ns-g-3">
+          <div class="bs-row bs-g-3">
             {{ range .Page.Params.sections }}
-            <div class="ns-col-md-6">
-              <a class="ns-d-block ns-text-decoration-none" href="../{{ urlize .title }}/">
-                <strong class="ns-d-block ns-h5 ns-mb-0">{{ .title }}</strong>
-                <span class="ns-text-secondary">{{ .description }}</span>
+            <div class="bs-col-md-6">
+              <a class="bs-d-block bs-text-decoration-none" href="../{{ urlize .title }}/">
+                <strong class="bs-d-block bs-h5 bs-mb-0">{{ .title }}</strong>
+                <span class="bs-text-secondary">{{ .description }}</span>
               </a>
             </div>
             {{ end }}

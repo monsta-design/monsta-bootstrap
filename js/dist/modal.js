@@ -607,6 +607,10 @@
     });
   };
 
+  const classPrefix = name => {
+    return "bs-" + name;
+  };
+
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): modal.js
@@ -645,13 +649,13 @@
   const EVENT_MOUSEUP_DISMISS = `mouseup.dismiss${EVENT_KEY}`;
   const EVENT_MOUSEDOWN_DISMISS = `mousedown.dismiss${EVENT_KEY}`;
   const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
-  const CLASS_NAME_OPEN = 'modal-open';
-  const CLASS_NAME_FADE = 'fade';
-  const CLASS_NAME_SHOW = 'show';
-  const CLASS_NAME_STATIC = 'modal-static';
-  const OPEN_SELECTOR = '.modal.show';
-  const SELECTOR_DIALOG = '.modal-dialog';
-  const SELECTOR_MODAL_BODY = '.modal-body';
+  const CLASS_NAME_OPEN = classPrefix('modal-open');
+  const CLASS_NAME_FADE = classPrefix('fade');
+  const CLASS_NAME_SHOW = classPrefix('show');
+  const CLASS_NAME_STATIC = classPrefix('modal-static');
+  const OPEN_SELECTOR = `.${classPrefix('modal')}.${classPrefix('show')}`;
+  const SELECTOR_DIALOG = `.${classPrefix('modal-dialog')}`;
+  const SELECTOR_MODAL_BODY = `.${classPrefix('modal-body')}`;
   const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="modal"]';
   /**
    * ------------------------------------------------------------------------

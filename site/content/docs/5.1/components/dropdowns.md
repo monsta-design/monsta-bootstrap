@@ -29,14 +29,14 @@ Wrap the dropdown's toggle (your button or link) and the dropdown menu within `.
 Any single `.btn` can be turned into a dropdown toggle with some markup changes. Here's how you can put them to work with either `<button>` elements:
 
 {{< example >}}
-<div class="ns-dropdown">
-  <button class="ns-btn ns-btn-secondary ns-dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+<div class="bs-dropdown">
+  <button class="bs-btn bs-btn-secondary bs-dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Dropdown button
   </button>
-  <ul class="ns-dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="ns-dropdown-item" href="#">Action</a></li>
-    <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-    <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
+  <ul class="bs-dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="bs-dropdown-item" href="#">Action</a></li>
+    <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+    <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
   </ul>
 </div>
 {{< /example >}}
@@ -44,96 +44,96 @@ Any single `.btn` can be turned into a dropdown toggle with some markup changes.
 And with `<a>` elements:
 
 {{< example >}}
-<div class="ns-dropdown">
-  <a class="ns-btn ns-btn-secondary ns-dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+<div class="bs-dropdown">
+  <a class="bs-btn bs-btn-secondary bs-dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
     Dropdown link
   </a>
 
-  <ul class="ns-dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="ns-dropdown-item" href="#">Action</a></li>
-    <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-    <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
+  <ul class="bs-dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><a class="bs-dropdown-item" href="#">Action</a></li>
+    <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+    <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
   </ul>
 </div>
 {{< /example >}}
 
 The best part is you can do this with any button variant, too:
 
-<div class="ns-bd-example">
+<div class="bs-bd-example">
   <div class="btn-group">
-    <button type="button" class="ns-btn ns-btn-primary ns-dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Primary</button>
-    <ul class="ns-dropdown-menu">
-      <li><a class="ns-dropdown-item" href="#">Action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="ns-dropdown-divider"></li>
-      <li><a class="ns-dropdown-item" href="#">Separated link</a></li>
-    </ul>
-  </div><!-- /btn-group -->
-  <div class="btn-group">
-    <button type="button" class="ns-btn ns-btn-secondary ns-dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Secondary</button>
-    <ul class="ns-dropdown-menu">
-      <li><a class="ns-dropdown-item" href="#">Action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="ns-dropdown-divider"></li>
-      <li><a class="ns-dropdown-item" href="#">Separated link</a></li>
-    </ul>
-  </div><!-- /btn-group -->
-  <div class="ns-btn-group">
-    <button type="button" class="ns-btn ns-btn-success ns-dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Success</button>
-    <ul class="ns-dropdown-menu">
-      <li><a class="ns-dropdown-item" href="#">Action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="ns-dropdown-divider"></li>
-      <li><a class="ns-dropdown-item" href="#">Separated link</a></li>
-    </ul>
-  </div><!-- /btn-group -->
-  <div class="ns-btn-group">
-    <button type="button" class="ns-btn ns-btn-info ns-dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Info</button>
-    <ul class="ns-dropdown-menu">
-      <li><a class="ns-dropdown-item" href="#">Action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="ns-dropdown-divider"></li>
-      <li><a class="ns-dropdown-item" href="#">Separated link</a></li>
-    </ul>
-  </div><!-- /btn-group -->
-  <div class="ns-btn-group">
-    <button type="button" class="ns-btn ns-btn-warning ns-dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Warning</button>
-    <ul class="ns-dropdown-menu">
-      <li><a class="ns-dropdown-item" href="#">Action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="ns-dropdown-divider"></li>
-      <li><a class="ns-dropdown-item" href="#">Separated link</a></li>
+    <button type="button" class="bs-btn bs-btn-primary bs-dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Primary</button>
+    <ul class="bs-dropdown-menu">
+      <li><a class="bs-dropdown-item" href="#">Action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="bs-dropdown-divider"></li>
+      <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
-    <button type="button" class="ns-btn ns-btn-danger ns-dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Danger</button>
-    <ul class="ns-dropdown-menu">
-      <li><a class="ns-dropdown-item" href="#">Action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="ns-dropdown-divider"></li>
-      <li><a class="ns-dropdown-item" href="#">Separated link</a></li>
+    <button type="button" class="bs-btn bs-btn-secondary bs-dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Secondary</button>
+    <ul class="bs-dropdown-menu">
+      <li><a class="bs-dropdown-item" href="#">Action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="bs-dropdown-divider"></li>
+      <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
+    </ul>
+  </div><!-- /btn-group -->
+  <div class="bs-btn-group">
+    <button type="button" class="bs-btn bs-btn-success bs-dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Success</button>
+    <ul class="bs-dropdown-menu">
+      <li><a class="bs-dropdown-item" href="#">Action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="bs-dropdown-divider"></li>
+      <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
+    </ul>
+  </div><!-- /btn-group -->
+  <div class="bs-btn-group">
+    <button type="button" class="bs-btn bs-btn-info bs-dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Info</button>
+    <ul class="bs-dropdown-menu">
+      <li><a class="bs-dropdown-item" href="#">Action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="bs-dropdown-divider"></li>
+      <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
+    </ul>
+  </div><!-- /btn-group -->
+  <div class="bs-btn-group">
+    <button type="button" class="bs-btn bs-btn-warning bs-dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Warning</button>
+    <ul class="bs-dropdown-menu">
+      <li><a class="bs-dropdown-item" href="#">Action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="bs-dropdown-divider"></li>
+      <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
+    </ul>
+  </div><!-- /btn-group -->
+  <div class="btn-group">
+    <button type="button" class="bs-btn bs-btn-danger bs-dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Danger</button>
+    <ul class="bs-dropdown-menu">
+      <li><a class="bs-dropdown-item" href="#">Action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="bs-dropdown-divider"></li>
+      <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
     </ul>
   </div><!-- /btn-group -->
 </div>
 
 ```html
 <!-- Example single danger button -->
-<div class="ns-btn-group">
-  <button type="button" class="ns-btn ns-btn-danger ns-dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+<div class="bs-btn-group">
+  <button type="button" class="bs-btn bs-btn-danger bs-dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     Action
   </button>
-  <ul class="ns-dropdown-menu">
-    <li><a class="ns-dropdown-item" href="#">Action</a></li>
-    <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-    <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="ns-dropdown-divider"></li>
-    <li><a class="ns-dropdown-item" href="#">Separated link</a></li>
+  <ul class="bs-dropdown-menu">
+    <li><a class="bs-dropdown-item" href="#">Action</a></li>
+    <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+    <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="bs-dropdown-divider"></li>
+    <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
   </ul>
 </div>
 ```
@@ -145,82 +145,82 @@ Similarly, create split button dropdowns with virtually the same markup as singl
 We use this extra class to reduce the horizontal `padding` on either side of the caret by 25% and remove the `margin-left` that's added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button.
 
 <div class="bd-example">
-  <div class="ns-btn-group">
-    <button type="button" class="ns-btn ns-btn-primary">Primary</button>
-    <button type="button" class="ns-btn ns-btn-primary ns-dropdown-toggle ns-dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="ns-visually-hidden">Toggle Dropdown</span>
+  <div class="bs-btn-group">
+    <button type="button" class="bs-btn bs-btn-primary">Primary</button>
+    <button type="button" class="bs-btn bs-btn-primary bs-dropdown-toggle bs-dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="bs-visually-hidden">Toggle Dropdown</span>
     </button>
-    <ul class="ns-dropdown-menu">
-      <li><a class="ns-dropdown-item" href="#">Action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="ns-dropdown-divider"></li>
-      <li><a class="ns-dropdown-item" href="#">Separated link</a></li>
+    <ul class="bs-dropdown-menu">
+      <li><a class="bs-dropdown-item" href="#">Action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="bs-dropdown-divider"></li>
+      <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
     </ul>
   </div><!-- /btn-group -->
-  <div class="ns-btn-group">
-    <button type="button" class="ns-btn ns-btn-secondary">Secondary</button>
-    <button type="button" class="ns-btn ns-btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="ns-visually-hidden">Toggle Dropdown</span>
+  <div class="bs-btn-group">
+    <button type="button" class="bs-btn bs-btn-secondary">Secondary</button>
+    <button type="button" class="bs-btn bs-btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="bs-visually-hidden">Toggle Dropdown</span>
     </button>
-    <ul class="ns-dropdown-menu">
-      <li><a class="ns-dropdown-item" href="#">Action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="ns-dropdown-divider"></li>
-      <li><a class="ns-dropdown-item" href="#">Separated link</a></li>
+    <ul class="bs-dropdown-menu">
+      <li><a class="bs-dropdown-item" href="#">Action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="bs-dropdown-divider"></li>
+      <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
     </ul>
   </div><!-- /btn-group -->
-  <div class="ns-btn-group">
-    <button type="button" class="ns-btn ns-btn-success">Success</button>
-    <button type="button" class="ns-btn ns-btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="ns-visually-hidden">Toggle Dropdown</span>
+  <div class="bs-btn-group">
+    <button type="button" class="bs-btn bs-btn-success">Success</button>
+    <button type="button" class="bs-btn bs-btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="bs-visually-hidden">Toggle Dropdown</span>
     </button>
-    <ul class="ns-dropdown-menu">
-      <li><a class="ns-dropdown-item" href="#">Action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="ns-dropdown-divider"></li>
-      <li><a class="ns-dropdown-item" href="#">Separated link</a></li>
+    <ul class="bs-dropdown-menu">
+      <li><a class="bs-dropdown-item" href="#">Action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="bs-dropdown-divider"></li>
+      <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
     </ul>
   </div><!-- /btn-group -->
-  <div class="ns-btn-group">
-    <button type="button" class="ns-btn ns-btn-info">Info</button>
-    <button type="button" class="ns-btn ns-btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="ns-visually-hidden">Toggle Dropdown</span>
+  <div class="bs-btn-group">
+    <button type="button" class="bs-btn bs-btn-info">Info</button>
+    <button type="button" class="bs-btn bs-btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="bs-visually-hidden">Toggle Dropdown</span>
     </button>
-    <ul class="ns-dropdown-menu">
-      <li><a class="ns-dropdown-item" href="#">Action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="ns-dropdown-divider"></li>
-      <li><a class="ns-dropdown-item" href="#">Separated link</a></li>
+    <ul class="bs-dropdown-menu">
+      <li><a class="bs-dropdown-item" href="#">Action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="bs-dropdown-divider"></li>
+      <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
     </ul>
   </div><!-- /btn-group -->
-  <div class="ns-btn-group">
-    <button type="button" class="ns-btn btn-warning">Warning</button>
-    <button type="button" class="ns-btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="ns-visually-hidden">Toggle Dropdown</span>
+  <div class="bs-btn-group">
+    <button type="button" class="bs-btn btn-warning">Warning</button>
+    <button type="button" class="bs-btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="bs-visually-hidden">Toggle Dropdown</span>
     </button>
-    <ul class="ns-dropdown-menu">
-      <li><a class="ns-dropdown-item" href="#">Action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="ns-dropdown-divider"></li>
-      <li><a class="ns-dropdown-item" href="#">Separated link</a></li>
+    <ul class="bs-dropdown-menu">
+      <li><a class="bs-dropdown-item" href="#">Action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="bs-dropdown-divider"></li>
+      <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
     </ul>
   </div><!-- /btn-group -->
-  <div class="ns-btn-group">
-    <button type="button" class="ns-btn ns-btn-danger">Danger</button>
-    <button type="button" class="ns-btn ns-btn-danger ns-dropdown-toggle ns-dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-      <span class="ns-visually-hidden">Toggle Dropdown</span>
+  <div class="bs-btn-group">
+    <button type="button" class="bs-btn bs-btn-danger">Danger</button>
+    <button type="button" class="bs-btn bs-btn-danger bs-dropdown-toggle bs-dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="bs-visually-hidden">Toggle Dropdown</span>
     </button>
-    <ul class="ns-dropdown-menu">
-      <li><a class="ns-dropdown-item" href="#">Action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Another action</a></li>
-      <li><a class="ns-dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="ns-dropdown-divider"></li>
-      <li><a class="ns-dropdown-item" href="#">Separated link</a></li>
+    <ul class="bs-dropdown-menu">
+      <li><a class="bs-dropdown-item" href="#">Action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="bs-dropdown-divider"></li>
+      <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
     </ul>
   </div><!-- /btn-group -->
 </div>

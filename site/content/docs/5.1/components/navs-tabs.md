@@ -20,18 +20,18 @@ To convey the active state to assistive technologies, use the `aria-current` att
 {{< /callout >}}
 
 {{< example >}}
-<ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+<ul class="bs-nav">
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-active" aria-current="page" href="#">Active</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -39,11 +39,11 @@ To convey the active state to assistive technologies, use the `aria-current` att
 Classes are used throughout, so your markup can be super flexible. Use `<ul>`s like above, `<ol>` if the order of your items is important, or roll your own with a `<nav>` element. Because the `.nav` uses `display: flex`, the nav links behave the same as nav items would, but without the extra markup.
 
 {{< example >}}
-<nav class="nav">
-  <a class="nav-link active" aria-current="page" href="#">Active</a>
-  <a class="nav-link" href="#">Link</a>
-  <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled">Disabled</a>
+<nav class="bs-nav">
+  <a class="bs-nav-link bs-active" aria-current="page" href="#">Active</a>
+  <a class="bs-nav-link" href="#">Link</a>
+  <a class="bs-nav-link" href="#">Link</a>
+  <a class="bs-nav-link bs-disabled">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -58,18 +58,18 @@ Change the horizontal alignment of your nav with [flexbox utilities]({{< docsref
 Centered with `.justify-content-center`:
 
 {{< example >}}
-<ul class="nav justify-content-center">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+<ul class="bs-nav bs-justify-content-center">
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-active" aria-current="page" href="#">Active</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -77,18 +77,18 @@ Centered with `.justify-content-center`:
 Right-aligned with `.justify-content-end`:
 
 {{< example >}}
-<ul class="nav justify-content-end">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+<ul class="bs-nav bs-justify-content-end">
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-active" aria-current="page" href="#">Active</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -98,18 +98,18 @@ Right-aligned with `.justify-content-end`:
 Stack your navigation by changing the flex item direction with the `.flex-column` utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., `.flex-sm-column`).
 
 {{< example >}}
-<ul class="nav flex-column">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+<ul class="bs-nav bs-flex-column">
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-active" aria-current="page" href="#">Active</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -117,11 +117,11 @@ Stack your navigation by changing the flex item direction with the `.flex-column
 As always, vertical navigation is possible without `<ul>`s, too.
 
 {{< example >}}
-<nav class="nav flex-column">
-  <a class="nav-link active" aria-current="page" href="#">Active</a>
-  <a class="nav-link" href="#">Link</a>
-  <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled">Disabled</a>
+<nav class="bs-nav bs-flex-column">
+  <a class="bs-nav-link bs-active" aria-current="page" href="#">Active</a>
+  <a class="bs-nav-link" href="#">Link</a>
+  <a class="bs-nav-link" href="#">Link</a>
+  <a class="bs-nav-link bs-disabled">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -130,18 +130,18 @@ As always, vertical navigation is possible without `<ul>`s, too.
 Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabbed interface. Use them to create tabbable regions with our [tab JavaScript plugin](#javascript-behavior).
 
 {{< example >}}
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+<ul class="bs-nav bs-nav-tabs">
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-active" aria-current="page" href="#">Active</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -151,18 +151,18 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
 Take that same HTML, but use `.nav-pills` instead:
 
 {{< example >}}
-<ul class="nav nav-pills">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+<ul class="bs-nav bs-nav-pills">
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-active" aria-current="page" href="#">Active</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -172,18 +172,18 @@ Take that same HTML, but use `.nav-pills` instead:
 Force your `.nav`'s contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your `.nav-item`s, use `.nav-fill`. Notice that all horizontal space is occupied, but not every nav item has the same width.
 
 {{< example >}}
-<ul class="nav nav-pills nav-fill">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+<ul class="bs-nav bs-nav-pills bs-nav-fill">
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-active" aria-current="page" href="#">Active</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Much longer nav link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Much longer nav link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -191,29 +191,29 @@ Force your `.nav`'s contents to extend the full available width one of two modif
 When using a `<nav>`-based navigation, you can safely omit `.nav-item` as only `.nav-link` is required for styling `<a>` elements.
 
 {{< example >}}
-<nav class="nav nav-pills nav-fill">
-  <a class="nav-link active" aria-current="page" href="#">Active</a>
-  <a class="nav-link" href="#">Much longer nav link</a>
-  <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled">Disabled</a>
+<nav class="bs-nav bs-nav-pills bs-nav-fill">
+  <a class="bs-nav-link bs-active" aria-current="page" href="#">Active</a>
+  <a class="bs-nav-link" href="#">Much longer nav link</a>
+  <a class="bs-nav-link" href="#">Link</a>
+  <a class="bs-nav-link bs-disabled">Disabled</a>
 </nav>
 {{< /example >}}
 
 For equal-width elements, use `.nav-justified`. All horizontal space will be occupied by nav links, but unlike the `.nav-fill` above, every nav item will be the same width.
 
 {{< example >}}
-<ul class="nav nav-pills nav-justified">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+<ul class="bs-nav bs-nav-pills bs-nav-justified">
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-active" aria-current="page" href="#">Active</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Much longer nav link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Much longer nav link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -221,11 +221,11 @@ For equal-width elements, use `.nav-justified`. All horizontal space will be occ
 Similar to the `.nav-fill` example using a `<nav>`-based navigation.
 
 {{< example >}}
-<nav class="nav nav-pills nav-justified">
-  <a class="nav-link active" aria-current="page" href="#">Active</a>
-  <a class="nav-link" href="#">Much longer nav link</a>
-  <a class="nav-link" href="#">Link</a>
-  <a class="nav-link disabled">Disabled</a>
+<nav class="bs-nav bs-nav-pills bs-nav-justified">
+  <a class="bs-nav-link bs-active" aria-current="page" href="#">Active</a>
+  <a class="bs-nav-link" href="#">Much longer nav link</a>
+  <a class="bs-nav-link" href="#">Link</a>
+  <a class="bs-nav-link bs-disabled">Disabled</a>
 </nav>
 
 {{< /example >}}
@@ -234,11 +234,11 @@ Similar to the `.nav-fill` example using a `<nav>`-based navigation.
 If you need responsive nav variations, consider using a series of [flexbox utilities]({{< docsref "/utilities/flex" >}}). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
 
 {{< example >}}
-<nav class="nav nav-pills flex-column flex-sm-row">
-  <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
-  <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
-  <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
-  <a class="flex-sm-fill text-sm-center nav-link disabled">Disabled</a>
+<nav class="bs-nav bs-nav-pills bs-flex-column bs-flex-sm-row">
+  <a class="bs-flex-sm-fill bs-text-sm-center bs-nav-link bs-active" aria-current="page" href="#">Active</a>
+  <a class="bs-flex-sm-fill bs-text-sm-center bs-nav-link" href="#">Longer nav link</a>
+  <a class="bs-flex-sm-fill bs-text-sm-center bs-nav-link" href="#">Link</a>
+  <a class="bs-flex-sm-fill bs-text-sm-center bs-nav-link bs-disabled">Disabled</a>
 </nav>
 {{< /example >}}
 
@@ -255,25 +255,25 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 ### Tabs with dropdowns
 
 {{< example >}}
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+<ul class="bs-nav bs-nav-tabs">
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-active" aria-current="page" href="#">Active</a>
   </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+  <li class="bs-nav-item bs-dropdown">
+    <a class="bs-nav-link bs-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+    <ul class="bs-dropdown-menu">
+      <li><a class="bs-dropdown-item" href="#">Action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="bs-dropdown-divider"></li>
+      <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -281,25 +281,25 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 ### Pills with dropdowns
 
 {{< example >}}
-<ul class="nav nav-pills">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+<ul class="bs-nav bs-nav-pills">
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-active" aria-current="page" href="#">Active</a>
   </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+  <li class="bs-nav-item bs-dropdown">
+    <a class="bs-nav-link bs-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+    <ul class="bs-dropdown-menu">
+      <li><a class="bs-dropdown-item" href="#">Action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Another action</a></li>
+      <li><a class="bs-dropdown-item" href="#">Something else here</a></li>
+      <li><hr class="bs-dropdown-divider"></li>
+      <li><a class="bs-dropdown-item" href="#">Separated link</a></li>
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link" href="#">Link</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+  <li class="bs-nav-item">
+    <a class="bs-nav-link bs-disabled">Disabled</a>
   </li>
 </ul>
 {{< /example >}}
@@ -318,47 +318,47 @@ Dynamic tabbed interfaces, as described in the [<abbr title="Web Accessibility I
 
 Note that dynamic tabbed interfaces should <em>not</em> contain dropdown menus, as this causes both usability and accessibility issues. From a usability perspective, the fact that the currently displayed tab's trigger element is not immediately visible (as it's inside the closed dropdown menu) can cause confusion. From an accessibility point of view, there is currently no sensible way to map this sort of construct to a standard WAI ARIA pattern, meaning that it cannot be easily made understandable to users of assistive technologies.
 
-<div class="bd-example">
-  <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+<div class="bs-bd-example">
+  <ul class="bs-nav bs-nav-tabs bs-mb-3" id="myTab" role="tablist">
+    <li class="bs-nav-item" role="presentation">
+      <button class="bs-nav-link bs-active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
     </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+    <li class="bs-nav-item" role="presentation">
+      <button class="bs-nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
     </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+    <li class="bs-nav-item" role="presentation">
+      <button class="bs-nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
     </li>
   </ul>
-  <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+  <div class="bs-tab-content" id="myTabContent">
+    <div class="bs-tab-pane bs-fade bs-show bs-active" id="home" role="tabpanel" aria-labelledby="home-tab">
       <p><strong>This is some placeholder content the Home tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
     </div>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <div class="bs-tab-pane bs-fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
       <p><strong>This is some placeholder content the Profile tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
     </div>
-    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+    <div class="bs-tab-pane bs-fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
       <p><strong>This is some placeholder content the Contact tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
     </div>
   </div>
 </div>
 
 ```html
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+<ul class="bs-nav bs-nav-tabs" id="myTab" role="tablist">
+  <li class="bs-nav-item" role="presentation">
+    <button class="bs-nav-link bs-active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
   </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+  <li class="bs-nav-item" role="presentation">
+    <button class="bs-nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
   </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+  <li class="bs-nav-item" role="presentation">
+    <button class="bs-nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
   </li>
 </ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+<div class="bs-tab-content" id="myTabContent">
+  <div class="bs-tab-pane bs-fade bs-show bs-active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+  <div class="bs-tab-pane bs-fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+  <div class="bs-tab-pane bs-fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
 </div>
 ```
 
@@ -366,20 +366,20 @@ To help fit your needs, this works with `<ul>`-based markup, as shown above, or 
 
 <div class="bd-example">
   <nav>
-    <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
-      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+    <div class="bs-nav bs-nav-tabs bs-mb-3" id="nav-tab" role="tablist">
+      <button class="bs-nav-link bs-active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+      <button class="bs-nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+      <button class="bs-nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
     </div>
   </nav>
-  <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+  <div class="bs-tab-content" id="nav-tabContent">
+    <div class="bs-tab-pane bs-fade bs-show bs-active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
       <p><strong>This is some placeholder content the Home tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
     </div>
-    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <div class="bs-tab-pane bs-fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
       <p><strong>This is some placeholder content the Profile tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
     </div>
-    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+    <div class="bs-tab-pane bs-fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
       <p><strong>This is some placeholder content the Contact tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
     </div>
   </div>
@@ -387,86 +387,86 @@ To help fit your needs, this works with `<ul>`-based markup, as shown above, or 
 
 ```html
 <nav>
-  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+  <div class="bs-nav bs-nav-tabs" id="nav-tab" role="tablist">
+    <button class="bs-nav-link bs-active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+    <button class="bs-nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
+    <button class="bs-nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
   </div>
 </nav>
-<div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+<div class="bs-tab-content" id="nav-tabContent">
+  <div class="bs-tab-pane bs-fade bs-show bs-active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+  <div class="bs-tab-pane bs-fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+  <div class="bs-tab-pane bs-fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
 </div>
 ```
 
 The tabs plugin also works with pills.
 
 <div class="bd-example">
-  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+  <ul class="bs-nav bs-nav-pills bs-mb-3" id="pills-tab" role="tablist">
+    <li class="bs-nav-item" role="presentation">
+      <button class="bs-nav-link bs-active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
     </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+    <li class="bs-nav-item" role="presentation">
+      <button class="bs-nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
     </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+    <li class="bs-nav-item" role="presentation">
+      <button class="bs-nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
     </li>
   </ul>
-  <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+  <div class="bs-tab-content" id="pills-tabContent">
+    <div class="bs-tab-pane bs-fade bs-show bs-active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
       <p><strong>This is some placeholder content the Home tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
     </div>
-    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    <div class="bs-tab-pane bs-fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
       <p><strong>This is some placeholder content the Profile tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
     </div>
-    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+    <div class="bs-tab-pane bs-fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
       <p><strong>This is some placeholder content the Contact tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
     </div>
   </div>
 </div>
 
 ```html
-<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+<ul class="bs-nav bs-nav-pills bs-mb-3" id="pills-tab" role="tablist">
+  <li class="bs-nav-item" role="presentation">
+    <button class="bs-nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
   </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+  <li class="bs-nav-item" role="presentation">
+    <button class="bs-nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
   </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+  <li class="bs-nav-item" role="presentation">
+    <button class="bs-nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
   </li>
 </ul>
-<div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
-  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+<div class="bs-tab-content" id="pills-tabContent">
+  <div class="bs-tab-pane bs-fade bs-show bs-active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+  <div class="bs-tab-pane bs-fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+  <div class="bs-tab-pane bs-fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
 </div>
 ```
 
 And with vertical pills.
 
 <div class="bd-example">
-  <div class="d-flex align-items-start">
+  <div class="bs-d-flex bs-align-items-start">
     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
-      <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
-      <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
-      <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+      <button class="bs-nav-link bs-active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+      <button class="bs-nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
+      <button class="bs-nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+      <button class="bs-nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
     </div>
-    <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+    <div class="bs-tab-content" id="v-pills-tabContent">
+      <div class="bs-tab-pane bs-fade bs-show bs-active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
       <p><strong>This is some placeholder content the Home tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
       </div>
-      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+      <div class="bs-tab-pane bs-fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
       <p><strong>This is some placeholder content the Profile tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
       </div>
-      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+      <div class="bs-tab-pane bs-fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
       <p><strong>This is some placeholder content the Messages tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
       </div>
-      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+      <div class="bs-tab-pane bs-fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
       <p><strong>This is some placeholder content the Settings tab's associated content.</strong> Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
       </div>
     </div>
@@ -474,18 +474,18 @@ And with vertical pills.
 </div>
 
 ```html
-<div class="d-flex align-items-start">
-  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
-    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
-    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
-    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+<div class="bs-d-flex bs-align-items-start">
+  <div class="bs-nav bs-flex-column bs-nav-pills bs-me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <button class="bs-nav-link bs-active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+    <button class="bs-nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
+    <button class="bs-nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+    <button class="bs-nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
   </div>
-  <div class="tab-content" id="v-pills-tabContent">
-    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
-    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
-    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+  <div class="bs-tab-content" id="v-pills-tabContent">
+    <div class="bs-tab-pane bs-fade bs-show bs-active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
+    <div class="bs-tab-pane bs-fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+    <div class="bs-tab-pane bs-fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+    <div class="bs-tab-pane bs-fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
   </div>
 </div>
 ```
@@ -496,27 +496,27 @@ You can activate a tab or pill navigation without writing any JavaScript by simp
 
 ```html
 <!-- Nav tabs -->
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+<ul class="bs-nav bs-nav-tabs" id="myTab" role="tablist">
+  <li class="bs-nav-item" role="presentation">
+    <button class="bs-nav-link bs-active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
   </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+  <li class="bs-nav-item" role="presentation">
+    <button class="bs-nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
   </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
+  <li class="bs-nav-item" role="presentation">
+    <button class="bs-nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
   </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+  <li class="bs-nav-item" role="presentation">
+    <button class="bs-nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
   </li>
 </ul>
 
 <!-- Tab panes -->
-<div class="tab-content">
-  <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-  <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-  <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
-  <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
+<div class="bs-tab-content">
+  <div class="bs-tab-pane bs-active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+  <div class="bs-tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+  <div class="bs-tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
+  <div class="bs-tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
 </div>
 ```
 
@@ -551,11 +551,11 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 To make tabs fade in, add `.fade` to each `.tab-pane`. The first tab pane must also have `.show` to make the initial content visible.
 
 ```html
-<div class="tab-content">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-  <div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
-  <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
+<div class="bs-tab-content">
+  <div class="bs-tab-pane bs-fade bs-show bs-active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+  <div class="bs-tab-pane bs-fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+  <div class="bs-tab-pane bs-fade" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
+  <div class="bs-tab-pane bs-fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
 </div>
 ```
 
@@ -570,26 +570,26 @@ To make tabs fade in, add `.fade` to each `.tab-pane`. The first tab pane must a
 Activates a tab element and content container. Tab should have either a `data-bs-target` or, if using a link, an `href` attribute, targeting a container node in the DOM.
 
 ```html
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+<ul class="bs-nav bs-nav-tabs" id="myTab" role="tablist">
+  <li class="bs-nav-item" role="presentation">
+    <button class="bs-nav-link bs-active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
   </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+  <li class="bs-nav-item" role="presentation">
+    <button class="bs-nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
   </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
+  <li class="bs-nav-item" role="presentation">
+    <button class="bs-nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
   </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+  <li class="bs-nav-item" role="presentation">
+    <button class="bs-nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
   </li>
 </ul>
 
-<div class="tab-content">
-  <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-  <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-  <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
-  <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
+<div class="bs-tab-content">
+  <div class="bs-tab-pane bs-active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+  <div class="bs-tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+  <div class="bs-tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
+  <div class="bs-tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
 </div>
 
 <script>
@@ -644,7 +644,7 @@ When showing a new tab, the events fire in the following order:
 
 If no tab was already active, then the `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
 
-<table class="table">
+<table class="bs-table">
   <thead>
     <tr>
       <th style="width: 150px;">Event type</th>

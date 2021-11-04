@@ -21,7 +21,7 @@ Aspect ratios are declared in a Sass map and included in each class via CSS vari
 Wrap any embed, like an `<iframe>`, in a parent element with `.ratio` and an aspect ratio class. The immediate child element is automatically sized thanks to our universal selector `.ratio > *`.
 
 {{< example >}}
-<div class="ratio ratio-16x9">
+<div class="bs-ratio bs-ratio-16x9">
   <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
 </div>
 {{< /example >}}
@@ -31,16 +31,16 @@ Wrap any embed, like an `<iframe>`, in a parent element with `.ratio` and an asp
 Aspect ratios can be customized with modifier classes. By default the following ratio classes are provided:
 
 {{< example class="bd-example-ratios" >}}
-<div class="ratio ratio-1x1">
+<div class="bs-ratio bs-ratio-1x1">
   <div>1x1</div>
 </div>
-<div class="ratio ratio-4x3">
+<div class="bs-ratio bs-ratio-4x3">
   <div>4x3</div>
 </div>
-<div class="ratio ratio-16x9">
+<div class="bs-ratio bs-ratio-16x9">
   <div>16x9</div>
 </div>
-<div class="ratio ratio-21x9">
+<div class="bs-ratio bs-ratio-21x9">
   <div>21x9</div>
 </div>
 {{< /example >}}
@@ -52,7 +52,7 @@ Each `.ratio-*` class includes a CSS custom property (or CSS variable) in the se
 For example, to create a 2x1 aspect ratio, set `--bs-aspect-ratio: 50%` on the `.ratio`.
 
 {{< example class="bd-example-ratios" >}}
-<div class="ratio" style="--bs-aspect-ratio: 50%;">
+<div class="bs-ratio" style="--bs-aspect-ratio: 50%;">
   <div>2x1</div>
 </div>
 {{< /example >}}
@@ -68,7 +68,7 @@ This CSS variable makes it easy to modify the aspect ratio across breakpoints. T
 ```
 
 {{< example class="bd-example-ratios bd-example-ratios-breakpoint" >}}
-<div class="ratio ratio-4x3">
+<div class="bs-ratio bs-ratio-4x3">
   <div>4x3, then 2x1</div>
 </div>
 {{< /example >}}

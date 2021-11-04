@@ -27,27 +27,27 @@ If you're making a scrollable container (other than the `<body>`), be sure to ha
 Scroll the area below the navbar and watch the active class change. The dropdown items will be highlighted as well.
 
 <div class="bd-example">
-  <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link" href="#scrollspyHeading1">First</a>
+  <nav id="navbar-example2" class="bs-navbar bs-navbar-light bs-bg-light bs-px-3">
+    <a class="bs-navbar-brand" href="#">Navbar</a>
+    <ul class="bs-nav bs-nav-pills">
+      <li class="bs-nav-item">
+        <a class="bs-nav-link" href="#scrollspyHeading1">First</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#scrollspyHeading2">Second</a>
+      <li class="bs-nav-item">
+        <a class="bs-nav-link" href="#scrollspyHeading2">Second</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
-          <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+      <li class="bs-nav-item bs-dropdown">
+        <a class="bs-nav-link bs-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+        <ul class="bs-dropdown-menu">
+          <li><a class="bs-dropdown-item" href="#scrollspyHeading3">Third</a></li>
+          <li><a class="bs-dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+          <li><hr class="bs-dropdown-divider"></li>
+          <li><a class="bs-dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
         </ul>
       </li>
     </ul>
   </nav>
-  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="bs-scrollspy-example" tabindex="0">
     <h4 id="scrollspyHeading1">First heading</h4>
     <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
     <h4 id="scrollspyHeading2">Second heading</h4>
@@ -62,27 +62,27 @@ Scroll the area below the navbar and watch the active class change. The dropdown
 </div>
 
 ```html
-<nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <ul class="nav nav-pills">
-    <li class="nav-item">
-      <a class="nav-link" href="#scrollspyHeading1">First</a>
+<nav id="navbar-example2" class="bs-navbar bs-navbar-light bs-bg-light bs-px-3">
+  <a class="bs-navbar-brand" href="#">Navbar</a>
+  <ul class="bs-nav bs-nav-pills">
+    <li class="bs-nav-item">
+      <a class="bs-nav-link" href="#scrollspyHeading1">First</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#scrollspyHeading2">Second</a>
+    <li class="bs-nav-item">
+      <a class="bs-nav-link" href="#scrollspyHeading2">Second</a>
     </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
-        <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+    <li class="bs-nav-item bs-dropdown">
+      <a class="bs-nav-link bs-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <ul class="bs-dropdown-menu">
+        <li><a class="bs-dropdown-item" href="#scrollspyHeading3">Third</a></li>
+        <li><a class="bs-dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+        <li><hr class="bs-dropdown-divider"></li>
+        <li><a class="bs-dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
       </ul>
     </li>
   </ul>
 </nav>
-<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="bs-scrollspy-example" tabindex="0">
   <h4 id="scrollspyHeading1">First heading</h4>
   <p>...</p>
   <h4 id="scrollspyHeading2">Second heading</h4>
@@ -101,26 +101,26 @@ Scroll the area below the navbar and watch the active class change. The dropdown
 Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its parents will also be `.active`. Scroll the area next to the navbar and watch the active class change.
 
 <div class="bd-example">
-  <div class="row">
-    <div class="col-4">
-      <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <nav class="nav nav-pills flex-column">
-          <a class="nav-link" href="#item-1">Item 1</a>
-          <nav class="nav nav-pills flex-column">
-            <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
-            <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+  <div class="bs-row">
+    <div class="bs-col-4">
+      <nav id="navbar-example3" class="bs-navbar bs-navbar-light bs-bg-light bs-flex-column bs-align-items-stretch bs-p-3">
+        <a class="bs-navbar-brand" href="#">Navbar</a>
+        <nav class="bs-nav bs-nav-pills flex-column">
+          <a class="bs-nav-link" href="#item-1">Item 1</a>
+          <nav class="bs-nav bs-nav-pills flex-column">
+            <a class="bs-nav-link bs-ms-3 bs-my-1" href="#item-1-1">Item 1-1</a>
+            <a class="bs-nav-link bs-ms-3 bs-my-1" href="#item-1-2">Item 1-2</a>
           </nav>
-          <a class="nav-link" href="#item-2">Item 2</a>
-          <a class="nav-link" href="#item-3">Item 3</a>
-          <nav class="nav nav-pills flex-column">
-            <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
-            <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+          <a class="bs-nav-link" href="#item-2">Item 2</a>
+          <a class="bs-nav-link" href="#item-3">Item 3</a>
+          <nav class="bs-nav bs-nav-pills bs-flex-column">
+            <a class="bs-nav-link bs-ms-3 bs-my-1" href="#item-3-1">Item 3-1</a>
+            <a class="bs-nav-link bs-ms-3 bs-my-1" href="#item-3-2">Item 3-2</a>
           </nav>
         </nav>
       </nav>
     </div>
-    <div class="col-8">
+    <div class="bs-col-8">
       <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" class="scrollspy-example-2" tabindex="0">
         <h4 id="item-1">Item 1</h4>
         <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
@@ -142,19 +142,19 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 </div>
 
 ```html
-<nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <nav class="nav nav-pills flex-column">
-    <a class="nav-link" href="#item-1">Item 1</a>
-    <nav class="nav nav-pills flex-column">
-      <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
-      <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+<nav id="navbar-example3" class="bs-navbar bs-navbar-light bs-bg-light bs-flex-column bs-align-items-stretch bs-p-3">
+  <a class="bs-navbar-brand" href="#">Navbar</a>
+  <nav class="bs-nav bs-nav-pills bs-flex-column">
+    <a class="bs-nav-link" href="#item-1">Item 1</a>
+    <nav class="bs-nav bs-nav-pills bs-flex-column">
+      <a class="bs-nav-link bs-ms-3 bs-my-1" href="#item-1-1">Item 1-1</a>
+      <a class="bs-nav-link bs-ms-3 bs-my-1" href="#item-1-2">Item 1-2</a>
     </nav>
-    <a class="nav-link" href="#item-2">Item 2</a>
-    <a class="nav-link" href="#item-3">Item 3</a>
-    <nav class="nav nav-pills flex-column">
-      <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
-      <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+    <a class="bs-nav-link" href="#item-2">Item 2</a>
+    <a class="bs-nav-link" href="#item-3">Item 3</a>
+    <nav class="bs-nav bs-nav-pills bs-flex-column">
+      <a class="bs-nav-link bs-ms-3 bs-my-1" href="#item-3-1">Item 3-1</a>
+      <a class="bs-nav-link bs-ms-3 bs-my-1" href="#item-3-2">Item 3-2</a>
     </nav>
   </nav>
 </nav>
@@ -182,16 +182,16 @@ Scrollspy also works with nested `.nav`s. If a nested `.nav` is `.active`, its p
 Scrollspy also works with `.list-group`s. Scroll the area next to the list group and watch the active class change.
 
 <div class="bd-example">
-  <div class="row">
-    <div class="col-4">
-      <div id="list-example" class="list-group">
-        <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-        <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-        <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-        <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+  <div class="bs-row">
+    <div class="bs-col-4">
+      <div id="list-example" class="bs-list-group">
+        <a class="bs-list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+        <a class="bs-list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+        <a class="bs-list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+        <a class="bs-list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
       </div>
     </div>
-    <div class="col-8">
+    <div class="bs-col-8">
       <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
         <h4 id="list-item-1">Item 1</h4>
         <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
@@ -207,11 +207,11 @@ Scrollspy also works with `.list-group`s. Scroll the area next to the list group
 </div>
 
 ```html
-<div id="list-example" class="list-group">
-  <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-  <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-  <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-  <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+<div id="list-example" class="bs-list-group">
+  <a class="bs-list-group-item bs-list-group-item-action" href="#list-item-1">Item 1</a>
+  <a class="bs-list-group-item bs-list-group-item-action" href="#list-item-2">Item 2</a>
+  <a class="bs-list-group-item bs-list-group-item-action" href="#list-item-3">Item 3</a>
+  <a class="bs-list-group-item bs-list-group-item-action" href="#list-item-4">Item 4</a>
 </div>
 <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
   <h4 id="list-item-1">Item 1</h4>
@@ -241,7 +241,7 @@ body {
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
   ...
   <div id="navbar-example">
-    <ul class="nav nav-tabs" role="tablist">
+    <ul class="bs-nav bs-nav-tabs" role="tablist">
       ...
     </ul>
   </div>
@@ -311,7 +311,7 @@ var scrollSpy = bootstrap.ScrollSpy.getOrCreateInstance(scrollSpyContentEl) // R
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-offset=""`.
 
-<table class="table">
+<table class="bs-table">
   <thead>
     <tr>
       <th style="width: 100px;">Name</th>
@@ -344,7 +344,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 
 ### Events
 
-<table class="table">
+<table class="bs-table">
   <thead>
     <tr>
       <th style="width: 150px;">Event type</th>

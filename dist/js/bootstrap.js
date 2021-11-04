@@ -1079,7 +1079,7 @@
   };
 
   const classPrefix = name => {
-    return "ns-" + name;
+    return "bs-" + name;
   };
 
   /**
@@ -2781,13 +2781,13 @@
   const EVENT_MOUSEUP_DISMISS = `mouseup.dismiss${EVENT_KEY$6}`;
   const EVENT_MOUSEDOWN_DISMISS = `mousedown.dismiss${EVENT_KEY$6}`;
   const EVENT_CLICK_DATA_API$2 = `click${EVENT_KEY$6}${DATA_API_KEY$3}`;
-  const CLASS_NAME_OPEN = 'modal-open';
-  const CLASS_NAME_FADE$3 = 'fade';
-  const CLASS_NAME_SHOW$4 = 'show';
-  const CLASS_NAME_STATIC = 'modal-static';
-  const OPEN_SELECTOR$1 = '.modal.show';
-  const SELECTOR_DIALOG = '.modal-dialog';
-  const SELECTOR_MODAL_BODY = '.modal-body';
+  const CLASS_NAME_OPEN = classPrefix('modal-open');
+  const CLASS_NAME_FADE$3 = classPrefix('fade');
+  const CLASS_NAME_SHOW$4 = classPrefix('show');
+  const CLASS_NAME_STATIC = classPrefix('modal-static');
+  const OPEN_SELECTOR$1 = `.${classPrefix('modal')}.${classPrefix('show')}`;
+  const SELECTOR_DIALOG = `.${classPrefix('modal-dialog')}`;
+  const SELECTOR_MODAL_BODY = `.${classPrefix('modal-body')}`;
   const SELECTOR_DATA_TOGGLE$2 = '[data-bs-toggle="modal"]';
   /**
    * ------------------------------------------------------------------------

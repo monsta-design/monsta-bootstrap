@@ -14,59 +14,59 @@ Placeholders can be used to enhance the experience of your application. They're 
 
 In the example below, we take a typical card component and recreate it with placeholders applied to create a "loading card". Size and proportions are the same between the two.
 
-<div class="bd-example bd-example-placeholder-cards d-flex justify-content-around">
-<div class="card">
-  {{< placeholder width="100%" height="180" class="card-img-top" text="false" background="#20c997" >}}
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="bd-example bd-example-placeholder-cards bs-d-flex bs-justify-content-around">
+<div class="bs-card">
+  {{< placeholder width="100%" height="180" class="bs-card-img-top" text="false" background="#20c997" >}}
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Card title</h5>
+    <p class="bs-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="bs-btn bs-btn-primary">Go somewhere</a>
   </div>
 </div>
 
-<div class="card" aria-hidden="true">
-  {{< placeholder width="100%" height="180" class="card-img-top" text="false" >}}
-  <div class="card-body">
-    <div class="h5 card-title placeholder-glow">
-      <span class="placeholder col-6"></span>
+<div class="bs-card" aria-hidden="true">
+  {{< placeholder width="100%" height="180" class="bs-card-img-top" text="false" >}}
+  <div class="bs-card-body">
+    <div class="bs-h5 bs-card-title bs-placeholder-glow">
+      <span class="bs-placeholder bs-col-6"></span>
     </div>
-    <p class="card-text placeholder-glow">
-      <span class="placeholder col-7"></span>
-      <span class="placeholder col-4"></span>
-      <span class="placeholder col-4"></span>
-      <span class="placeholder col-6"></span>
-      <span class="placeholder col-8"></span>
+    <p class="bs-card-text bs-placeholder-glow">
+      <span class="bs-placeholder bs-col-7"></span>
+      <span class="bs-placeholder bs-col-4"></span>
+      <span class="bs-placeholder bs-col-4"></span>
+      <span class="bs-placeholder bs-col-6"></span>
+      <span class="bs-placeholder bs-col-8"></span>
     </p>
-    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+    <a href="#" tabindex="-1" class="bs-btn bs-btn-primary disabled placeholder col-6"></a>
   </div>
 </div>
 </div>
 
 ```html
-<div class="card">
-  <img src="..." class="card-img-top" alt="...">
+<div class="bs-card">
+  <img src="..." class="bs-card-img-top" alt="...">
 
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Card title</h5>
+    <p class="bs-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="bs-btn bs-btn-primary">Go somewhere</a>
   </div>
 </div>
 
-<div class="card" aria-hidden="true">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title placeholder-glow">
-      <span class="placeholder col-6"></span>
+<div class="bs-card" aria-hidden="true">
+  <img src="..." class="bs-card-img-top" alt="...">
+  <div class="bs-card-body">
+    <h5 class="bs-card-title bs-placeholder-glow">
+      <span class="bs-placeholder bs-col-6"></span>
     </h5>
-    <p class="card-text placeholder-glow">
-      <span class="placeholder col-7"></span>
-      <span class="placeholder col-4"></span>
-      <span class="placeholder col-4"></span>
-      <span class="placeholder col-6"></span>
-      <span class="placeholder col-8"></span>
+    <p class="bs-card-text bs-placeholder-glow">
+      <span class="bs-placeholder bs-col-7"></span>
+      <span class="bs-placeholder bs-col-4"></span>
+      <span class="bs-placeholder bs-col-4"></span>
+      <span class="bs-placeholder bs-col-6"></span>
+      <span class="bs-placeholder bs-col-8"></span>
     </p>
-    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+    <a href="#" tabindex="-1" class="bs-btn bs-btn-primary bs-disabled bs-placeholder bs-col-6"></a>
   </div>
 </div>
 ```
@@ -79,10 +79,10 @@ We apply additional styling to `.btn`s via `::before` to ensure the `height` is 
 
 {{< example >}}
 <p aria-hidden="true">
-  <span class="placeholder col-6"></span>
+  <span class="bs-placeholder bs-col-6"></span>
 </p>
 
-<a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-4" aria-hidden="true"></a>
+<a href="#" tabindex="-1" class="bs-btn bs-btn-primary bs-disabled bs-placeholder bs-col-4" aria-hidden="true"></a>
 {{< /example >}}
 
 {{< callout info >}}
@@ -94,9 +94,9 @@ The use of `aria-hidden="true"` only indicates that the element should be hidden
 You can change the `width` through grid column classes, width utilities, or inline styles.
 
 {{< example >}}
-<span class="placeholder col-6"></span>
-<span class="placeholder w-75"></span>
-<span class="placeholder" style="width: 25%;"></span>
+<span class="bs-placeholder bs-col-6"></span>
+<span class="bs-placeholder bs-w-75"></span>
+<span class="bs-placeholder" style="width: 25%;"></span>
 {{< /example >}}
 
 ### Color
@@ -104,10 +104,10 @@ You can change the `width` through grid column classes, width utilities, or inli
 By default, the `placeholder` uses `currentColor`. This can be overridden with a custom color or utility class.
 
 {{< example >}}
-<span class="placeholder col-12"></span>
+<span class="bs-placeholder bs-col-12"></span>
 {{< placeholders.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<span class="placeholder col-12 bg-{{ .name }}"></span>
+<span class="bs-placeholder bs-col-12 bs-bg-{{ .name }}"></span>
 {{- end -}}
 {{< /placeholders.inline >}}
 {{< /example >}}
@@ -117,10 +117,10 @@ By default, the `placeholder` uses `currentColor`. This can be overridden with a
 The size of `.placeholder`s are based on the typographic style of the parent element. Customize them with sizing modifiers: `.placeholder-lg`, `.placeholder-sm`, or `.placeholder-xs`.
 
 {{< example >}}
-<span class="placeholder col-12 placeholder-lg"></span>
-<span class="placeholder col-12"></span>
-<span class="placeholder col-12 placeholder-sm"></span>
-<span class="placeholder col-12 placeholder-xs"></span>
+<span class="bs-placeholder bs-col-12 bs-placeholder-lg"></span>
+<span class="bs-placeholder bs-col-12"></span>
+<span class="bs-placeholder bs-col-12 bs-placeholder-sm"></span>
+<span class="bs-placeholder bs-col-12 bs-placeholder-xs"></span>
 {{< /example >}}
 
 ### Animation
@@ -128,12 +128,12 @@ The size of `.placeholder`s are based on the typographic style of the parent ele
 Animate placeholders with `.placeholder-glow` or `.placeholder-wave` to better convey the perception of something being _actively_ loaded.
 
 {{< example >}}
-<p class="placeholder-glow">
-  <span class="placeholder col-12"></span>
+<p class="bs-placeholder-glow">
+  <span class="bs-placeholder bs-col-12"></span>
 </p>
 
-<p class="placeholder-wave">
-  <span class="placeholder col-12"></span>
+<p class="bs-placeholder-wave">
+  <span class="bs-placeholder bs-col-12"></span>
 </p>
 {{< /example >}}
 

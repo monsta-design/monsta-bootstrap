@@ -12,14 +12,14 @@ Due to the widespread use of `<table>` elements across third-party widgets like 
 
 Using the most basic table markup, here's how `.table`-based tables look in Bootstrap.
 
-{{< table class="table" simplified="false" >}}
+{{< table class="bs-table" simplified="false" >}}
 
 ## Variants
 
 Use contextual classes to color tables, table rows or individual cells.
 
 <div class="bd-example">
-  <table class="table">
+  <table class="bs-table">
     <thead>
       <tr>
         <th scope="col">Class</th>
@@ -35,7 +35,7 @@ Use contextual classes to color tables, table rows or individual cells.
       </tr>
       {{< table.inline >}}
       {{- range (index $.Site.Data "theme-colors") }}
-        <tr class="table-{{ .name }}">
+        <tr class="bs-table-{{ .name }}">
           <th scope="row">{{ .name | title }}</th>
           <td>Cell</td>
           <td>Cell</td>
@@ -49,20 +49,20 @@ Use contextual classes to color tables, table rows or individual cells.
 {{< highlight html >}}
 <!-- On tables -->{{< table.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<table class="table-{{ .name }}">...</table>
+<table class="bs-table-{{ .name }}">...</table>
 {{- end -}}
 {{< /table.inline >}}
 
 <!-- On rows -->{{< table.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<tr class="table-{{ .name }}">...</tr>
+<tr class="bs-table-{{ .name }}">...</tr>
 {{- end -}}
 {{< /table.inline >}}
 
 <!-- On cells (`td` or `th`) -->
 <tr>{{< table.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-  <td class="table-{{ .name }}">...</td>
+  <td class="bs-table-{{ .name }}">...</td>
 {{- end -}}
 {{< /table.inline >}}
 </tr>
@@ -78,32 +78,32 @@ Use contextual classes to color tables, table rows or individual cells.
 
 Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
 
-{{< table class="table table-striped" >}}
+{{< table class="bs-table table-striped" >}}
 
 These classes can also be added to table variants:
 
-{{< table class="table table-dark table-striped" >}}
+{{< table class="bs-table table-dark table-striped" >}}
 
-{{< table class="table table-success table-striped" >}}
+{{< table class="bs-table table-success table-striped" >}}
 
 ### Hoverable rows
 
 Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 
-{{< table class="table table-hover" >}}
+{{< table class="bs-table bs-table-hover" >}}
 
-{{< table class="table table-dark table-hover" >}}
+{{< table class="bs-table bs-table-dark table-hover" >}}
 
 These hoverable rows can also be combined with the striped variant:
 
-{{< table class="table table-striped table-hover" >}}
+{{< table class="bs-table bs-table-striped bs-table-hover" >}}
 
 ### Active tables
 
 Highlight a table row or cell by adding a `.table-active` class.
 
 <div class="bd-example">
-  <table class="table">
+  <table class="bs-table">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -113,7 +113,7 @@ Highlight a table row or cell by adding a `.table-active` class.
       </tr>
     </thead>
     <tbody>
-      <tr class="table-active">
+      <tr class="bs-table-active">
         <th scope="row">1</th>
         <td>Mark</td>
         <td>Otto</td>
@@ -127,7 +127,7 @@ Highlight a table row or cell by adding a `.table-active` class.
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td colspan="2" class="table-active">Larry the Bird</td>
+        <td colspan="2" class="bs-table-active">Larry the Bird</td>
         <td>@twitter</td>
       </tr>
     </tbody>
@@ -135,12 +135,12 @@ Highlight a table row or cell by adding a `.table-active` class.
 </div>
 
 ```html
-<table class="table">
+<table class="bs-table">
   <thead>
     ...
   </thead>
   <tbody>
-    <tr class="table-active">
+    <tr class="bs-table-active">
       ...
     </tr>
     <tr>
@@ -148,7 +148,7 @@ Highlight a table row or cell by adding a `.table-active` class.
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2" class="table-active">Larry the Bird</td>
+      <td colspan="2" class="bs-table-active">Larry the Bird</td>
       <td>@twitter</td>
     </tr>
   </tbody>
@@ -156,7 +156,7 @@ Highlight a table row or cell by adding a `.table-active` class.
 ```
 
 <div class="bd-example">
-  <table class="table table-dark">
+  <table class="bs-table bs-table-dark">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -166,7 +166,7 @@ Highlight a table row or cell by adding a `.table-active` class.
       </tr>
     </thead>
     <tbody>
-      <tr class="table-active">
+      <tr class="bs-table-active">
         <th scope="row">1</th>
         <td>Mark</td>
         <td>Otto</td>
@@ -180,7 +180,7 @@ Highlight a table row or cell by adding a `.table-active` class.
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td colspan="2" class="table-active">Larry the Bird</td>
+        <td colspan="2" class="bs-table-active">Larry the Bird</td>
         <td>@twitter</td>
       </tr>
     </tbody>
@@ -188,12 +188,12 @@ Highlight a table row or cell by adding a `.table-active` class.
 </div>
 
 ```html
-<table class="table table-dark">
+<table class="bs-table bs-table-dark">
   <thead>
     ...
   </thead>
   <tbody>
-    <tr class="table-active">
+    <tr class="bs-table-active">
       ...
     </tr>
     <tr>
@@ -201,7 +201,7 @@ Highlight a table row or cell by adding a `.table-active` class.
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2" class="table-active">Larry the Bird</td>
+      <td colspan="2" class="bs-table-active">Larry the Bird</td>
       <td>@twitter</td>
     </tr>
   </tbody>
@@ -228,41 +228,41 @@ Behind the scenes it looks like this:
 
 Add `.table-bordered` for borders on all sides of the table and cells.
 
-{{< table class="table table-bordered" >}}
+{{< table class="bs-table bs-table-bordered" >}}
 
 [Border color utilities]({{< docsref "/utilities/borders#border-color" >}}) can be added to change colors:
 
-{{< table class="table table-bordered border-primary" >}}
+{{< table class="bs-table bs-table-bordered bs-border-primary" >}}
 
 ### Tables without borders
 
 Add `.table-borderless` for a table without borders.
 
-{{< table class="table table-borderless" >}}
+{{< table class="bs-table bs-table-borderless" >}}
 
-{{< table class="table table-dark table-borderless" >}}
+{{< table class="bs-table bs-table-dark bs-table-borderless" >}}
 
 ## Small tables
 
 Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` in half.
 
-{{< table class="table table-sm" >}}
+{{< table class="bs-table bs-table-sm" >}}
 
-{{< table class="table table-dark table-sm" >}}
+{{< table class="bs-table bs-table-dark bs-table-sm" >}}
 
 ## Vertical alignment
 
 Table cells of `<thead>` are always vertical aligned to the bottom. Table cells in `<tbody>` inherit their alignment from `<table>` and are aligned to the the top by default. Use the [vertical align]({{< docsref "/utilities/vertical-align" >}}) classes to re-align where needed.
 
 <div class="bd-example">
-  <div class="table-responsive">
-    <table class="table align-middle">
+  <div class="bs-table-responsive">
+    <table class="bs-table bs-align-middle">
       <thead>
         <tr>
-          <th scope="col" class="w-25">Heading 1</th>
-          <th scope="col" class="w-25">Heading 2</th>
-          <th scope="col" class="w-25">Heading 3</th>
-          <th scope="col" class="w-25">Heading 4</th>
+          <th scope="col" class="bs-w-25">Heading 1</th>
+          <th scope="col" class="bs-w-25">Heading 2</th>
+          <th scope="col" class="bs-w-25">Heading 3</th>
+          <th scope="col" class="bs-w-25">Heading 4</th>
         </tr>
       </thead>
       <tbody>
@@ -272,7 +272,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
           <td>This cell inherits <code>vertical-align: middle;</code> from the table</td>
           <td>This here is some placeholder text, intended to take up quite a bit of vertical space, to demonstrate how the vertical alignment works in the preceding cells.</td>
         </tr>
-        <tr class="align-bottom">
+        <tr class="bs-align-bottom">
           <td>This cell inherits <code>vertical-align: bottom;</code> from the table row</td>
           <td>This cell inherits <code>vertical-align: bottom;</code> from the table row</td>
           <td>This cell inherits <code>vertical-align: bottom;</code> from the table row</td>
@@ -281,7 +281,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
         <tr>
           <td>This cell inherits <code>vertical-align: middle;</code> from the table</td>
           <td>This cell inherits <code>vertical-align: middle;</code> from the table</td>
-          <td class="align-top">This cell is aligned to the top.</td>
+          <td class="bs-align-top">This cell is aligned to the top.</td>
           <td>This here is some placeholder text, intended to take up quite a bit of vertical space, to demonstrate how the vertical alignment works in the preceding cells.</td>
         </tr>
       </tbody>
@@ -290,8 +290,8 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 </div>
 
 ```html
-<div class="table-responsive">
-  <table class="table align-middle">
+<div class="bs-table-responsive">
+  <table class="bs-table bs-align-middle">
     <thead>
       <tr>
         ...
@@ -301,13 +301,13 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
       <tr>
         ...
       </tr>
-      <tr class="align-bottom">
+      <tr class="bs-align-bottom">
         ...
       </tr>
       <tr>
         <td>...</td>
         <td>...</td>
-        <td class="align-top">This cell is aligned to the top.</td>
+        <td class="bs-align-top">This cell is aligned to the top.</td>
         <td>...</td>
       </tr>
     </tbody>
@@ -320,7 +320,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 Border styles, active styles, and table variants are not inherited by nested tables.
 
 <div class="bd-example">
-<table class="table table-striped table-bordered">
+<table class="bs-table bs-table-striped bs-table-bordered">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -338,7 +338,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
     </tr>
     <tr>
       <td colspan="4">
-        <table class="table mb-0">
+        <table class="bs-table bs-mb-0">
           <thead>
             <tr>
               <th scope="col">Header</th>
@@ -377,7 +377,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
 </div>
 
 ```html
-<table class="table table-striped">
+<table class="bs-table bs-table-striped">
   <thead>
     ...
   </thead>
@@ -385,7 +385,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
     ...
     <tr>
       <td colspan="4">
-        <table class="table mb-0">
+        <table class="bs-table bs-mb-0">
           ...
         </table>
       </td>
@@ -408,8 +408,8 @@ Note that if you add `<tr>`s as direct children of a table, those `<tr>` will be
 Similar to tables and dark tables, use the modifier classes `.table-light` or `.table-dark` to make `<thead>`s appear light or dark gray.
 
 <div class="bd-example">
-<table class="table">
-  <thead class="table-light">
+<table class="bs-table">
+  <thead class="bs-table-light">
     <tr>
       <th scope="col">#</th>
       <th scope="col">First</th>
@@ -441,8 +441,8 @@ Similar to tables and dark tables, use the modifier classes `.table-light` or `.
 </div>
 
 ```html
-<table class="table">
-  <thead class="table-light">
+<table class="bs-table">
+  <thead class="bs-table-light">
     ...
   </thead>
   <tbody>
@@ -452,8 +452,8 @@ Similar to tables and dark tables, use the modifier classes `.table-light` or `.
 ```
 
 <div class="bd-example">
-<table class="table">
-  <thead class="table-dark">
+<table class="bs-table">
+  <thead class="bs-table-dark">
     <tr>
       <th scope="col">#</th>
       <th scope="col">First</th>
@@ -485,8 +485,8 @@ Similar to tables and dark tables, use the modifier classes `.table-light` or `.
 </div>
 
 ```html
-<table class="table">
-  <thead class="table-dark">
+<table class="bs-table">
+  <thead class="bs-table-dark">
     ...
   </thead>
   <tbody>
@@ -498,8 +498,8 @@ Similar to tables and dark tables, use the modifier classes `.table-light` or `.
 ### Table foot
 
 <div class="bd-example">
-<table class="table">
-  <thead class="table-light">
+<table class="bs-table">
+  <thead class="bs-table-light">
     <tr>
       <th scope="col">#</th>
       <th scope="col">First</th>
@@ -539,7 +539,7 @@ Similar to tables and dark tables, use the modifier classes `.table-light` or `.
 </div>
 
 ```html
-<table class="table">
+<table class="bs-table">
   <thead>
     ...
   </thead>
@@ -557,14 +557,14 @@ Similar to tables and dark tables, use the modifier classes `.table-light` or `.
 A `<caption>` functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it.
 
 <div class="bd-example">
-  <table class="table">
+  <table class="bs-table">
     <caption>List of users</caption>
     {{< partial "table-content" >}}
   </table>
 </div>
 
 ```html
-<table class="table table-sm">
+<table class="bs-table bs-table-sm">
   <caption>List of users</caption>
   <thead>
     ...
@@ -578,7 +578,7 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
 You can also put the `<caption>` on the top of the table with `.caption-top`.
 
 {{< example >}}
-<table class="table caption-top">
+<table class="bs-table bs-caption-top">
   <caption>List of users</caption>
   <thead>
     <tr>
@@ -626,8 +626,8 @@ Responsive tables make use of `overflow-y: hidden`, which clips off any content 
 Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
 
 <div class="bd-example">
-  <div class="table-responsive">
-    <table class="table">
+  <div class="bs-table-responsive">
+    <table class="bs-table">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -685,8 +685,8 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 </div>
 
 ```html
-<div class="table-responsive">
-  <table class="table">
+<div class="bs-table-responsive">
+  <table class="bs-table">
     ...
   </table>
 </div>
@@ -702,8 +702,8 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 {{ range $.Site.Data.breakpoints }}
 {{ if not (eq . "xs") }}
 <div class="bd-example">
-  <div class="table-responsive{{ .abbr }}">
-    <table class="table">
+  <div class="bs-table-responsive{{ .abbr }}">
+    <table class="bs-table">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -763,8 +763,8 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 {{< tables.inline >}}
 {{- range $.Site.Data.breakpoints -}}
 {{- if not (eq . "xs") }}
-<div class="table-responsive{{ .abbr }}">
-  <table class="table">
+<div class="bs-table-responsive{{ .abbr }}">
+  <table class="bs-table">
     ...
   </table>
 </div>

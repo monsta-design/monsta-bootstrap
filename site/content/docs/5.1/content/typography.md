@@ -22,7 +22,7 @@ These styles can be found within `_reboot.scss`, and the global variables are de
 
 All HTML headings, `<h1>` through `<h6>`, are available.
 
-<table class="table">
+<table class="bs-table">
   <thead>
     <tr>
       <th>Heading</th>
@@ -34,37 +34,37 @@ All HTML headings, `<h1>` through `<h6>`, are available.
       <td>
         {{< markdown >}}`<h1></h1>`{{< /markdown >}}
       </td>
-      <td><span class="h1">h1. Bootstrap heading</span></td>
+      <td><span class="bs-h1">h1. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h2></h2>`{{< /markdown >}}
       </td>
-      <td><span class="h2">h2. Bootstrap heading</span></td>
+      <td><span class="bs-h2">h2. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h3></h3>`{{< /markdown >}}
       </td>
-      <td><span class="h3">h3. Bootstrap heading</span></td>
+      <td><span class="bs-h3">h3. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h4></h4>`{{< /markdown >}}
       </td>
-      <td><span class="h4">h4. Bootstrap heading</span></td>
+      <td><span class="bs-h4">h4. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h5></h5>`{{< /markdown >}}
       </td>
-      <td><span class="h5">h5. Bootstrap heading</span></td>
+      <td><span class="bs-h5">h5. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h6></h6>`{{< /markdown >}}
       </td>
-      <td><span class="h6">h6. Bootstrap heading</span></td>
+      <td><span class="bs-h6">h6. Bootstrap heading</span></td>
     </tr>
   </tbody>
 </table>
@@ -81,12 +81,12 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
 
 {{< example >}}
-<p class="h1">h1. Bootstrap heading</p>
-<p class="h2">h2. Bootstrap heading</p>
-<p class="h3">h3. Bootstrap heading</p>
-<p class="h4">h4. Bootstrap heading</p>
-<p class="h5">h5. Bootstrap heading</p>
-<p class="h6">h6. Bootstrap heading</p>
+<p class="bs-h1">h1. Bootstrap heading</p>
+<p class="bs-h2">h2. Bootstrap heading</p>
+<p class="bs-h3">h3. Bootstrap heading</p>
+<p class="bs-h4">h4. Bootstrap heading</p>
+<p class="bs-h5">h5. Bootstrap heading</p>
+<p class="bs-h6">h6. Bootstrap heading</p>
 {{< /example >}}
 
 ### Customizing headings
@@ -96,7 +96,7 @@ Use the included utility classes to recreate the small secondary heading text fr
 {{< example >}}
 <h3>
   Fancy display heading
-  <small class="text-muted">With faded secondary text</small>
+  <small class="bs-text-muted">With faded secondary text</small>
 </h3>
 {{< /example >}}
 
@@ -105,21 +105,21 @@ Use the included utility classes to recreate the small secondary heading text fr
 Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
 
 <div class="bd-example">
-  <div class="display-1 pb-3 mb-3 border-bottom">Display 1</div>
-  <div class="display-2 pb-3 mb-3 border-bottom">Display 2</div>
-  <div class="display-3 pb-3 mb-3 border-bottom">Display 3</div>
-  <div class="display-4 pb-3 mb-3 border-bottom">Display 4</div>
-  <div class="display-5 pb-3 mb-3 border-bottom">Display 5</div>
-  <div class="display-6">Display 6</div>
+  <div class="bs-display-1 bs-pb-3 bs-mb-3 bs-border-bottom">Display 1</div>
+  <div class="bs-display-2 bs-pb-3 bs-mb-3 bs-border-bottom">Display 2</div>
+  <div class="bs-display-3 bs-pb-3 bs-mb-3 bs-border-bottom">Display 3</div>
+  <div class="bs-display-4 bs-pb-3 bs-mb-3 bs-border-bottom">Display 4</div>
+  <div class="bs-display-5 bs-pb-3 bs-mb-3 bs-border-bottom">Display 5</div>
+  <div class="bs-display-6">Display 6</div>
 </div>
 
 ```html
-<h1 class="display-1">Display 1</h1>
-<h1 class="display-2">Display 2</h1>
-<h1 class="display-3">Display 3</h1>
-<h1 class="display-4">Display 4</h1>
-<h1 class="display-5">Display 5</h1>
-<h1 class="display-6">Display 6</h1>
+<h1 class="bs-display-1">Display 1</h1>
+<h1 class="bs-display-2">Display 2</h1>
+<h1 class="bs-display-3">Display 3</h1>
+<h1 class="bs-display-4">Display 4</h1>
+<h1 class="bs-display-5">Display 5</h1>
+<h1 class="bs-display-6">Display 6</h1>
 ```
 
 Display headings are configured via the `$display-font-sizes` Sass map and two variables, `$display-font-weight` and `$display-line-height`.
@@ -131,7 +131,7 @@ Display headings are configured via the `$display-font-sizes` Sass map and two v
 Make a paragraph stand out by adding `.lead`.
 
 {{< example >}}
-<p class="lead">
+<p class="bs-lead">
   This is a lead paragraph. It stands out from regular paragraphs.
 </p>
 {{< /example >}}
@@ -179,15 +179,15 @@ Add `.initialism` to an abbreviation for a slightly smaller font-size.
 
 {{< example >}}
 <p><abbr title="attribute">attr</abbr></p>
-<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
+<p><abbr title="HyperText Markup Language" class="bs-initialism">HTML</abbr></p>
 {{< /example >}}
 
 ## Blockquotes
 
-For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.
+For quoting blocks of content from another source within your document. Wrap `<blockquote class="bs-blockquote">` around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.
 
 {{< example >}}
-<blockquote class="blockquote">
+<blockquote class="bs-blockquote">
   <p>A well-known quote, contained in a blockquote element.</p>
 </blockquote>
 {{< /example >}}
@@ -198,10 +198,10 @@ The HTML spec requires that blockquote attribution be placed outside the `<block
 
 {{< example >}}
 <figure>
-  <blockquote class="blockquote">
+  <blockquote class="bs-blockquote">
     <p>A well-known quote, contained in a blockquote element.</p>
   </blockquote>
-  <figcaption class="blockquote-footer">
+  <figcaption class="bs-blockquote-footer">
     Someone famous in <cite title="Source Title">Source Title</cite>
   </figcaption>
 </figure>
@@ -212,22 +212,22 @@ The HTML spec requires that blockquote attribution be placed outside the `<block
 Use text utilities as needed to change the alignment of your blockquote.
 
 {{< example >}}
-<figure class="text-center">
-  <blockquote class="blockquote">
+<figure class="bs-text-center">
+  <blockquote class="bs-blockquote">
     <p>A well-known quote, contained in a blockquote element.</p>
   </blockquote>
-  <figcaption class="blockquote-footer">
+  <figcaption class="bs-blockquote-footer">
     Someone famous in <cite title="Source Title">Source Title</cite>
   </figcaption>
 </figure>
 {{< /example >}}
 
 {{< example >}}
-<figure class="text-end">
-  <blockquote class="blockquote">
+<figure class="bs-text-end">
+  <blockquote class="bs-blockquote">
     <p>A well-known quote, contained in a blockquote element.</p>
   </blockquote>
-  <figcaption class="blockquote-footer">
+  <figcaption class="bs-blockquote-footer">
     Someone famous in <cite title="Source Title">Source Title</cite>
   </figcaption>
 </figure>
@@ -240,7 +240,7 @@ Use text utilities as needed to change the alignment of your blockquote.
 Remove the default `list-style` and left margin on list items (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
 
 {{< example >}}
-<ul class="list-unstyled">
+<ul class="bs-list-unstyled">
   <li>This is a list.</li>
   <li>It appears completely unstyled.</li>
   <li>Structurally, it's still a list.</li>
@@ -261,10 +261,10 @@ Remove the default `list-style` and left margin on list items (immediate childre
 Remove a list's bullets and apply some light `margin` with a combination of two classes, `.list-inline` and `.list-inline-item`.
 
 {{< example >}}
-<ul class="list-inline">
-  <li class="list-inline-item">This is a list item.</li>
-  <li class="list-inline-item">And another one.</li>
-  <li class="list-inline-item">But they're displayed inline.</li>
+<ul class="bs-list-inline">
+  <li class="bs-list-inline-item">This is a list item.</li>
+  <li class="bs-list-inline-item">And another one.</li>
+  <li class="bs-list-inline-item">But they're displayed inline.</li>
 </ul>
 {{< /example >}}
 
@@ -273,27 +273,27 @@ Remove a list's bullets and apply some light `margin` with a combination of two 
 Align terms and descriptions horizontally by using our grid system's predefined classes (or semantic mixins). For longer terms, you can optionally add a `.text-truncate` class to truncate the text with an ellipsis.
 
 {{< example >}}
-<dl class="row">
-  <dt class="col-sm-3">Description lists</dt>
-  <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+<dl class="bs-row">
+  <dt class="bs-col-sm-3">Description lists</dt>
+  <dd class="bs-col-sm-9">A description list is perfect for defining terms.</dd>
 
-  <dt class="col-sm-3">Term</dt>
-  <dd class="col-sm-9">
+  <dt class="bs-col-sm-3">Term</dt>
+  <dd class="bs-col-sm-9">
     <p>Definition for the term.</p>
     <p>And some more placeholder definition text.</p>
   </dd>
 
-  <dt class="col-sm-3">Another term</dt>
-  <dd class="col-sm-9">This definition is short, so no extra paragraphs or anything.</dd>
+  <dt class="bs-col-sm-3">Another term</dt>
+  <dd class="bs-col-sm-9">This definition is short, so no extra paragraphs or anything.</dd>
 
-  <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
-  <dd class="col-sm-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
+  <dt class="bs-col-sm-3 text-truncate">Truncated term is truncated</dt>
+  <dd class="bs-col-sm-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
 
-  <dt class="col-sm-3">Nesting</dt>
-  <dd class="col-sm-9">
-    <dl class="row">
-      <dt class="col-sm-4">Nested definition list</dt>
-      <dd class="col-sm-8">I heard you like definition lists. Let me put a definition list inside your definition list.</dd>
+  <dt class="bs-col-sm-3">Nesting</dt>
+  <dd class="bs-col-sm-9">
+    <dl class="bs-row">
+      <dt class="bs-col-sm-4">Nested definition list</dt>
+      <dd class="bs-col-sm-8">I heard you like definition lists. Let me put a definition list inside your definition list.</dd>
     </dl>
   </dd>
 </dl>

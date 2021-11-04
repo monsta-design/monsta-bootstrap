@@ -11,8 +11,8 @@ toc: true
 Create custom `<input type="range">` controls with `.form-range`. The track (the background) and thumb (the value) are both styled to appear the same across browsers. As only Firefox supports "filling" their track from the left or right of the thumb as a means to visually indicate progress, we do not currently support it.
 
 {{< example >}}
-<label for="customRange1" class="form-label">Example range</label>
-<input type="range" class="form-range" id="customRange1">
+<label for="customRange1" class="bs-form-label">Example range</label>
+<input type="range" class="bs-form-range" id="customRange1">
 {{< /example >}}
 
 ## Disabled
@@ -20,8 +20,8 @@ Create custom `<input type="range">` controls with `.form-range`. The track (the
 Add the `disabled` boolean attribute on an input to give it a grayed out appearance and remove pointer events.
 
 {{< example >}}
-<label for="disabledRange" class="form-label">Disabled range</label>
-<input type="range" class="form-range" id="disabledRange" disabled>
+<label for="disabledRange" class="bs-form-label">Disabled range</label>
+<input type="range" class="bs-form-range" id="disabledRange" disabled>
 {{< /example >}}
 
 ## Min and max
@@ -29,8 +29,8 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
 Range inputs have implicit values for `min` and `max`—`0` and `100`, respectively. You may specify new values for those using the `min` and `max` attributes.
 
 {{< example >}}
-<label for="customRange2" class="form-label">Example range</label>
-<input type="range" class="form-range" min="0" max="5" id="customRange2">
+<label for="customRange2" class="bs-form-label">Example range</label>
+<input type="range" class="bs-form-range" min="0" max="5" id="customRange2">
 {{< /example >}}
 
 ## Steps
@@ -38,8 +38,8 @@ Range inputs have implicit values for `min` and `max`—`0` and `100`, respectiv
 By default, range inputs "snap" to integer values. To change this, you can specify a `step` value. In the example below, we double the number of steps by using `step="0.5"`.
 
 {{< example >}}
-<label for="customRange3" class="form-label">Example range</label>
-<input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+<label for="customRange3" class="bs-form-label">Example range</label>
+<input type="range" class="bs-form-range" min="0" max="5" step="0.5" id="customRange3">
 {{< /example >}}
 
 ## Sass

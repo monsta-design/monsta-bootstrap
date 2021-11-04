@@ -19,14 +19,14 @@ Customize them with additional styles as needed.
 ## Example
 
 {{< example >}}
-<div class="vr"></div>
+<div class="bs-vr"></div>
 {{< /example >}}
 
 Vertical rules scale their height in flex layouts:
 
 {{< example >}}
-<div class="d-flex" style="height: 200px;">
-  <div class="vr"></div>
+<div class="bs-d-flex" style="height: 200px;">
+  <div class="bs-vr"></div>
 </div>
 {{< /example >}}
 
@@ -35,10 +35,10 @@ Vertical rules scale their height in flex layouts:
 They can also be used in [stacks]({{< docsref "/helpers/stacks" >}}):
 
 {{< example >}}
-<div class="hstack gap-3">
-  <div class="bg-light border">First item</div>
-  <div class="bg-light border ms-auto">Second item</div>
-  <div class="vr"></div>
-  <div class="bg-light border">Third item</div>
+<div class="bs-hstack bs-gap-3">
+  <div class="bs-bg-light bs-border">First item</div>
+  <div class="bs-bg-light bs-border bs-ms-auto">Second item</div>
+  <div class="bs-vr"></div>
+  <div class="bs-bg-light bs-border">Third item</div>
 </div>
 {{< /example >}}

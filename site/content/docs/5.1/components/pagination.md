@@ -14,12 +14,12 @@ In addition, as pages likely have more than one such navigation section, it's ad
 
 {{< example >}}
 <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  <ul class="bs-pagination">
+    <li class="bs-page-item"><a class="bs-page-link" href="#">Previous</a></li>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">1</a></li>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">2</a></li>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">3</a></li>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">Next</a></li>
   </ul>
 </nav>
 {{< /example >}}
@@ -30,17 +30,17 @@ Looking to use an icon or symbol in place of text for some pagination links? Be 
 
 {{< example >}}
 <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
+  <ul class="bs-pagination">
+    <li class="bs-page-item">
+      <a class="bs-page-link" href="#" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
+    <li class="bs-page-item"><a class="bs-page-link" href="#">1</a></li>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">2</a></li>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">3</a></li>
+    <li class="bs-page-item">
+      <a class="bs-page-link" href="#" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
@@ -56,17 +56,17 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
 
 {{< example >}}
 <nav aria-label="...">
-  <ul class="pagination">
-    <li class="page-item disabled">
-      <a class="page-link">Previous</a>
+  <ul class="bs-pagination">
+    <li class="bs-page-item disabled">
+      <a class="bs-page-link">Previous</a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item active" aria-current="page">
-      <a class="page-link" href="#">2</a>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">1</a></li>
+    <li class="bs-page-item active" aria-current="page">
+      <a class="bs-page-link" href="#">2</a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">3</a></li>
+    <li class="bs-page-item">
+      <a class="bs-page-link" href="#">Next</a>
     </li>
   </ul>
 </nav>
@@ -76,17 +76,17 @@ You can optionally swap out active or disabled anchors for `<span>`, or omit the
 
 {{< example >}}
 <nav aria-label="...">
-  <ul class="pagination">
-    <li class="page-item disabled">
-      <span class="page-link">Previous</span>
+  <ul class="bs-pagination">
+    <li class="bs-page-item bs-disabled">
+      <span class="bs-page-link">Previous</span>
     </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item active" aria-current="page">
-      <span class="page-link">2</span>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">1</a></li>
+    <li class="bs-page-item active" aria-current="page">
+      <span class="bs-page-link">2</span>
     </li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">3</a></li>
+    <li class="bs-page-item">
+      <a class="bs-page-link" href="#">Next</a>
     </li>
   </ul>
 </nav>
@@ -98,24 +98,24 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
 
 {{< example >}}
 <nav aria-label="...">
-  <ul class="pagination pagination-lg">
-    <li class="page-item active" aria-current="page">
-      <span class="page-link">1</span>
+  <ul class="bs-pagination bs-pagination-lg">
+    <li class="bs-page-item bs-active" aria-current="page">
+      <span class="bs-page-link">1</span>
     </li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">2</a></li>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">3</a></li>
   </ul>
 </nav>
 {{< /example >}}
 
 {{< example >}}
 <nav aria-label="...">
-  <ul class="pagination pagination-sm">
-    <li class="page-item active" aria-current="page">
-      <span class="page-link">1</span>
+  <ul class="bs-pagination bs-pagination-sm">
+    <li class="bs-page-item bs-active" aria-current="page">
+      <span class="bs-page-link">1</span>
     </li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">2</a></li>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">3</a></li>
   </ul>
 </nav>
 {{< /example >}}
@@ -126,15 +126,15 @@ Change the alignment of pagination components with [flexbox utilities]({{< docsr
 
 {{< example >}}
 <nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link">Previous</a>
+  <ul class="bs-pagination bs-justify-content-center">
+    <li class="bs-page-item bs-disabled">
+      <a class="bs-page-link">Previous</a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">1</a></li>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">2</a></li>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">3</a></li>
+    <li class="bs-page-item">
+      <a class="bs-page-link" href="#">Next</a>
     </li>
   </ul>
 </nav>
@@ -142,15 +142,15 @@ Change the alignment of pagination components with [flexbox utilities]({{< docsr
 
 {{< example >}}
 <nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-end">
-    <li class="page-item disabled">
-      <a class="page-link">Previous</a>
+  <ul class="bs-pagination bs-justify-content-end">
+    <li class="bs-page-item bs-disabled">
+      <a class="bs-page-link">Previous</a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">1</a></li>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">2</a></li>
+    <li class="bs-page-item"><a class="bs-page-link" href="#">3</a></li>
+    <li class="bs-page-item">
+      <a class="bs-page-link" href="#">Next</a>
     </li>
   </ul>
 </nav>

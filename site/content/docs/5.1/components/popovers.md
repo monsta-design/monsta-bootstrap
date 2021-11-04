@@ -55,7 +55,7 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 ## Example
 
 {{< example >}}
-<button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+<button type="button" class="bs-btn bs-btn-lg bs-btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 {{< /example >}}
 
 ### Four directions
@@ -63,16 +63,16 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 Four options are available: top, right, bottom, and left aligned. Directions are mirrored when using Bootstrap in RTL.
 
 {{< example >}}
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+<button type="button" class="bs-btn bs-btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
   Popover on top
 </button>
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+<button type="button" class="bs-btn bs-btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
   Popover on right
 </button>
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+<button type="button" class="bs-btn bs-btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
   Popover on bottom
 </button>
-<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+<button type="button" class="bs-btn bs-btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
   Popover on left
 </button>
 {{< /example >}}
@@ -88,11 +88,11 @@ For proper cross-browser and cross-platform behavior, you must use the `<a>` tag
 {{< /callout >}}
 
 {{< example >}}
-<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+<a tabindex="0" class="bs-btn bs-btn-lg bs-btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
 {{< /example >}}
 
 ```js
-var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+var popover = new bootstrap.Popover(document.querySelector('.bs-popover-dismiss'), {
   trigger: 'focus'
 })
 ```
@@ -104,8 +104,8 @@ Elements with the `disabled` attribute aren't interactive, meaning users cannot 
 For disabled popover triggers, you may also prefer `data-bs-trigger="hover focus"` so that the popover appears as immediate visual feedback to your users as they may not expect to _click_ on a disabled element.
 
 {{< example >}}
-<span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
-  <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+<span class="bs-d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+  <button class="bs-btn bs-btn-primary" type="button" disabled>Disabled button</button>
 </span>
 {{< /example >}}
 
@@ -142,7 +142,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` options cannot be supplied using data attributes.
 {{< /callout >}}
 
-<table class="table">
+<table class="bs-table">
   <thead>
     <tr>
       <th style="width: 100px;">Name</th>
@@ -209,7 +209,7 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
     <tr>
       <td><code>template</code></td>
       <td>string</td>
-      <td><code>'&lt;div class="popover" role="tooltip"&gt;&lt;div class="popover-arrow"&gt;&lt;/div&gt;&lt;h3 class="popover-header"&gt;&lt;/h3&gt;&lt;div class="popover-body"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
+      <td><code>'&lt;div class="bs-popover" role="tooltip"&gt;&lt;div class="bs-popover-arrow"&gt;&lt;/div&gt;&lt;h3 class="bs-popover-header"&gt;&lt;/h3&gt;&lt;div class="bs-popover-body"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
       <td>
         <p>Base HTML to use when creating the popover.</p>
         <p>The popover's <code>title</code> will be injected into the <code>.popover-header</code>.</p>
@@ -404,7 +404,7 @@ var popover = bootstrap.Popover.getOrCreateInstance(exampleTriggerEl) // Returns
 
 ### Events
 
-<table class="table">
+<table class="bs-table">
   <thead>
     <tr>
       <th style="width: 150px;">Event type</th>

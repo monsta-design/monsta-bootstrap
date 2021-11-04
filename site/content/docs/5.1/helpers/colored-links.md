@@ -11,7 +11,7 @@ You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` class
 {{< example >}}
 {{< colored-links.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<a href="#" class="link-{{ .name }}">{{ .name | title }} link</a>
+<a href="#" class="ns-link-{{ .name }}">{{ .name | title }} link</a>
 {{- end -}}
 {{< /colored-links.inline >}}
 {{< /example >}}

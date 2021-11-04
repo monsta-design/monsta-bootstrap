@@ -12,48 +12,48 @@ Containers are the most basic layout element in Bootstrap and are **required whe
 
 Bootstrap comes with three different containers:
 
-- `.container`, which sets a `max-width` at each responsive breakpoint
-- `.container-fluid`, which is `width: 100%` at all breakpoints
-- `.container-{breakpoint}`, which is `width: 100%` until the specified breakpoint
+- `.bs-container`, which sets a `max-width` at each responsive breakpoint
+- `.bs-container-fluid`, which is `width: 100%` at all breakpoints
+- `.bs-container-{breakpoint}`, which is `width: 100%` until the specified breakpoint
 
-The table below illustrates how each container's `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
+The table below illustrates how each container's `max-width` compares to the original `.bs-container` and `.bs-container-fluid` across each breakpoint.
 
 See them in action and compare them in our [Grid example]({{< docsref "/examples/grid#containers" >}}).
 
-<table class="table">
+<table class="bs-table">
   <thead>
     <tr>
-      <td class="border-dark"></td>
+      <td class="bs-border-dark"></td>
       <th scope="col">
         Extra small<br>
-        <span class="fw-normal">&lt;576px</span>
+        <span class="bs-fw-normal">&lt;576px</span>
       </th>
       <th scope="col">
         Small<br>
-        <span class="fw-normal">&ge;576px</span>
+        <span class="bs-fw-normal">&ge;576px</span>
       </th>
       <th scope="col">
         Medium<br>
-        <span class="fw-normal">&ge;768px</span>
+        <span class="bs-fw-normal">&ge;768px</span>
       </th>
       <th scope="col">
         Large<br>
-        <span class="fw-normal">&ge;992px</span>
+        <span class="bs-fw-normal">&ge;992px</span>
       </th>
       <th scope="col">
         X-Large<br>
-        <span class="fw-normal">&ge;1200px</span>
+        <span class="bs-fw-normal">&ge;1200px</span>
       </th>
       <th scope="col">
         XX-Large<br>
-        <span class="fw-normal">&ge;1400px</span>
+        <span class="bs-fw-normal">&ge;1400px</span>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row" class="fw-normal"><code>.container</code></th>
-      <td class="text-muted">100%</td>
+      <th scope="row" class="bs-fw-normal"><code>.container</code></th>
+      <td class="bs-text-muted">100%</td>
       <td>540px</td>
       <td>720px</td>
       <td>960px</td>
@@ -61,8 +61,8 @@ See them in action and compare them in our [Grid example]({{< docsref "/examples
       <td>1320px</td>
     </tr>
     <tr>
-      <th scope="row" class="fw-normal"><code>.container-sm</code></th>
-      <td class="text-muted">100%</td>
+      <th scope="row" class="bs-fw-normal"><code>.container-sm</code></th>
+      <td class="bs-text-muted">100%</td>
       <td>540px</td>
       <td>720px</td>
       <td>960px</td>
@@ -70,49 +70,49 @@ See them in action and compare them in our [Grid example]({{< docsref "/examples
       <td>1320px</td>
     </tr>
     <tr>
-      <th scope="row" class="fw-normal"><code>.container-md</code></th>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
+      <th scope="row" class="bs-fw-normal"><code>.container-md</code></th>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
       <td>720px</td>
       <td>960px</td>
       <td>1140px</td>
       <td>1320px</td>
     </tr>
     <tr>
-      <th scope="row" class="fw-normal"><code>.container-lg</code></th>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
+      <th scope="row" class="bs-fw-normal"><code>.container-lg</code></th>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
       <td>960px</td>
       <td>1140px</td>
       <td>1320px</td>
     </tr>
     <tr>
-      <th scope="row" class="fw-normal"><code>.container-xl</code></th>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
+      <th scope="row" class="bs-fw-normal"><code>.container-xl</code></th>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
       <td>1140px</td>
       <td>1320px</td>
     </tr>
     <tr>
-      <th scope="row" class="fw-normal"><code>.container-xxl</code></th>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
+      <th scope="row" class="bs-fw-normal"><code>.container-xxl</code></th>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
       <td>1320px</td>
     </tr>
     <tr>
-      <th scope="row" class="fw-normal"><code>.container-fluid</code></th>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
-      <td class="text-muted">100%</td>
+      <th scope="row" class="bs-fw-normal"><code>.container-fluid</code></th>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
+      <td class="bs-text-muted">100%</td>
     </tr>
   </tbody>
 </table>
@@ -122,7 +122,7 @@ See them in action and compare them in our [Grid example]({{< docsref "/examples
 Our default `.container` class is a responsive, fixed-width container, meaning its `max-width` changes at each breakpoint.
 
 ```html
-<div class="container">
+<div class="bs-container">
   <!-- Content here -->
 </div>
 ```
@@ -132,11 +132,11 @@ Our default `.container` class is a responsive, fixed-width container, meaning i
 Responsive containers allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` is 100% wide to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, `xl`, and `xxl`.
 
 ```html
-<div class="container-sm">100% wide until small breakpoint</div>
-<div class="container-md">100% wide until medium breakpoint</div>
-<div class="container-lg">100% wide until large breakpoint</div>
-<div class="container-xl">100% wide until extra large breakpoint</div>
-<div class="container-xxl">100% wide until extra extra large breakpoint</div>
+<div class="bs-container-sm">100% wide until small breakpoint</div>
+<div class="bs-container-md">100% wide until medium breakpoint</div>
+<div class="bs-container-lg">100% wide until large breakpoint</div>
+<div class="bs-container-xl">100% wide until extra large breakpoint</div>
+<div class="bs-container-xxl">100% wide until extra extra large breakpoint</div>
 ```
 
 ## Fluid containers
@@ -144,7 +144,7 @@ Responsive containers allow you to specify a class that is 100% wide until the s
 Use `.container-fluid` for a full width container, spanning the entire width of the viewport.
 
 ```html
-<div class="container-fluid">
+<div class="bs-container-fluid">
   ...
 </div>
 ```

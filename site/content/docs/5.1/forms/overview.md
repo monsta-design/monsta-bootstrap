@@ -34,20 +34,20 @@ Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for 
 
 {{< example >}}
 <form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  <div class="bs-mb-3">
+    <label for="exampleInputEmail1" class="bs-form-label">Email address</label>
+    <input type="email" class="bs-form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="bs-form-text">We'll never share your email with anyone else.</div>
   </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+  <div class="bs-mb-3">
+    <label for="exampleInputPassword1" class="bs-form-label">Password</label>
+    <input type="password" class="bs-form-control" id="exampleInputPassword1">
   </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  <div class="bs-mb-3 bs-form-check">
+    <input type="checkbox" class="bs-form-check-input" id="exampleCheck1">
+    <label class="bs-form-check-label" for="exampleCheck1">Check me out</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="bs-btn bs-btn-primary">Submit</button>
 </form>
 {{< /example >}}
 
@@ -64,9 +64,9 @@ Form text should be explicitly associated with the form control it relates to us
 Form text below inputs can be styled with `.form-text`. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.
 
 {{< example >}}
-<label for="inputPassword5" class="form-label">Password</label>
-<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-<div id="passwordHelpBlock" class="form-text">
+<label for="inputPassword5" class="bs-form-label">Password</label>
+<input type="password" id="inputPassword5" class="bs-form-control" aria-describedby="passwordHelpBlock">
+<div id="passwordHelpBlock" class="bs-form-text">
   Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
 </div>
 {{< /example >}}
@@ -74,15 +74,15 @@ Form text below inputs can be styled with `.form-text`. If a block-level element
 Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`, or something else) with nothing more than the `.form-text` class.
 
 {{< example >}}
-<div class="row g-3 align-items-center">
-  <div class="col-auto">
-    <label for="inputPassword6" class="col-form-label">Password</label>
+<div class="bs-row bs-g-3 bs-align-items-center">
+  <div class="bs-col-auto">
+    <label for="inputPassword6" class="bs-col-form-label">Password</label>
   </div>
-  <div class="col-auto">
-    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+  <div class="bs-col-auto">
+    <input type="password" id="inputPassword6" class="bs-form-control" aria-describedby="passwordHelpInline">
   </div>
-  <div class="col-auto">
-    <span id="passwordHelpInline" class="form-text">
+  <div class="bs-col-auto">
+    <span id="passwordHelpInline" class="bs-form-text">
       Must be 8-20 characters long.
     </span>
   </div>
@@ -94,36 +94,36 @@ Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`
 Add the `disabled` boolean attribute on an input to prevent user interactions and make it appear lighter.
 
 ```html
-<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+<input class="bs-form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
 ```
 
 Add the `disabled` attribute to a `<fieldset>` to disable all the controls within. Browsers treat all native form controls (`<input>`, `<select>`, and `<button>` elements) inside a `<fieldset disabled>` as disabled, preventing both keyboard and mouse interactions on them.
 
-However, if your form also includes custom button-like elements such as `<a class="btn btn-*">...</a>`, these will only be given a style of `pointer-events: none`, meaning they are still focusable and operable using the keyboard. In this case, you must manually modify these controls by adding `tabindex="-1"` to prevent them from receiving focus and `aria-disabled="disabled"` to signal their state to assistive technologies.
+However, if your form also includes custom button-like elements such as `<a class="bs-btn bs-btn-*">...</a>`, these will only be given a style of `pointer-events: none`, meaning they are still focusable and operable using the keyboard. In this case, you must manually modify these controls by adding `tabindex="-1"` to prevent them from receiving focus and `aria-disabled="disabled"` to signal their state to assistive technologies.
 
 {{< example >}}
 <form>
   <fieldset disabled>
     <legend>Disabled fieldset example</legend>
-    <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">Disabled input</label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+    <div class="bs-mb-3">
+      <label for="disabledTextInput" class="bs-form-label">Disabled input</label>
+      <input type="text" id="disabledTextInput" class="bs-form-control" placeholder="Disabled input">
     </div>
-    <div class="mb-3">
-      <label for="disabledSelect" class="form-label">Disabled select menu</label>
-      <select id="disabledSelect" class="form-select">
+    <div class="bs-mb-3">
+      <label for="disabledSelect" class="bs-form-label">Disabled select menu</label>
+      <select id="disabledSelect" class="bs-form-select">
         <option>Disabled select</option>
       </select>
     </div>
-    <div class="mb-3">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-        <label class="form-check-label" for="disabledFieldsetCheck">
+    <div class="bs-mb-3">
+      <div class="bs-form-check">
+        <input class="bs-form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+        <label class="bs-form-check-label" for="disabledFieldsetCheck">
           Can't check this
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="bs-btn bs-btn-primary">Submit</button>
   </fieldset>
 </form>
 {{< /example >}}

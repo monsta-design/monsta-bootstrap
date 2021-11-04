@@ -1,4 +1,4 @@
----
+bs----
 layout: docs
 title: Breakpoints
 description: Breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport sizes in Bootstrap.
@@ -19,7 +19,7 @@ toc: true
 
 Bootstrap includes six default breakpoints, sometimes referred to as _grid tiers_, for building responsively. These breakpoints can be customized if you're using our source Sass files.
 
-<table class="table">
+<table class="bs-table">
   <thead>
     <tr>
       <th>Breakpoint</th>

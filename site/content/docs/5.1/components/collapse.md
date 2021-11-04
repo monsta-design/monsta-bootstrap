@@ -26,15 +26,15 @@ Generally, we recommend using a button with the `data-bs-target` attribute. Whil
 
 {{< example >}}
 <p>
-  <a classns-="ns-btn ns-btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <a classns-="bs-btn bs-btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Link with href
   </a>
-  <button class="ns-btn ns-btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  <button class="bs-btn bs-btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     Button with data-bs-target
   </button>
 </p>
-<div class="ns-collapse" id="collapseExample">
-  <div class="ns-card ns-card-body">
+<div class="bs-collapse" id="collapseExample">
+  <div class="bs-card bs-card-body">
     Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
   </div>
 </div>
@@ -50,13 +50,13 @@ Please note that while the example below has a `min-height` set to avoid excessi
 
 {{< example >}}
 <p>
-  <button class="ns-btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+  <button class="bs-btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
     Toggle width collapse
   </button>
 </p>
 <div style="min-height: 120px;">
-  <div class="ns-collapse ns-collapse-horizontal" id="collapseWidthExample">
-    <div class="ns-card ns-card-body" style="width: 300px;">
+  <div class="bs-collapse bs-collapse-horizontal" id="collapseWidthExample">
+    <div class="bs-card bs-card-body" style="width: 300px;">
       This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
     </div>
   </div>
@@ -70,21 +70,21 @@ Multiple `<button>` or `<a>` can show and hide an element if they each reference
 
 {{< example >}}
 <p>
-  <a class="ns-btn ns-btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-  <button class="ns-btn ns-btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
-  <button class="ns-btn ns-btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+  <a class="bs-btn bs-btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+  <button class="bs-btn bs-btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+  <button class="bs-btn bs-btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
 </p>
-<div class="ns-row">
-  <div class="ns-col">
-    <div class="ns-collapse ns-multi-collapse" id="multiCollapseExample1">
-      <div class="card ns-card-body">
+<div class="bs-row">
+  <div class="bs-col">
+    <div class="bs-collapse bs-multi-collapse" id="multiCollapseExample1">
+      <div class="card bs-card-body">
         Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
       </div>
     </div>
   </div>
-  <div class="ns-col">
-    <div class="ns-collapse ns-multi-collapse" id="multiCollapseExample2">
-      <div class="ns-card ns-card-body">
+  <div class="bs-col">
+    <div class="bs-collapse bs-multi-collapse" id="multiCollapseExample2">
+      <div class="bs-card bs-card-body">
         Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
       </div>
     </div>
@@ -143,7 +143,7 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-parent=""`.
 
-<table class="ns-table">
+<table class="bs-table">
   <thead>
     <tr>
       <th style="width: 100px;">Name</th>
@@ -185,7 +185,7 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
 })
 ```
 
-<table class="ns-table">
+<table class="bs-table">
   <thead>
     <tr>
       <th>Method</th>
@@ -233,7 +233,7 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
 
 Bootstrap's collapse class exposes a few events for hooking into collapse functionality.
 
-<table class="ns-table">
+<table class="bs-table">
   <thead>
     <tr>
       <th style="width: 150px;">Event type</th>

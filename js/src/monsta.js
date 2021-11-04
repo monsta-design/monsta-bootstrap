@@ -1,5 +1,5 @@
 const classPrefix = (name) => {
-  return "ns-" + name
+  return "bs-" + name
 }
 
 export {

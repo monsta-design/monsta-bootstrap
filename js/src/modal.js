@@ -20,7 +20,9 @@ import ScrollBarHelper from './util/scrollbar'
 import BaseComponent from './base-component'
 import Backdrop from './util/backdrop'
 import FocusTrap from './util/focustrap'
-import { enableDismissTrigger } from './util/component-functions'
+import {enableDismissTrigger} from './util/component-functions'
+import {classPrefix} from "./monsta";
+
 
 /**
  * ------------------------------------------------------------------------
@@ -58,14 +60,14 @@ const EVENT_MOUSEUP_DISMISS = `mouseup.dismiss${EVENT_KEY}`
 const EVENT_MOUSEDOWN_DISMISS = `mousedown.dismiss${EVENT_KEY}`
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
-const CLASS_NAME_OPEN = 'modal-open'
-const CLASS_NAME_FADE = 'fade'
-const CLASS_NAME_SHOW = 'show'
-const CLASS_NAME_STATIC = 'modal-static'
+const CLASS_NAME_OPEN = classPrefix('modal-open')
+const CLASS_NAME_FADE = classPrefix('fade')
+const CLASS_NAME_SHOW = classPrefix('show')
+const CLASS_NAME_STATIC = classPrefix('modal-static')
 
-const OPEN_SELECTOR = '.modal.show'
-const SELECTOR_DIALOG = '.modal-dialog'
-const SELECTOR_MODAL_BODY = '.modal-body'
+const OPEN_SELECTOR = `.${classPrefix('modal')}.${classPrefix('show')}`
+const SELECTOR_DIALOG = `.${classPrefix('modal-dialog')}`
+const SELECTOR_MODAL_BODY = `.${classPrefix('modal-body')}`
 const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="modal"]'
 
 /**
@@ -319,7 +321,7 @@ class Modal extends BaseComponent {
       return
     }
 
-    const { classList, scrollHeight, style } = this._element
+    const {classList, scrollHeight, style} = this._element
     const isModalOverflowing = scrollHeight > document.documentElement.clientHeight
 
     // return if the following background transition hasn't yet completed

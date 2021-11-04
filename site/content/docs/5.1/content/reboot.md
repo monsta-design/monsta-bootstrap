@@ -20,7 +20,7 @@ Here are our guidelines and reasons for choosing what to override in Reboot:
 
 ## CSS variables
 
-<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.1.1</small>
+<small class="bs-d-inline-flex bs-px-2 bs-py-1 bs-font-monospace bs-text-muted bs-border bs-rounded-3">Added in v5.1.1</small>
 
 With v5.1.1, we standardized our required `@import`s across all our CSS bundles (including `bootstrap.css`, `bootstrap-reboot.css`, and `bootstrap-grid.css` to include `_root.scss` . This adds `:root` level CSS variables to all bundles, regardless of how many of them are used in that bundle. Ultimately Bootstrap 5 will continue to see more CSS variables added over time.
 
@@ -86,7 +86,7 @@ Which allows you to make real-time customizations however you like:
 
 All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-top` removed. Headings have `margin-bottom: .5rem` added and paragraphs `margin-bottom: 1rem` for easy spacing.
 
-<table class="table">
+<table class="bs-table">
   <thead>
     <tr>
       <th>Heading</th>
@@ -98,37 +98,37 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
       <td>
         {{< markdown >}}`<h1></h1>`{{< /markdown >}}
       </td>
-      <td><span class="h1">h1. Bootstrap heading</span></td>
+      <td><span class="bs-h1">h1. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h2></h2>`{{< /markdown >}}
       </td>
-      <td><span class="h2">h2. Bootstrap heading</span></td>
+      <td><span class="bs-h2">h2. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h3></h3>`{{< /markdown >}}
       </td>
-      <td><span class="h3">h3. Bootstrap heading</span></td>
+      <td><span class="bs-h3">h3. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h4></h4>`{{< /markdown >}}
       </td>
-      <td><span class="h4">h4. Bootstrap heading</span></td>
+      <td><span class="bs-h4">h4. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h5></h5>`{{< /markdown >}}
       </td>
-      <td><span class="h5">h5. Bootstrap heading</span></td>
+      <td><span class="bs-h5">h5. Bootstrap heading</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h6></h6>`{{< /markdown >}}
       </td>
-      <td><span class="h6">h6. Bootstrap heading</span></td>
+      <td><span class="bs-h6">h6. Bootstrap heading</span></td>
     </tr>
   </tbody>
 </table>
@@ -422,7 +422,7 @@ The `<address>` element is updated to reset the browser default `font-style` fro
 The default `margin` on blockquotes is `1em 40px`, so we reset that to `0 0 1rem` for something more consistent with other elements.
 
 <div class="bd-example">
-  <blockquote class="blockquote">
+  <blockquote class="bs-blockquote">
     <p>A well-known quote, contained in a blockquote element.</p>
   </blockquote>
   <p>Someone famous in <cite title="Source Title">Source Title</cite></p>

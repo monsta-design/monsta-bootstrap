@@ -10,14 +10,14 @@ For longer content, you can add a `.text-truncate` class to truncate the text wi
 
 {{< example >}}
 <!-- Block level -->
-<div class="row">
-  <div class="col-2 text-truncate">
+<div class="bs-row">
+  <div class="bs-col-2 bs-text-truncate">
     This text is quite long, and will be truncated once displayed.
   </div>
 </div>
 
 <!-- Inline level -->
-<span class="d-inline-block text-truncate" style="max-width: 150px;">
+<span class="bs-d-inline-block bs-text-truncate" style="max-width: 150px;">
   This text is quite long, and will be truncated once displayed.
 </span>
 {{< /example >}}

@@ -12,12 +12,12 @@ Cards have `position: relative` by default in Bootstrap, so in this case you can
 Multiple links and tap targets are not recommended with stretched links. However, some `position` and `z-index` styles can help should this be required.
 
 {{< example >}}
-<div class="card" style="width: 18rem;">
-  {{< placeholder width="100%" height="180" class="card-img-top" text="false" title="Card image cap" >}}
-  <div class="card-body">
-    <h5 class="card-title">Card with stretched link</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+<div class="bs-card" style="width: 18rem;">
+  {{< placeholder width="100%" height="180" class="bs-card-img-top" text="false" title="Card image cap" >}}
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Card with stretched link</h5>
+    <p class="bs-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="bs-btn bs-btn-primary bs-stretched-link">Go somewhere</a>
   </div>
 </div>
 {{< /example >}}
@@ -25,25 +25,25 @@ Multiple links and tap targets are not recommended with stretched links. However
 Most custom components do not have `position: relative` by default, so we need to add the `.position-relative` here to prevent the link from stretching outside the parent element.
 
 {{< example >}}
-<div class="d-flex position-relative">
-  {{< placeholder width="144" height="144" class="flex-shrink-0 me-3" text="false" title="Generic placeholder image" >}}
+<div class="dbs--flex bs-position-relative">
+  {{< placeholder width="144" height="144" class="bs-flex-shrink-0 bs-me-3" text="false" title="Generic placeholder image" >}}
   <div>
-    <h5 class="mt-0">Custom component with stretched link</h5>
+    <h5 class="bs-mt-0">Custom component with stretched link</h5>
     <p>This is some placeholder content for the custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
-    <a href="#" class="stretched-link">Go somewhere</a>
+    <a href="#" class="bs-stretched-link">Go somewhere</a>
   </div>
 </div>
 {{< /example >}}
 
 {{< example >}}
-<div class="row g-0 bg-light position-relative">
-  <div class="col-md-6 mb-md-0 p-md-4">
-    {{< placeholder width="100%" height="200" class="w-100" text="false" title="Generic placeholder image" >}}
+<div class="bs-row gbs--0 bs-bg-light bs-position-relative">
+  <div class="bs-col-md-6 bs-mb-md-0 pbs--md-4">
+    {{< placeholder width="100%" height="200" class="wbs--100" text="false" title="Generic placeholder image" >}}
   </div>
-  <div class="col-md-6 p-4 ps-md-0">
-    <h5 class="mt-0">Columns with stretched link</h5>
+  <div class="bs-col-md-6 pbs--4 bs-ps-md-0">
+    <h5 class="bs-mt-0">Columns with stretched link</h5>
     <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
-    <a href="#" class="stretched-link">Go somewhere</a>
+    <a href="#" class="bs-stretched-link">Go somewhere</a>
   </div>
 </div>
 {{< /example >}}
@@ -58,16 +58,16 @@ If the stretched link doesn't seem to work, the [containing block](https://devel
 - A `filter` value other than `none` or a `will-change` value of `filter` (only works on Firefox)
 
 {{< example >}}
-<div class="card" style="width: 18rem;">
-  {{< placeholder width="100%" height="180" class="card-img-top" text="false" title="Card image cap" >}}
-  <div class="card-body">
-    <h5 class="card-title">Card with stretched links</h5>
+<div class="bs-card" style="width: 18rem;">
+  {{< placeholder width="100%" height="180" class="bs-card-img-top" text="false" title="Card image cap" >}}
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Card with stretched links</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <p class="card-text">
-      <a href="#" class="stretched-link text-danger" style="position: relative;">Stretched link will not work here, because <code>position: relative</code> is added to the link</a>
+      <a href="#" class="bs-stretched-link bs-text-danger" style="position: relative;">Stretched link will not work here, because <code>position: relative</code> is added to the link</a>
     </p>
-    <p class="card-text bg-light" style="transform: rotate(0);">
-      This <a href="#" class="text-warning stretched-link">stretched link</a> will only be spread over the <code>p</code>-tag, because a transform is applied to it.
+    <p class="bs-card-text bs-bg-light" style="transform: rotate(0);">
+      This <a href="#" class="bs-text-warning bs-stretched-link">stretched link</a> will only be spread over the <code>p</code>-tag, because a transform is applied to it.
     </p>
   </div>
 </div>

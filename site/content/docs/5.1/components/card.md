@@ -17,12 +17,12 @@ Cards are built with as little markup and styles as possible, but still manage t
 Below is an example of a basic card with mixed content and a fixed width. Cards have no fixed width to start, so they'll naturally fill the full width of its parent element. This is easily customized with our various [sizing options](#sizing).
 
 {{< example >}}
-<div class="ns-card" style="width: 18rem;">
-  {{< placeholder width="100%" height="180" class="ns-card-img-top" text="Image cap" >}}
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Card title</h5>
-    <p class="ns-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="ns-btn ns-btn-primary">Go somewhere</a>
+<div class="bs-card" style="width: 18rem;">
+  {{< placeholder width="100%" height="180" class="bs-card-img-top" text="Image cap" >}}
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Card title</h5>
+    <p class="bs-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="bs-btn bs-btn-primary">Go somewhere</a>
   </div>
 </div>
 {{< /example >}}
@@ -36,8 +36,8 @@ Cards support a wide variety of content, including images, text, list groups, li
 The building block of a card is the `.card-body`. Use it whenever you need a padded section within a card.
 
 {{< example >}}
-<div class="ns-card">
-  <div class="ns-card-body">
+<div class="bs-card">
+  <div class="bs-card-body">
     This is some text within a card body.
   </div>
 </div>
@@ -50,13 +50,13 @@ Card titles are used by adding `.card-title` to a `<h*>` tag. In the same way, l
 Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-title` and the `.card-subtitle` items are placed in a `.card-body` item, the card title and subtitle are aligned nicely.
 
 {{< example >}}
-<div class="ns-card" style="width: 18rem;">
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Card title</h5>
-    <h6 class="ns-card-subtitle ns-mb-2 ns-text-muted">Card subtitle</h6>
-    <p class="ns-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="ns-card-link">Card link</a>
-    <a href="#" class="ns-card-link">Another link</a>
+<div class="bs-card" style="width: 18rem;">
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Card title</h5>
+    <h6 class="bs-card-subtitle bs-mb-2 bs-text-muted">Card subtitle</h6>
+    <p class="bs-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="bs-card-link">Card link</a>
+    <a href="#" class="bs-card-link">Another link</a>
   </div>
 </div>
 {{< /example >}}
@@ -66,10 +66,10 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
 `.card-img-top` places an image to the top of the card. With `.card-text`, text can be added to the card. Text within `.card-text` can also be styled with the standard HTML tags.
 
 {{< example >}}
-<div class="ns-card" style="width: 18rem;">
-  {{< placeholder width="100%" height="180" class="ns-card-img-top" text="Image cap" >}}
-  <div class="ns-card-body">
-    <p class="ns-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<div class="bs-card" style="width: 18rem;">
+  {{< placeholder width="100%" height="180" class="bs-card-img-top" text="Image cap" >}}
+  <div class="bs-card-body">
+    <p class="bs-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
 {{< /example >}}
@@ -79,36 +79,36 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
 Create lists of content in a card with a flush list group.
 
 {{< example >}}
-<div class="ns-card" style="width: 18rem;">
-  <ul class="ns-list-group list-group-flush">
-    <li class="ns-list-group-item">An item</li>
-    <li class="ns-list-group-item">A second item</li>
-    <li class="ns-list-group-item">A third item</li>
+<div class="bs-card" style="width: 18rem;">
+  <ul class="bs-list-group list-group-flush">
+    <li class="bs-list-group-item">An item</li>
+    <li class="bs-list-group-item">A second item</li>
+    <li class="bs-list-group-item">A third item</li>
   </ul>
 </div>
 {{< /example >}}
 
 {{< example >}}
-<div class="ns-card" style="width: 18rem;">
-  <div class="ns-card-header">
+<div class="bs-card" style="width: 18rem;">
+  <div class="bs-card-header">
     Featured
   </div>
-  <ul class="ns-list-group list-group-flush">
-    <li class="ns-list-group-item">An item</li>
-    <li class="ns-list-group-item">A second item</li>
-    <li class="ns-list-group-item">A third item</li>
+  <ul class="bs-list-group list-group-flush">
+    <li class="bs-list-group-item">An item</li>
+    <li class="bs-list-group-item">A second item</li>
+    <li class="bs-list-group-item">A third item</li>
   </ul>
 </div>
 {{< /example >}}
 
 {{< example >}}
-<div class="ns-card" style="width: 18rem;">
-  <ul class="ns-list-group list-group-flush">
-    <li class="ns-list-group-item">An item</li>
-    <li class="ns-list-group-item">A second item</li>
-    <li class="ns-list-group-item">A third item</li>
+<div class="bs-card" style="width: 18rem;">
+  <ul class="bs-list-group list-group-flush">
+    <li class="bs-list-group-item">An item</li>
+    <li class="bs-list-group-item">A second item</li>
+    <li class="bs-list-group-item">A third item</li>
   </ul>
-  <div class="ns-card-footer">
+  <div class="bs-card-footer">
     Card footer
   </div>
 </div>
@@ -119,20 +119,20 @@ Create lists of content in a card with a flush list group.
 Mix and match multiple content types to create the card you need, or throw everything in there. Shown below are image styles, blocks, text styles, and a list group—all wrapped in a fixed-width card.
 
 {{< example >}}
-<div class="ns-card" style="width: 18rem;">
-  {{< placeholder width="100%" height="180" class="ns-card-img-top" text="Image cap" >}}
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Card title</h5>
-    <p class="ns-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<div class="bs-card" style="width: 18rem;">
+  {{< placeholder width="100%" height="180" class="bs-card-img-top" text="Image cap" >}}
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Card title</h5>
+    <p class="bs-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
-  <ul class="ns-list-group list-group-flush">
-    <li class="ns-list-group-item">An item</li>
-    <li class="ns-list-group-item">A second item</li>
-    <li class="ns-list-group-item">A third item</li>
+  <ul class="bs-list-group list-group-flush">
+    <li class="bs-list-group-item">An item</li>
+    <li class="bs-list-group-item">A second item</li>
+    <li class="bs-list-group-item">A third item</li>
   </ul>
-  <div class="ns-card-body">
-    <a href="#" class="ns-card-link">Card link</a>
-    <a href="#" class="ns-card-link">Another link</a>
+  <div class="bs-card-body">
+    <a href="#" class="bs-card-link">Card link</a>
+    <a href="#" class="bs-card-link">Another link</a>
   </div>
 </div>
 {{< /example >}}
@@ -142,14 +142,14 @@ Mix and match multiple content types to create the card you need, or throw every
 Add an optional header and/or footer within a card.
 
 {{< example >}}
-<div class="ns-card">
-  <div class="ns-card-header">
+<div class="bs-card">
+  <div class="bs-card-header">
     Featured
   </div>
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Special title treatment</h5>
-    <p class="ns-card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="ns-btn ns-btn-primary">Go somewhere</a>
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Special title treatment</h5>
+    <p class="bs-card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="bs-btn bs-btn-primary">Go somewhere</a>
   </div>
 </div>
 {{< /example >}}
@@ -157,41 +157,41 @@ Add an optional header and/or footer within a card.
 Card headers can be styled by adding `.card-header` to `<h*>` elements.
 
 {{< example >}}
-<div class="ns-card">
-  <h5 class="ns-card-header">Featured</h5>
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Special title treatment</h5>
-    <p class="ns-card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="ns-btn ns-btn-primary">Go somewhere</a>
+<div class="bs-card">
+  <h5 class="bs-card-header">Featured</h5>
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Special title treatment</h5>
+    <p class="bs-card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="bs-btn bs-btn-primary">Go somewhere</a>
   </div>
 </div>
 {{< /example >}}
 
 {{< example >}}
-<div class="ns-card">
-  <div class="ns-card-header">
+<div class="bs-card">
+  <div class="bs-card-header">
     Quote
   </div>
-  <div class="ns-card-body">
-    <blockquote class="ns-blockquote ns-mb-0">
+  <div class="bs-card-body">
+    <blockquote class="bs-blockquote bs-mb-0">
       <p>A well-known quote, contained in a blockquote element.</p>
-      <footer class="ns-blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <footer class="bs-blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
 </div>
 {{< /example >}}
 
 {{< example >}}
-<div class="ns-card ns-text-center">
+<div class="bs-card bs-text-center">
   <div class="card-header">
     Featured
   </div>
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Special title treatment</h5>
-    <p class="ns-card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="ns-btn ns-btn-primary">Go somewhere</a>
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Special title treatment</h5>
+    <p class="bs-card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="bs-btn bs-btn-primary">Go somewhere</a>
   </div>
-  <div class="ns-card-footer ns-text-muted">
+  <div class="bs-card-footer bs-text-muted">
     2 days ago
   </div>
 </div>
@@ -206,22 +206,22 @@ Cards assume no specific `width` to start, so they'll be 100% wide unless otherw
 Using the grid, wrap cards in columns and rows as needed.
 
 {{< example >}}
-<div class="ns-row">
-  <div class="ns-col-sm-6">
-    <div class="ns-card">
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Special title treatment</h5>
-        <p class="ns-card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="ns-btn ns-btn-primary">Go somewhere</a>
+<div class="bs-row">
+  <div class="bs-col-sm-6">
+    <div class="bs-card">
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Special title treatment</h5>
+        <p class="bs-card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="bs-btn bs-btn-primary">Go somewhere</a>
       </div>
     </div>
   </div>
-  <div class="ns-col-sm-6">
-    <div class="ns-card">
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Special title treatment</h5>
-        <p class="ns-card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="ns-btn ns-btn-primary">Go somewhere</a>
+  <div class="bs-col-sm-6">
+    <div class="bs-card">
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Special title treatment</h5>
+        <p class="bs-card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="bs-btn bs-btn-primary">Go somewhere</a>
       </div>
     </div>
   </div>
@@ -233,19 +233,19 @@ Using the grid, wrap cards in columns and rows as needed.
 Use our handful of [available sizing utilities]({{< docsref "/utilities/sizing" >}}) to quickly set a card's width.
 
 {{< example >}}
-<div class="ns-card w-75">
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Card title</h5>
-    <p class="ns-card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="ns-btn ns-btn-primary">Button</a>
+<div class="bs-card w-75">
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Card title</h5>
+    <p class="bs-card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="bs-btn bs-btn-primary">Button</a>
   </div>
 </div>
 
-<div class="ns-card ns-w-50">
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Card title</h5>
-    <p class="ns-card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="ns-btn ns-btn-primary">Button</a>
+<div class="bs-card bs-w-50">
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Card title</h5>
+    <p class="bs-card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="bs-btn bs-btn-primary">Button</a>
   </div>
 </div>
 {{< /example >}}
@@ -255,11 +255,11 @@ Use our handful of [available sizing utilities]({{< docsref "/utilities/sizing" 
 Use custom CSS in your stylesheets or as inline styles to set a width.
 
 {{< example >}}
-<div class="ns-card" style="width: 18rem;">
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Special title treatment</h5>
-    <p class="ns-card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="ns-btn ns-btn-primary">Go somewhere</a>
+<div class="bs-card" style="width: 18rem;">
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Special title treatment</h5>
+    <p class="bs-card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="bs-btn bs-btn-primary">Go somewhere</a>
   </div>
 </div>
 {{< /example >}}
@@ -269,27 +269,27 @@ Use custom CSS in your stylesheets or as inline styles to set a width.
 You can quickly change the text alignment of any card—in its entirety or specific parts—with our [text align classes]({{< docsref "/utilities/text#text-alignment" >}}).
 
 {{< example >}}
-<div class="ns-card" style="width: 18rem;">
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Special title treatment</h5>
-    <p class="ns-card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="ns-btn ns-btn-primary">Go somewhere</a>
+<div class="bs-card" style="width: 18rem;">
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Special title treatment</h5>
+    <p class="bs-card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="bs-btn bs-btn-primary">Go somewhere</a>
   </div>
 </div>
 
-<div class="ns-card ns-text-center" style="width: 18rem;">
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Special title treatment</h5>
-    <p class="ns-card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="ns-btn ns-btn-primary">Go somewhere</a>
+<div class="bs-card bs-text-center" style="width: 18rem;">
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Special title treatment</h5>
+    <p class="bs-card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="bs-btn bs-btn-primary">Go somewhere</a>
   </div>
 </div>
 
 <div class="card text-end" style="width: 18rem;">
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Special title treatment</h5>
-    <p class="ns-card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="ns-btn ns-btn-primary">Go somewhere</a>
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Special title treatment</h5>
+    <p class="bs-card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="bs-btn bs-btn-primary">Go somewhere</a>
   </div>
 </div>
 {{< /example >}}
@@ -299,47 +299,47 @@ You can quickly change the text alignment of any card—in its entirety or speci
 Add some navigation to a card's header (or block) with Bootstrap's [nav components]({{< docsref "/components/navs-tabs" >}}).
 
 {{< example >}}
-<div class="ns-card text-center">
-  <div class="ns-card-header">
-    <ul class="ns-nav ns-nav-tabs card-header-tabs">
-      <li class="ns-nav-item">
-        <a class="ns-nav-link ns-active" aria-current="true" href="#">Active</a>
+<div class="bs-card text-center">
+  <div class="bs-card-header">
+    <ul class="bs-nav bs-nav-tabs card-header-tabs">
+      <li class="bs-nav-item">
+        <a class="bs-nav-link bs-active" aria-current="true" href="#">Active</a>
       </li>
-      <li class="ns-nav-item">
-        <a class="ns-nav-link" href="#">Link</a>
+      <li class="bs-nav-item">
+        <a class="bs-nav-link" href="#">Link</a>
       </li>
-      <li class="ns-nav-item">
-        <a class="ns-nav-link ns-disabled">Disabled</a>
+      <li class="bs-nav-item">
+        <a class="bs-nav-link bs-disabled">Disabled</a>
       </li>
     </ul>
   </div>
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Special title treatment</h5>
-    <p class="ns-card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="ns-btn ns-btn-primary">Go somewhere</a>
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Special title treatment</h5>
+    <p class="bs-card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="bs-btn bs-btn-primary">Go somewhere</a>
   </div>
 </div>
 {{< /example >}}
 
 {{< example >}}
-<div class="ns-card ns-text-center">
-  <div class="ns-card-header">
-    <ul class="ns-nav ns-nav-pills ns-card-header-pills">
-      <li class="ns-nav-item">
-        <a class="ns-nav-link ns-active" href="#">Active</a>
+<div class="bs-card bs-text-center">
+  <div class="bs-card-header">
+    <ul class="bs-nav bs-nav-pills bs-card-header-pills">
+      <li class="bs-nav-item">
+        <a class="bs-nav-link bs-active" href="#">Active</a>
       </li>
-      <li class="ns-nav-item">
-        <a class="ns-nav-link" href="#">Link</a>
+      <li class="bs-nav-item">
+        <a class="bs-nav-link" href="#">Link</a>
       </li>
-      <li class="ns-nav-item">
-        <a class="ns-nav-link disabled">Disabled</a>
+      <li class="bs-nav-item">
+        <a class="bs-nav-link disabled">Disabled</a>
       </li>
     </ul>
   </div>
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Special title treatment</h5>
-    <p class="ns-card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="ns-btn ns-btn-primary">Go somewhere</a>
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Special title treatment</h5>
+    <p class="bs-card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="bs-btn bs-btn-primary">Go somewhere</a>
   </div>
 </div>
 {{< /example >}}
@@ -353,21 +353,21 @@ Cards include a few options for working with images. Choose from appending "imag
 Similar to headers and footers, cards can include top and bottom "image caps"—images at the top or bottom of a card.
 
 {{< example >}}
-<div class="ns-card ns-mb-3">
-  {{< placeholder width="100%" height="180" class="ns-card-img-top" text="Image cap" >}}
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Card title</h5>
-    <p class="ns-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="ns-card-text"><small class="ns-text-muted">Last updated 3 mins ago</small></p>
+<div class="bs-card bs-mb-3">
+  {{< placeholder width="100%" height="180" class="bs-card-img-top" text="Image cap" >}}
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Card title</h5>
+    <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="bs-card-text"><small class="bs-text-muted">Last updated 3 mins ago</small></p>
   </div>
 </div>
-<div class="ns-card">
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">Card title</h5>
-    <p class="ns-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="ns-card-text"><small class="ns-text-muted">Last updated 3 mins ago</small></p>
+<div class="bs-card">
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">Card title</h5>
+    <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="bs-card-text"><small class="bs-text-muted">Last updated 3 mins ago</small></p>
   </div>
-  {{< placeholder width="100%" height="180" class="ns-card-img-bottom" text="Image cap" >}}
+  {{< placeholder width="100%" height="180" class="bs-card-img-bottom" text="Image cap" >}}
 </div>
 {{< /example >}}
 
@@ -376,12 +376,12 @@ Similar to headers and footers, cards can include top and bottom "image caps"—
 Turn an image into a card background and overlay your card's text. Depending on the image, you may or may not need additional styles or utilities.
 
 {{< example >}}
-<div class="ns-card ns-bg-dark ns-text-white">
-  {{< placeholder width="100%" height="270" class="ns-bd-placeholder-img-lg card-img" text="Card image" >}}
-  <div class="ns-card-img-overlay">
-    <h5 class="ns-card-title">Card title</h5>
-    <p class="ns-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="ns-card-text">Last updated 3 mins ago</p>
+<div class="bs-card bs-bg-dark bs-text-white">
+  {{< placeholder width="100%" height="270" class="bs-bd-placeholder-img-lg card-img" text="Card image" >}}
+  <div class="bs-card-img-overlay">
+    <h5 class="bs-card-title">Card title</h5>
+    <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="bs-card-text">Last updated 3 mins ago</p>
   </div>
 </div>
 {{< /example >}}
@@ -395,16 +395,16 @@ Note that content should not be larger than the height of the image. If content 
 Using a combination of grid and utility classes, cards can be made horizontal in a mobile-friendly and responsive way. In the example below, we remove the grid gutters with `.g-0` and use `.col-md-*` classes to make the card horizontal at the `md` breakpoint. Further adjustments may be needed depending on your card content.
 
 {{< example >}}
-<div class="ns-card ns-mb-3" style="max-width: 540px;">
-  <div class="ns-row ns-g-0">
-    <div class="ns-col-md-4">
-      {{< placeholder width="100%" height="250" text="Image" class="ns-img-fluid rounded-start" >}}
+<div class="bs-card bs-mb-3" style="max-width: 540px;">
+  <div class="bs-row bs-g-0">
+    <div class="bs-col-md-4">
+      {{< placeholder width="100%" height="250" text="Image" class="bs-img-fluid rounded-start" >}}
     </div>
-    <div class="ns-col-md-8">
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="ns-card-text"><small class="ns-text-muted">Last updated 3 mins ago</small></p>
+    <div class="bs-col-md-8">
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="bs-card-text"><small class="bs-text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>
   </div>
@@ -422,11 +422,11 @@ Use [text color]({{< docsref "/utilities/colors" >}}) and [background utilities]
 {{< example >}}
 {{< card.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<div class="ns-card{{ if .contrast_color }} text-{{ .contrast_color }}{{ else }} text-white{{ end }} bg-{{ .name }} mb-3" style="max-width: 18rem;">
-  <div class="ns-card-header">Header</div>
-  <div class="ns-card-body">
-    <h5 class="ns-card-title">{{ .name | title }} card title</h5>
-    <p class="ns-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<div class="bs-card{{ if .contrast_color }} text-{{ .contrast_color }}{{ else }} text-white{{ end }} bg-{{ .name }} mb-3" style="max-width: 18rem;">
+  <div class="bs-card-header">Header</div>
+  <div class="bs-card-body">
+    <h5 class="bs-card-title">{{ .name | title }} card title</h5>
+    <p class="bs-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
 {{- end -}}
@@ -444,11 +444,11 @@ Use [border utilities]({{< docsref "/utilities/borders" >}}) to change just the 
 {{< example >}}
 {{< card.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<div class="ns-card ns-border-{{ .name }} mb-3" style="max-width: 18rem;">
-  <div class="ns-card-header">Header</div>
-  <div class="ns-card-body{{ if not .contrast_color }} text-{{ .name }}{{ end }}">
-    <h5 class="ns-card-title">{{ .name | title }} card title</h5>
-    <p class="ns-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<div class="bs-card bs-border-{{ .name }} mb-3" style="max-width: 18rem;">
+  <div class="bs-card-header">Header</div>
+  <div class="bs-card-body{{ if not .contrast_color }} text-{{ .name }}{{ end }}">
+    <h5 class="bs-card-title">{{ .name | title }} card title</h5>
+    <p class="bs-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
 {{- end -}}
@@ -460,13 +460,13 @@ Use [border utilities]({{< docsref "/utilities/borders" >}}) to change just the 
 You can also change the borders on the card header and footer as needed, and even remove their `background-color` with `.bg-transparent`.
 
 {{< example >}}
-<div class="ns-card border-success mb-3" style="max-width: 18rem;">
-  <div class="ns-card-header bg-transparent border-success">Header</div>
-  <div class="ns-card-body text-success">
-    <h5 class="ns-card-title">Success card title</h5>
-    <p class="ns-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<div class="bs-card border-success mb-3" style="max-width: 18rem;">
+  <div class="bs-card-header bg-transparent border-success">Header</div>
+  <div class="bs-card-body text-success">
+    <h5 class="bs-card-title">Success card title</h5>
+    <p class="bs-card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
-  <div class="ns-card-footer bg-transparent border-success">Footer</div>
+  <div class="bs-card-footer bg-transparent border-success">Footer</div>
 </div>
 {{< /example >}}
 
@@ -479,29 +479,29 @@ In addition to styling the content within cards, Bootstrap includes a few option
 Use card groups to render cards as a single, attached element with equal width and height columns. Card groups start off stacked and use `display: flex;` to become attached with uniform dimensions starting at the `sm` breakpoint.
 
 {{< example >}}
-<div class="ns-card-group">
-  <div class="ns-card">
-    {{< placeholder width="100%" height="180" class="ns-card-img-top" text="Image cap" >}}
-    <div class="ns-card-body">
-      <h5 class="ns-card-title">Card title</h5>
-      <p class="ns-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="ns-card-text"><small class="ns-text-muted">Last updated 3 mins ago</small></p>
+<div class="bs-card-group">
+  <div class="bs-card">
+    {{< placeholder width="100%" height="180" class="bs-card-img-top" text="Image cap" >}}
+    <div class="bs-card-body">
+      <h5 class="bs-card-title">Card title</h5>
+      <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="bs-card-text"><small class="bs-text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
-  <div class="ns-card">
-    {{< placeholder width="100%" height="180" class="ns-card-img-top" text="Image cap" >}}
-    <div class="ns-card-body">
-      <h5 class="ns-card-title">Card title</h5>
-      <p class="ns-card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="ns-card-text"><small class="ns-text-muted">Last updated 3 mins ago</small></p>
+  <div class="bs-card">
+    {{< placeholder width="100%" height="180" class="bs-card-img-top" text="Image cap" >}}
+    <div class="bs-card-body">
+      <h5 class="bs-card-title">Card title</h5>
+      <p class="bs-card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="bs-card-text"><small class="bs-text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
-  <div class="ns-card">
-    {{< placeholder width="100%" height="180" class="ns-card-img-top" text="Image cap" >}}
-    <div class="ns-card-body">
-      <h5 class="ns-card-title">Card title</h5>
-      <p class="ns-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="ns-card-text"><small class="ns-text-muted">Last updated 3 mins ago</small></p>
+  <div class="bs-card">
+    {{< placeholder width="100%" height="180" class="bs-card-img-top" text="Image cap" >}}
+    <div class="bs-card-body">
+      <h5 class="bs-card-title">Card title</h5>
+      <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="bs-card-text"><small class="bs-text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
 </div>
@@ -510,35 +510,35 @@ Use card groups to render cards as a single, attached element with equal width a
 When using card groups with footers, their content will automatically line up.
 
 {{< example >}}
-<div class="ns-card-group">
-  <div class="ns-card">
-    {{< placeholder width="100%" height="180" class="ns-card-img-top" text="Image cap" >}}
-    <div class="ns-card-body">
-      <h5 class="ns-card-title">Card title</h5>
-      <p class="ns-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+<div class="bs-card-group">
+  <div class="bs-card">
+    {{< placeholder width="100%" height="180" class="bs-card-img-top" text="Image cap" >}}
+    <div class="bs-card-body">
+      <h5 class="bs-card-title">Card title</h5>
+      <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     </div>
-    <div class="ns-card-footer">
-      <small class="ns-text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="ns-card">
-    {{< placeholder width="100%" height="180" class="ns-card-img-top" text="Image cap" >}}
-    <div class="ns-card-body">
-      <h5 class="ns-card-title">Card title</h5>
-      <p class="ns-card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="ns-card-footer">
-      <small class="ns-text-muted">Last updated 3 mins ago</small>
+    <div class="bs-card-footer">
+      <small class="bs-text-muted">Last updated 3 mins ago</small>
     </div>
   </div>
-  <div class="ns-card">
-    {{< placeholder width="100%" height="180" class="ns-card-img-top" text="Image cap" >}}
-    <div class="ns-card-body">
-      <h5 class="ns-card-title">Card title</h5>
-      <p class="ns-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+  <div class="bs-card">
+    {{< placeholder width="100%" height="180" class="bs-card-img-top" text="Image cap" >}}
+    <div class="bs-card-body">
+      <h5 class="bs-card-title">Card title</h5>
+      <p class="bs-card-text">This card has supporting text below as a natural lead-in to additional content.</p>
     </div>
-    <div class="ns-card-footer">
-      <small class="ns-text-muted">Last updated 3 mins ago</small>
+    <div class="bs-card-footer">
+      <small class="bs-text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="bs-card">
+    {{< placeholder width="100%" height="180" class="bs-card-img-top" text="Image cap" >}}
+    <div class="bs-card-body">
+      <h5 class="bs-card-title">Card title</h5>
+      <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+    </div>
+    <div class="bs-card-footer">
+      <small class="bs-text-muted">Last updated 3 mins ago</small>
     </div>
   </div>
 </div>
@@ -549,40 +549,40 @@ When using card groups with footers, their content will automatically line up.
 Use the Bootstrap grid system and its [`.row-cols` classes]({{< docsref "/layout/grid#row-columns" >}}) to control how many grid columns (wrapped around your cards) you show per row. For example, here's `.row-cols-1` laying out the cards on one column, and `.row-cols-md-2` splitting four cards to equal width across multiple rows, from the medium breakpoint up.
 
 {{< example >}}
-<div class="ns-row row-cols-1 row-cols-md-2 g-4">
-  <div class="ns-col">
-    <div class="ns-card">
-      {{< placeholder width="100%" height="140" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+<div class="bs-row row-cols-1 row-cols-md-2 g-4">
+  <div class="bs-col">
+    <div class="bs-card">
+      {{< placeholder width="100%" height="140" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
-  <div class="ns-col">
-    <div class="ns-card">
-      {{< placeholder width="100%" height="140" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  <div class="bs-col">
+    <div class="bs-card">
+      {{< placeholder width="100%" height="140" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
-  <div class="ns-col">
-    <div class="ns-card">
-      {{< placeholder width="100%" height="140" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+  <div class="bs-col">
+    <div class="bs-card">
+      {{< placeholder width="100%" height="140" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
       </div>
     </div>
   </div>
-  <div class="ns-col">
-    <div class="ns-card">
-      {{< placeholder width="100%" height="140" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  <div class="bs-col">
+    <div class="bs-card">
+      {{< placeholder width="100%" height="140" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
@@ -592,40 +592,40 @@ Use the Bootstrap grid system and its [`.row-cols` classes]({{< docsref "/layout
 Change it to `.row-cols-3` and you'll see the fourth card wrap.
 
 {{< example >}}
-<div class="ns-row ns-row-cols-1 ns-row-cols-md-3 ns-g-4">
-  <div class="ns-col">
-    <div class="ns-card">
-      {{< placeholder width="100%" height="140" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+<div class="bs-row bs-row-cols-1 bs-row-cols-md-3 bs-g-4">
+  <div class="bs-col">
+    <div class="bs-card">
+      {{< placeholder width="100%" height="140" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
-  <div class="ns-col">
-    <div class="ns-card">
-      {{< placeholder width="100%" height="140" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  <div class="bs-col">
+    <div class="bs-card">
+      {{< placeholder width="100%" height="140" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
-  <div class="ns-col">
-    <div class="ns-card">
-      {{< placeholder width="100%" height="140" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+  <div class="bs-col">
+    <div class="bs-card">
+      {{< placeholder width="100%" height="140" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
       </div>
     </div>
   </div>
-  <div class="ns-col">
-    <div class="ns-card">
-      {{< placeholder width="100%" height="140" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  <div class="bs-col">
+    <div class="bs-card">
+      {{< placeholder width="100%" height="140" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
@@ -635,40 +635,40 @@ Change it to `.row-cols-3` and you'll see the fourth card wrap.
 When you need equal height, add `.h-100` to the cards. If you want equal heights by default, you can set `$card-height: 100%` in Sass.
 
 {{< example >}}
-<div class="ns-row ns-row-cols-1 ns-row-cols-md-3 ns-g-4">
-  <div class="ns-col">
-    <div class="ns-card ns-h-100">
-      {{< placeholder width="100%" height="140" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+<div class="bs-row bs-row-cols-1 bs-row-cols-md-3 bs-g-4">
+  <div class="bs-col">
+    <div class="bs-card bs-h-100">
+      {{< placeholder width="100%" height="140" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
-  <div class="ns-col">
-    <div class="ns-card ns-h-100">
-      {{< placeholder width="100%" height="140" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a short card.</p>
+  <div class="bs-col">
+    <div class="bs-card bs-h-100">
+      {{< placeholder width="100%" height="140" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a short card.</p>
       </div>
     </div>
   </div>
-  <div class="ns-col">
-    <div class="ns-card ns-h-100">
-      {{< placeholder width="100%" height="140" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+  <div class="bs-col">
+    <div class="bs-card bs-h-100">
+      {{< placeholder width="100%" height="140" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
       </div>
     </div>
   </div>
-  <div class="ns-col">
-    <div class="ns-card ns-h-100">
-      {{< placeholder width="100%" height="140" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  <div class="bs-col">
+    <div class="bs-card bs-h-100">
+      {{< placeholder width="100%" height="140" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
     </div>
   </div>
@@ -678,40 +678,40 @@ When you need equal height, add `.h-100` to the cards. If you want equal heights
 Just like with card groups, card footers will automatically line up.
 
 {{< example >}}
-<div class="ns-row ns-row-cols-1 ns-row-cols-md-3 ns-g-4">
-  <div class="ns-col">
-    <div class="ns-card ns-h-100">
-      {{< placeholder width="100%" height="180" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+<div class="bs-row bs-row-cols-1 bs-row-cols-md-3 bs-g-4">
+  <div class="bs-col">
+    <div class="bs-card bs-h-100">
+      {{< placeholder width="100%" height="180" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
-      <div class="ns-card-footer">
-        <small class="ns-text-muted">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="ns-col">
-    <div class="ns-card ns-h-100">
-      {{< placeholder width="100%" height="180" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="ns-card-footer">
-        <small class="ns-text-muted">Last updated 3 mins ago</small>
+      <div class="bs-card-footer">
+        <small class="bs-text-muted">Last updated 3 mins ago</small>
       </div>
     </div>
   </div>
-  <div class="ns-col">
-    <div class="ns-card ns-h-100">
-      {{< placeholder width="100%" height="180" class="ns-card-img-top" text="Image cap" >}}
-      <div class="ns-card-body">
-        <h5 class="ns-card-title">Card title</h5>
-        <p class="ns-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+  <div class="bs-col">
+    <div class="bs-card bs-h-100">
+      {{< placeholder width="100%" height="180" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This card has supporting text below as a natural lead-in to additional content.</p>
       </div>
-      <div class="ns-card-footer">
-        <small class="ns-text-muted">Last updated 3 mins ago</small>
+      <div class="bs-card-footer">
+        <small class="bs-text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="bs-col">
+    <div class="bs-card bs-h-100">
+      {{< placeholder width="100%" height="180" class="bs-card-img-top" text="Image cap" >}}
+      <div class="bs-card-body">
+        <h5 class="bs-card-title">Card title</h5>
+        <p class="bs-card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="bs-card-footer">
+        <small class="bs-text-muted">Last updated 3 mins ago</small>
       </div>
     </div>
   </div>

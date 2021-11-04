@@ -46,7 +46,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 Hover over the links below to see tooltips:
 
 <div class="bd-example tooltip-demo">
-  <p class="muted">Placeholder text to demonstrate some <a href="#" data-bs-toggle="tooltip" title="Default tooltip">inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-bs-toggle="tooltip" title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how <a href="#" data-bs-toggle="tooltip" title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-bs-toggle="tooltip" title="The last tip!">your own</a> site or project.
+  <p class="bs-muted">Placeholder text to demonstrate some <a href="#" data-bs-toggle="tooltip" title="Default tooltip">inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-bs-toggle="tooltip" title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how <a href="#" data-bs-toggle="tooltip" title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-bs-toggle="tooltip" title="The last tip!">your own</a> site or project.
   </p>
 </div>
 
@@ -54,25 +54,25 @@ Hover over the buttons below to see the four tooltips directions: top, right, bo
 
 <div class="bd-example tooltip-demo">
   <div class="bd-example-tooltips">
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">Tooltip on top</button>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">Tooltip on right</button>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">Tooltip on left</button>
-    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Tooltip with HTML</button>
+    <button type="button" class="bs-btn bs-btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">Tooltip on top</button>
+    <button type="button" class="bs-btn bs-btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">Tooltip on right</button>
+    <button type="button" class="bs-btn bs-btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+    <button type="button" class="bs-btn bs-btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">Tooltip on left</button>
+    <button type="button" class="bs-btn bs-btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Tooltip with HTML</button>
   </div>
 </div>
 
 ```html
-<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+<button type="button" class="bs-btn bs-btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
   Tooltip on top
 </button>
-<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+<button type="button" class="bs-btn bs-btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
   Tooltip on right
 </button>
-<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+<button type="button" class="bs-btn bs-btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
   Tooltip on bottom
 </button>
-<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+<button type="button" class="bs-btn bs-btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
   Tooltip on left
 </button>
 ```
@@ -80,7 +80,7 @@ Hover over the buttons below to see the four tooltips directions: top, right, bo
 And with custom HTML added:
 
 ```html
-<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+<button type="button" class="bs-btn bs-btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
   Tooltip with HTML
 </button>
 ```
@@ -88,7 +88,7 @@ And with custom HTML added:
 With an SVG:
 
 <div class="bd-example tooltip-demo">
-  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" title="Default tooltip">
+  <a href="#" class="bs-d-inline-block" data-bs-toggle="tooltip" title="Default tooltip">
     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
       <rect width="100%" height="100%" fill="#563d7c"/>
       <circle cx="50" cy="50" r="30" fill="#007bff"/>
@@ -141,9 +141,9 @@ You should only add tooltips to HTML elements that are traditionally keyboard-fo
 <a href="#" data-bs-toggle="tooltip" title="Some tooltip text!">Hover over me</a>
 
 <!-- Generated markup by the plugin -->
-<div class="tooltip bs-tooltip-top" role="tooltip">
-  <div class="tooltip-arrow"></div>
-  <div class="tooltip-inner">
+<div class="bs-tooltip bs-tooltip-top" role="tooltip">
+  <div class="bs-tooltip-arrow"></div>
+  <div class="bs-tooltip-inner">
     Some tooltip text!
   </div>
 </div>
@@ -153,10 +153,10 @@ You should only add tooltips to HTML elements that are traditionally keyboard-fo
 
 Elements with the `disabled` attribute aren't interactive, meaning users cannot focus, hover, or click them to trigger a tooltip (or popover). As a workaround, you'll want to trigger the tooltip from a wrapper `<div>` or `<span>`, ideally made keyboard-focusable using `tabindex="0"`.
 
-<div class="tooltip-demo">
+<div class="bs-tooltip-demo">
 {{< example >}}
-<span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Disabled tooltip">
-  <button class="btn btn-primary" type="button" disabled>Disabled button</button>
+<span class="bs-d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Disabled tooltip">
+  <button class="bs-btn bs-btn-primary" type="button" disabled>Disabled button</button>
 </span>
 {{< /example >}}
 </div>
@@ -169,7 +169,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` options cannot be supplied using data attributes.
 {{< /callout >}}
 
-<table class="table">
+<table class="bs-table">
   <thead>
     <tr>
       <th style="width: 100px;">Name</th>
@@ -231,7 +231,7 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
     <tr>
       <td><code>template</code></td>
       <td>string</td>
-      <td><code>'&lt;div class="tooltip" role="tooltip"&gt;&lt;div class="tooltip-arrow"&gt;&lt;/div&gt;&lt;div class="tooltip-inner"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
+      <td><code>'&lt;div class="bs-tooltip" role="tooltip"&gt;&lt;div class="bs-tooltip-arrow"&gt;&lt;/div&gt;&lt;div class="bs-tooltip-inner"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
       <td>
         <p>Base HTML to use when creating the tooltip.</p>
         <p>The tooltip's <code>title</code> will be injected into the <code>.tooltip-inner</code>.</p>
@@ -428,7 +428,7 @@ var tooltip = bootstrap.Tooltip.getOrCreateInstance(exampleTriggerEl) // Returns
 
 ### Events
 
-<table class="table">
+<table class="bs-table">
   <thead>
     <tr>
       <th style="width: 150px;">Event type</th>
