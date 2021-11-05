@@ -3,33 +3,33 @@ layout: examples
 title: Sticky Footer Navbar Template
 extra_css:
   - "sticky-footer-navbar.css"
-html_class: "h-100"
-body_class: "d-flex flex-column h-100"
+html_class: "bs-h-100"
+body_class: "bs-d-flex bs-flex-column bs-h-100"
 ---
 
 <header>
   <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Fixed navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+  <nav class="bs-navbar bs-navbar-expand-md bs-navbar-dark bs-fixed-top bs-bg-dark">
+    <div class="bs-container-fluid">
+      <a class="bs-navbar-brand" href="#">Fixed navbar</a>
+      <button class="bs-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="bs-navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+      <div class="bs-collapse bs-navbar-collapse" id="navbarCollapse">
+        <ul class="bs-navbar-nav bs-me-auto bs-mb-2 bs-mb-md-0">
+          <li class="bs-nav-item">
+            <a class="bs-nav-link bs-active" aria-current="page" href="#">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+          <li class="bs-nav-item">
+            <a class="bs-nav-link" href="#">Link</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+          <li class="bs-nav-item">
+            <a class="bs-nav-link bs-disabled">Disabled</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+        <form class="bs-d-flex">
+          <input class="bs-form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="bs-btn bs-btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </div>
@@ -37,16 +37,16 @@ body_class: "d-flex flex-column h-100"
 </header>
 
 <!-- Begin page content -->
-<main class="flex-shrink-0">
-  <div class="container">
-    <h1 class="mt-5">Sticky footer with fixed navbar</h1>
-    <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code class="small">padding-top: 60px;</code> on the <code class="small">main &gt; .container</code>.</p>
+<main class="bs-flex-shrink-0">
+  <div class="bs-container">
+    <h1 class="bs-mt-5">Sticky footer with fixed navbar</h1>
+    <p class="bs-lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code class="bs-small">padding-top: 60px;</code> on the <code class="bs-small">main &gt; .bs-container</code>.</p>
     <p>Back to <a href="{{< docsref "/examples/sticky-footer" >}}">the default sticky footer</a> minus the navbar.</p>
   </div>
 </main>
 
-<footer class="footer mt-auto py-3 bg-light">
-  <div class="container">
-    <span class="text-muted">Place sticky footer content here.</span>
+<footer class="bs-footer bs-mt-auto bs-py-3 bs-bg-light">
+  <div class="bs-container">
+    <span class="bs-text-muted">Place sticky footer content here.</span>
   </div>
 </footer>

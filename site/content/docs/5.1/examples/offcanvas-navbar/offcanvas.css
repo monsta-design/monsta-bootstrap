@@ -8,7 +8,7 @@ body {
 }
 
 @media (max-width: 991.98px) {
-  .offcanvas-collapse {
+  .bs-offcanvas-collapse {
     position: fixed;
     top: 56px; /* Height of navbar */
     bottom: 0;
@@ -21,20 +21,20 @@ body {
     background-color: #343a40;
     transition: transform .3s ease-in-out, visibility .3s ease-in-out;
   }
-  .offcanvas-collapse.open {
+  .bs-offcanvas-collapse.bs-open {
     visibility: visible;
     transform: translateX(-100%);
   }
 }
 
-.nav-scroller {
+.bs-nav-scroller {
   position: relative;
   z-index: 2;
   height: 2.75rem;
   overflow-y: hidden;
 }
 
-.nav-scroller .nav {
+.bs-nav-scroller .bs-nav {
   display: flex;
   flex-wrap: nowrap;
   padding-bottom: 1rem;
@@ -46,22 +46,22 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-.nav-underline .nav-link {
+.bs-nav-underline .bs-nav-link {
   padding-top: .75rem;
   padding-bottom: .75rem;
   font-size: .875rem;
   color: #6c757d;
 }
 
-.nav-underline .nav-link:hover {
+.bs-nav-underline .bs-nav-link:hover {
   color: #007bff;
 }
 
-.nav-underline .active {
+.bs-nav-underline .bs-active {
   font-weight: 500;
   color: #343a40;
 }
 
-.bg-purple {
+.bs-bg-purple {
   background-color: #6f42c1;
 }
