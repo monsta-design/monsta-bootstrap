@@ -31,7 +31,7 @@
   }
 }
 
-.#{$prefix}bs-tooltip-top {
+.#{$prefix}tooltip-top {
   padding: $tooltip-arrow-height 0;
 
   .#{$prefix}tooltip-arrow {
@@ -45,7 +45,7 @@
   }
 }
 
-.#{$prefix}bs-tooltip-end {
+.#{$prefix}tooltip-end {
   padding: 0 $tooltip-arrow-height;
 
   .#{$prefix}tooltip-arrow {
@@ -61,7 +61,7 @@
   }
 }
 
-.#{$prefix}bs-tooltip-bottom {
+.#{$prefix}tooltip-bottom {
   padding: $tooltip-arrow-height 0;
 
   .#{$prefix}tooltip-arrow {
@@ -75,7 +75,7 @@
   }
 }
 
-.#{$prefix}bs-tooltip-start {
+.#{$prefix}tooltip-start {
   padding: 0 $tooltip-arrow-height;
 
   .#{$prefix}tooltip-arrow {
@@ -91,18 +91,18 @@
   }
 }
 
-.#{$prefix}bs-tooltip-auto {
+.#{$prefix}tooltip-auto {
   &[data-popper-placement^="top"] {
-    @extend .#{$prefix}bs-tooltip-top;
+    @extend .#{$prefix}tooltip-top;
   }
   &[data-popper-placement^="right"] {
-    @extend .#{$prefix}bs-tooltip-end;
+    @extend .#{$prefix}tooltip-end;
   }
   &[data-popper-placement^="bottom"] {
-    @extend .#{$prefix}bs-tooltip-bottom;
+    @extend .#{$prefix}tooltip-bottom;
   }
   &[data-popper-placement^="left"] {
-    @extend .#{$prefix}bs-tooltip-start;
+    @extend .#{$prefix}tooltip-start;
   }
 }
 

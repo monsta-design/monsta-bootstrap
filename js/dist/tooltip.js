@@ -290,6 +290,10 @@
     return createdDocument.body.innerHTML;
   }
 
+  const classPrefix = name => {
+    return "bs-" + name;
+  };
+
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): tooltip.js
@@ -302,10 +306,10 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME = 'tooltip';
+  const NAME = classPrefix('tooltip');
   const DATA_KEY = 'bs.tooltip';
   const EVENT_KEY = `.${DATA_KEY}`;
-  const CLASS_PREFIX = 'bs-tooltip';
+  const CLASS_PREFIX = classPrefix('tooltip');
   const DISALLOWED_ATTRIBUTES = new Set(['sanitize', 'allowList', 'sanitizeFn']);
   const DefaultType = {
     animation: 'boolean',
@@ -335,7 +339,7 @@
   };
   const Default = {
     animation: true,
-    template: '<div class="tooltip" role="tooltip">' + '<div class="tooltip-arrow"></div>' + '<div class="tooltip-inner"></div>' + '</div>',
+    template: `<div class="${classPrefix('tooltip')}" role="tooltip">` + `<div class="${classPrefix('tooltip-arrow')}"></div>` + `<div class="${classPrefix('tooltip-inner')}"></div>` + '</div>',
     trigger: 'hover focus',
     title: '',
     delay: 0,
@@ -364,12 +368,12 @@
     MOUSEENTER: `mouseenter${EVENT_KEY}`,
     MOUSELEAVE: `mouseleave${EVENT_KEY}`
   };
-  const CLASS_NAME_FADE = 'fade';
-  const CLASS_NAME_MODAL = 'modal';
-  const CLASS_NAME_SHOW = 'show';
-  const HOVER_STATE_SHOW = 'show';
-  const HOVER_STATE_OUT = 'out';
-  const SELECTOR_TOOLTIP_INNER = '.tooltip-inner';
+  const CLASS_NAME_FADE = classPrefix('fade');
+  const CLASS_NAME_MODAL = classPrefix('modal');
+  const CLASS_NAME_SHOW = classPrefix('show');
+  const HOVER_STATE_SHOW = classPrefix('show');
+  const HOVER_STATE_OUT = classPrefix('out');
+  const SELECTOR_TOOLTIP_INNER = `.${classPrefix('tooltip-inner')}`;
   const SELECTOR_MODAL = `.${CLASS_NAME_MODAL}`;
   const EVENT_MODAL_HIDE = 'hide.bs.modal';
   const TRIGGER_HOVER = 'hover';
@@ -398,6 +402,7 @@
 
       this._config = this._getConfig(config);
       this.tip = null;
+      console.log("this._config:", this._config);
 
       this._setListeners();
     } // Getters

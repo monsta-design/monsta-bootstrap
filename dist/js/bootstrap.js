@@ -3552,10 +3552,10 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME$4 = 'tooltip';
+  const NAME$4 = classPrefix('tooltip');
   const DATA_KEY$4 = 'bs.tooltip';
   const EVENT_KEY$4 = `.${DATA_KEY$4}`;
-  const CLASS_PREFIX$1 = 'bs-tooltip';
+  const CLASS_PREFIX$1 = classPrefix('tooltip');
   const DISALLOWED_ATTRIBUTES = new Set(['sanitize', 'allowList', 'sanitizeFn']);
   const DefaultType$3 = {
     animation: 'boolean',
@@ -3585,7 +3585,7 @@
   };
   const Default$3 = {
     animation: true,
-    template: '<div class="tooltip" role="tooltip">' + '<div class="tooltip-arrow"></div>' + '<div class="tooltip-inner"></div>' + '</div>',
+    template: `<div class="${classPrefix('tooltip')}" role="tooltip">` + `<div class="${classPrefix('tooltip-arrow')}"></div>` + `<div class="${classPrefix('tooltip-inner')}"></div>` + '</div>',
     trigger: 'hover focus',
     title: '',
     delay: 0,
@@ -3614,12 +3614,12 @@
     MOUSEENTER: `mouseenter${EVENT_KEY$4}`,
     MOUSELEAVE: `mouseleave${EVENT_KEY$4}`
   };
-  const CLASS_NAME_FADE$2 = 'fade';
-  const CLASS_NAME_MODAL = 'modal';
-  const CLASS_NAME_SHOW$2 = 'show';
-  const HOVER_STATE_SHOW = 'show';
-  const HOVER_STATE_OUT = 'out';
-  const SELECTOR_TOOLTIP_INNER = '.tooltip-inner';
+  const CLASS_NAME_FADE$2 = classPrefix('fade');
+  const CLASS_NAME_MODAL = classPrefix('modal');
+  const CLASS_NAME_SHOW$2 = classPrefix('show');
+  const HOVER_STATE_SHOW = classPrefix('show');
+  const HOVER_STATE_OUT = classPrefix('out');
+  const SELECTOR_TOOLTIP_INNER = `.${classPrefix('tooltip-inner')}`;
   const SELECTOR_MODAL = `.${CLASS_NAME_MODAL}`;
   const EVENT_MODAL_HIDE = 'hide.bs.modal';
   const TRIGGER_HOVER = 'hover';
@@ -3648,6 +3648,7 @@
 
       this._config = this._getConfig(config);
       this.tip = null;
+      console.log("this._config:", this._config);
 
       this._setListeners();
     } // Getters
@@ -4262,16 +4263,16 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME$3 = 'popover';
+  const NAME$3 = classPrefix('popover');
   const DATA_KEY$3 = 'bs.popover';
   const EVENT_KEY$3 = `.${DATA_KEY$3}`;
-  const CLASS_PREFIX = 'bs-popover';
+  const CLASS_PREFIX = classPrefix('popover');
   const Default$2 = { ...Tooltip.Default,
     placement: 'right',
     offset: [0, 8],
     trigger: 'click',
     content: '',
-    template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>'
+    template: `<div class="${classPrefix('popover')}" role="tooltip">` + `<div class="${classPrefix('popover-arrow')}"></div>` + `<h3 class="${classPrefix('popover-header')}"></h3>` + `<div class="${classPrefix('popover-body')}"></div>` + '</div>'
   };
   const DefaultType$2 = { ...Tooltip.DefaultType,
     content: '(string|element|function)'
@@ -4288,8 +4289,8 @@
     MOUSEENTER: `mouseenter${EVENT_KEY$3}`,
     MOUSELEAVE: `mouseleave${EVENT_KEY$3}`
   };
-  const SELECTOR_TITLE = '.popover-header';
-  const SELECTOR_CONTENT = '.popover-body';
+  const SELECTOR_TITLE = `.${classPrefix('popover-header')}`;
+  const SELECTOR_CONTENT = `.${classPrefix('popover-body')}`;
   /**
    * ------------------------------------------------------------------------
    * Class Definition

@@ -36,7 +36,7 @@
   }
 }
 
-.#{$prefix}bs-popover-top {
+.#{$prefix}popover-top {
   > .#{$prefix}popover-arrow {
     bottom: subtract(-$popover-arrow-height, $popover-border-width);
 
@@ -54,7 +54,7 @@
   }
 }
 
-.#{$prefix}bs-popover-end {
+.#{$prefix}popover-end {
   > .#{$prefix}popover-arrow {
     left: subtract(-$popover-arrow-height, $popover-border-width);
     width: $popover-arrow-height;
@@ -74,7 +74,7 @@
   }
 }
 
-.#{$prefix}bs-popover-bottom {
+.#{$prefix}popover-bottom {
   > .#{$prefix}popover-arrow {
     top: subtract(-$popover-arrow-height, $popover-border-width);
 
@@ -104,7 +104,7 @@
   }
 }
 
-.#{$prefix}bs-popover-start {
+.#{$prefix}popover-start {
   > .#{$prefix}popover-arrow {
     right: subtract(-$popover-arrow-height, $popover-border-width);
     width: $popover-arrow-height;
@@ -124,18 +124,18 @@
   }
 }
 
-.#{$prefix}bs-popover-auto {
+.#{$prefix}popover-auto {
   &[data-popper-placement^="top"] {
-    @extend .#{$prefix}bs-popover-top;
+    @extend .#{$prefix}popover-top;
   }
   &[data-popper-placement^="right"] {
-    @extend .#{$prefix}bs-popover-end;
+    @extend .#{$prefix}popover-end;
   }
   &[data-popper-placement^="bottom"] {
-    @extend .#{$prefix}bs-popover-bottom;
+    @extend .#{$prefix}popover-bottom;
   }
   &[data-popper-placement^="left"] {
-    @extend .#{$prefix}bs-popover-start;
+    @extend .#{$prefix}popover-start;
   }
 }
 

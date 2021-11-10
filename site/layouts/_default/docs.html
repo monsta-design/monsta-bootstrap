@@ -9,7 +9,7 @@
     <main class="bd-main bs-order-1">
       <div class="bd-intro bs-ps-lg-4">
         <div class="bs-d-md-flex bs-flex-md-row-reverse bs-align-items-center bs-justify-content-between">
-          <a class="bs-btn bs-btn-sm bs-btn-bd-light bs-mb-2 bs-mb-md-0" href="{{ .Site.Params.repo }}/blob/main/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
+          <a class="bs-btn bs-btn-sm btn-bd-light bs-mb-2 bs-mb-md-0" href="{{ .Site.Params.repo }}/blob/main/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">View on GitHub</a>
           <h1 class="bd-title" id="content">{{ .Title | markdownify }}</h1>
         </div>
         <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>

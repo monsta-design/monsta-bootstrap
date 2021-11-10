@@ -68,6 +68,10 @@
     });
   };
 
+  const classPrefix = name => {
+    return "bs-" + name;
+  };
+
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): popover.js
@@ -80,16 +84,16 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME = 'popover';
+  const NAME = classPrefix('popover');
   const DATA_KEY = 'bs.popover';
   const EVENT_KEY = `.${DATA_KEY}`;
-  const CLASS_PREFIX = 'bs-popover';
+  const CLASS_PREFIX = classPrefix('popover');
   const Default = { ...Tooltip__default.default.Default,
     placement: 'right',
     offset: [0, 8],
     trigger: 'click',
     content: '',
-    template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>'
+    template: `<div class="${classPrefix('popover')}" role="tooltip">` + `<div class="${classPrefix('popover-arrow')}"></div>` + `<h3 class="${classPrefix('popover-header')}"></h3>` + `<div class="${classPrefix('popover-body')}"></div>` + '</div>'
   };
   const DefaultType = { ...Tooltip__default.default.DefaultType,
     content: '(string|element|function)'
@@ -106,8 +110,8 @@
     MOUSEENTER: `mouseenter${EVENT_KEY}`,
     MOUSELEAVE: `mouseleave${EVENT_KEY}`
   };
-  const SELECTOR_TITLE = '.popover-header';
-  const SELECTOR_CONTENT = '.popover-body';
+  const SELECTOR_TITLE = `.${classPrefix('popover-header')}`;
+  const SELECTOR_CONTENT = `.${classPrefix('popover-body')}`;
   /**
    * ------------------------------------------------------------------------
    * Class Definition

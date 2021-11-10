@@ -17,12 +17,13 @@ import {
   noop,
   typeCheckConfig
 } from './util/index'
-import { DefaultAllowlist, sanitizeHtml } from './util/sanitizer'
+import {DefaultAllowlist, sanitizeHtml} from './util/sanitizer'
 import Data from './dom/data'
 import EventHandler from './dom/event-handler'
 import Manipulator from './dom/manipulator'
 import SelectorEngine from './dom/selector-engine'
 import BaseComponent from './base-component'
+import {classPrefix} from "./monsta";
 
 /**
  * ------------------------------------------------------------------------
@@ -30,10 +31,10 @@ import BaseComponent from './base-component'
  * ------------------------------------------------------------------------
  */
 
-const NAME = 'tooltip'
+const NAME = classPrefix('tooltip')
 const DATA_KEY = 'bs.tooltip'
 const EVENT_KEY = `.${DATA_KEY}`
-const CLASS_PREFIX = 'bs-tooltip'
+const CLASS_PREFIX = classPrefix('tooltip')
 const DISALLOWED_ATTRIBUTES = new Set(['sanitize', 'allowList', 'sanitizeFn'])
 
 const DefaultType = {
@@ -66,10 +67,10 @@ const AttachmentMap = {
 
 const Default = {
   animation: true,
-  template: '<div class="tooltip" role="tooltip">' +
-              '<div class="tooltip-arrow"></div>' +
-              '<div class="tooltip-inner"></div>' +
-            '</div>',
+  template: `<div class="${classPrefix('tooltip')}" role="tooltip">` +
+    `<div class="${classPrefix('tooltip-arrow')}"></div>` +
+    `<div class="${classPrefix('tooltip-inner')}"></div>` +
+    '</div>',
   trigger: 'hover focus',
   title: '',
   delay: 0,
@@ -100,14 +101,14 @@ const Event = {
   MOUSELEAVE: `mouseleave${EVENT_KEY}`
 }
 
-const CLASS_NAME_FADE = 'fade'
-const CLASS_NAME_MODAL = 'modal'
-const CLASS_NAME_SHOW = 'show'
+const CLASS_NAME_FADE = classPrefix('fade')
+const CLASS_NAME_MODAL = classPrefix('modal')
+const CLASS_NAME_SHOW = classPrefix('show')
 
-const HOVER_STATE_SHOW = 'show'
-const HOVER_STATE_OUT = 'out'
+const HOVER_STATE_SHOW = classPrefix('show')
+const HOVER_STATE_OUT = classPrefix('out')
 
-const SELECTOR_TOOLTIP_INNER = '.tooltip-inner'
+const SELECTOR_TOOLTIP_INNER = `.${classPrefix('tooltip-inner')}`
 const SELECTOR_MODAL = `.${CLASS_NAME_MODAL}`
 
 const EVENT_MODAL_HIDE = 'hide.bs.modal'
@@ -141,7 +142,7 @@ class Tooltip extends BaseComponent {
     // Protected
     this._config = this._getConfig(config)
     this.tip = null
-
+    console.log("this._config:", this._config)
     this._setListeners()
   }
 
@@ -259,7 +260,7 @@ class Tooltip extends BaseComponent {
     const attachment = this._getAttachment(placement)
     this._addAttachmentClass(attachment)
 
-    const { container } = this._config
+    const {container} = this._config
     Data.set(tip, this.constructor.DATA_KEY, this)
 
     if (!this._element.ownerDocument.documentElement.contains(this.tip)) {
@@ -451,7 +452,7 @@ class Tooltip extends BaseComponent {
   }
 
   _getOffset() {
-    const { offset } = this._config
+    const {offset} = this._config
 
     if (typeof offset === 'string') {
       return offset.split(',').map(val => Number.parseInt(val, 10))
@@ -582,7 +583,7 @@ class Tooltip extends BaseComponent {
     if (event) {
       context._activeTrigger[
         event.type === 'focusin' ? TRIGGER_FOCUS : TRIGGER_HOVER
-      ] = true
+        ] = true
     }
 
     if (context.getTipElement().classList.contains(CLASS_NAME_SHOW) || context._hoverState === HOVER_STATE_SHOW) {
@@ -612,7 +613,7 @@ class Tooltip extends BaseComponent {
     if (event) {
       context._activeTrigger[
         event.type === 'focusout' ? TRIGGER_FOCUS : TRIGGER_HOVER
-      ] = context._element.contains(event.relatedTarget)
+        ] = context._element.contains(event.relatedTarget)
     }
 
     if (context._isWithActiveTrigger()) {
@@ -716,7 +717,7 @@ class Tooltip extends BaseComponent {
   }
 
   _handlePopperPlacementChange(popperData) {
-    const { state } = popperData
+    const {state} = popperData
 
     if (!state) {
       return
