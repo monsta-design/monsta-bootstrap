@@ -5,6 +5,8 @@
  * --------------------------------------------------------------------------
  */
 
+import {classPrefix} from "../monsta";
+
 const MAX_UID = 1000000
 const MILLISECONDS_MULTIPLIER = 1000
 const TRANSITION_END = 'transitionend'
@@ -79,7 +81,7 @@ const getTransitionDurationFromElement = element => {
   }
 
   // Get transition-duration of the element
-  let { transitionDuration, transitionDelay } = window.getComputedStyle(element)
+  let {transitionDuration, transitionDelay} = window.getComputedStyle(element)
 
   const floatTransitionDuration = Number.parseFloat(transitionDuration)
   const floatTransitionDelay = Number.parseFloat(transitionDelay)
@@ -151,7 +153,7 @@ const isDisabled = element => {
     return true
   }
 
-  if (element.classList.contains('disabled')) {
+  if (element.classList.contains(classPrefix('disabled'))) {
     return true
   }
 
@@ -159,7 +161,7 @@ const isDisabled = element => {
     return element.disabled
   }
 
-  return element.hasAttribute('disabled') && element.getAttribute('disabled') !== 'false'
+  return element.hasAttribute(classPrefix('disabled')) && element.getAttribute(classPrefix('disabled')) !== 'false'
 }
 
 const findShadowRoot = element => {
@@ -185,7 +187,8 @@ const findShadowRoot = element => {
   return findShadowRoot(element.parentNode)
 }
 
-const noop = () => {}
+const noop = () => {
+}
 
 /**
  * Trick to restart an element's animation
@@ -201,7 +204,7 @@ const reflow = element => {
 }
 
 const getjQuery = () => {
-  const { jQuery } = window
+  const {jQuery} = window
 
   if (jQuery && !document.body.hasAttribute('data-bs-no-jquery')) {
     return jQuery
@@ -263,7 +266,7 @@ const executeAfterTransition = (callback, transitionElement, waitForTransition =
 
   let called = false
 
-  const handler = ({ target }) => {
+  const handler = ({target}) => {
     if (target !== transitionElement) {
       return
     }

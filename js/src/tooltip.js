@@ -142,7 +142,6 @@ class Tooltip extends BaseComponent {
     // Protected
     this._config = this._getConfig(config)
     this.tip = null
-    console.log("this._config:", this._config)
     this._setListeners()
   }
 

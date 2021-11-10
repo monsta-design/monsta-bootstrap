@@ -1,10 +1,11 @@
 //
 // Grid examples
 //
+@import "../../../scss/monsta";
 
 .bd-example-row {
-  .row {
-    > .col,
+  .#{$prefix}row {
+    > .#{$prefix}col,
     > [class^="col-"] {
       padding-top: .75rem;
       padding-bottom: .75rem;
@@ -13,12 +14,12 @@
     }
   }
 
-  .row + .row {
+  .#{$prefix}row + .#{$prefix}row {
     margin-top: 1rem;
   }
 }
 
-.bd-example-row-flex-cols .row {
+.bd-example-row-flex-cols .#{$prefix}row {
   min-height: 10rem;
   background-color: rgba(255, 0, 0, .1);
 }
@@ -26,11 +27,11 @@
 .bd-example-cssgrid {
   text-align: center;
 
-  .grid + .grid {
+  .#{$prefix}grid + .#{$prefix}grid {
     margin-top: 1rem;
   }
 
-  .grid > * {
+  .#{$prefix}grid > * {
     padding-top: .75rem;
     padding-bottom: .75rem;
     background-color: rgba(255, 0, 255, .1);
@@ -106,16 +107,16 @@
     margin-top: 2rem;
   }
 
-  > .form-control {
-    + .form-control {
+  > .#{$prefix}form-control {
+    + .#{$prefix}form-control {
       margin-top: .5rem;
     }
   }
 
-  > .nav + .nav,
-  > .alert + .alert,
-  > .navbar + .navbar,
-  > .progress + .progress {
+  > .#{$prefix}nav + .#{$prefix}nav,
+  > .#{$prefix}alert + .#{$prefix}alert,
+  > .#{$prefix}navbar + .#{$prefix}navbar,
+  > .#{$prefix}progress + .#{$prefix}progress {
     margin-top: 1rem;
   }
 
@@ -135,16 +136,17 @@
   }
 
   // Buttons
-  > .btn,
-  > .btn-group {
+  > .#{$prefix}btn,
+  > .#{$prefix}btn-group {
     margin: .25rem .125rem;
   }
-  > .btn-toolbar + .btn-toolbar {
+
+  > .#{$prefix}btn-toolbar + .#{$prefix}btn-toolbar {
     margin-top: .5rem;
   }
 
   // List groups
-  > .list-group {
+  > .#{$prefix}list-group {
     max-width: 400px;
   }
 
@@ -153,29 +155,29 @@
   }
 
   // Navbars
-  .fixed-top,
-  .sticky-top {
+  .#{$prefix}fixed-top,
+  .#{$prefix}sticky-top {
     position: static;
     margin: -1rem -1rem 1rem;
   }
 
-  .fixed-bottom {
+  .#{$prefix}fixed-bottom {
     position: static;
     margin: 1rem -1rem -1rem;
   }
 
   @include media-breakpoint-up(sm) {
-    .fixed-top,
-    .sticky-top {
+    .#{$prefix}fixed-top,
+    .#{$prefix}sticky-top {
       margin: -1.5rem -1.5rem 1rem;
     }
-    .fixed-bottom {
+    .#{$prefix}fixed-bottom {
       margin: 1rem -1.5rem -1.5rem;
     }
   }
 
   // Pagination
-  .pagination {
+  .#{$prefix}pagination {
     margin-top: .5rem;
     margin-bottom: .5rem;
   }
@@ -183,7 +185,7 @@
 
 // Ratio helpers
 .bd-example-ratios {
-  .ratio {
+  .#{$prefix}ratio {
     display: inline-block;
     width: 10rem;
     color: $gray-600;
@@ -197,8 +199,9 @@
     }
   }
 }
+
 .bd-example-ratios-breakpoint {
-  .ratio-4x3 {
+  .#{$prefix}ratio-4x3 {
     width: 16rem;
 
     @include media-breakpoint-up(md) {
@@ -210,7 +213,7 @@
 .bd-example-modal {
   background-color: #fafafa;
 
-  .modal {
+  .#{$prefix}modal {
     position: static;
     display: block;
   }
@@ -219,7 +222,7 @@
 .bd-example-offcanvas {
   @include border-start-radius(0);
 
-  .offcanvas {
+  .#{$prefix}offcanvas {
     position: static;
     display: block;
     height: 200px;

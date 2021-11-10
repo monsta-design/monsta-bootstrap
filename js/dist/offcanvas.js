@@ -16,6 +16,10 @@
   const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
   const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
+  const classPrefix = name => {
+    return "bs-" + name;
+  };
+
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): util/index.js
@@ -139,7 +143,7 @@
       return true;
     }
 
-    if (element.classList.contains('disabled')) {
+    if (element.classList.contains(classPrefix('disabled'))) {
       return true;
     }
 
@@ -147,7 +151,7 @@
       return element.disabled;
     }
 
-    return element.hasAttribute('disabled') && element.getAttribute('disabled') !== 'false';
+    return element.hasAttribute(classPrefix('disabled')) && element.getAttribute(classPrefix('disabled')) !== 'false';
   };
   /**
    * Trick to restart an element's animation
@@ -359,7 +363,7 @@
    * --------------------------------------------------------------------------
    */
   const Default$2 = {
-    className: 'modal-backdrop',
+    className: classPrefix('modal-backdrop'),
     isVisible: true,
     // if false, we use the backdrop helper without adding any element to the dom
     isAnimated: false,
@@ -374,9 +378,9 @@
     rootElement: '(element|string)',
     clickCallback: '(function|null)'
   };
-  const NAME$2 = 'backdrop';
-  const CLASS_NAME_FADE = 'fade';
-  const CLASS_NAME_SHOW$1 = 'show';
+  const NAME$2 = classPrefix('backdrop');
+  const CLASS_NAME_FADE = classPrefix('fade');
+  const CLASS_NAME_SHOW$1 = classPrefix('show');
   const EVENT_MOUSEDOWN = `mousedown.bs.${NAME$2}`;
 
   class Backdrop {
@@ -598,7 +602,7 @@
         return;
       }
 
-      const target = getElementFromSelector(this) || this.closest(`.${name}`);
+      const target = getElementFromSelector(this) || this.closest(`.${classPrefix(name)}`);
       const instance = component.getOrCreateInstance(target); // Method argument is left, for Alert and only, as it doesn't implement the 'hide' method
 
       instance[method]();
@@ -633,9 +637,9 @@
     keyboard: 'boolean',
     scroll: 'boolean'
   };
-  const CLASS_NAME_SHOW = 'show';
-  const CLASS_NAME_BACKDROP = 'offcanvas-backdrop';
-  const OPEN_SELECTOR = '.offcanvas.show';
+  const CLASS_NAME_SHOW = classPrefix('show');
+  const CLASS_NAME_BACKDROP = classPrefix('offcanvas-backdrop');
+  const OPEN_SELECTOR = `.${classPrefix('offcanvas')}.${classPrefix('show')}`;
   const EVENT_SHOW = `show${EVENT_KEY}`;
   const EVENT_SHOWN = `shown${EVENT_KEY}`;
   const EVENT_HIDE = `hide${EVENT_KEY}`;

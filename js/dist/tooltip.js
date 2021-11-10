@@ -36,6 +36,10 @@
   const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
   const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
+  const classPrefix = name => {
+    return "bs-" + name;
+  };
+
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): util/index.js
@@ -290,10 +294,6 @@
     return createdDocument.body.innerHTML;
   }
 
-  const classPrefix = name => {
-    return "bs-" + name;
-  };
-
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): tooltip.js
@@ -402,7 +402,6 @@
 
       this._config = this._getConfig(config);
       this.tip = null;
-      console.log("this._config:", this._config);
 
       this._setListeners();
     } // Getters

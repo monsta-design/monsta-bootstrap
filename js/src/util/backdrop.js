@@ -7,9 +7,10 @@
 
 import EventHandler from '../dom/event-handler'
 import { execute, executeAfterTransition, getElement, reflow, typeCheckConfig } from './index'
+import {classPrefix} from "../monsta";
 
 const Default = {
-  className: 'modal-backdrop',
+  className: classPrefix('modal-backdrop'),
   isVisible: true, // if false, we use the backdrop helper without adding any element to the dom
   isAnimated: false,
   rootElement: 'body', // give the choice to place backdrop under different elements
@@ -23,9 +24,9 @@ const DefaultType = {
   rootElement: '(element|string)',
   clickCallback: '(function|null)'
 }
-const NAME = 'backdrop'
-const CLASS_NAME_FADE = 'fade'
-const CLASS_NAME_SHOW = 'show'
+const NAME = classPrefix('backdrop')
+const CLASS_NAME_FADE = classPrefix('fade')
+const CLASS_NAME_SHOW = classPrefix('show')
 
 const EVENT_MOUSEDOWN = `mousedown.bs.${NAME}`
 

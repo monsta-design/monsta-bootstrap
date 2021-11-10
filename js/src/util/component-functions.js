@@ -6,7 +6,8 @@
  */
 
 import EventHandler from '../dom/event-handler'
-import { getElementFromSelector, isDisabled } from './index'
+import {getElementFromSelector, isDisabled} from './index'
+import {classPrefix} from "../monsta";
 
 const enableDismissTrigger = (component, method = 'hide') => {
   const clickEvent = `click.dismiss${component.EVENT_KEY}`
@@ -16,12 +17,10 @@ const enableDismissTrigger = (component, method = 'hide') => {
     if (['A', 'AREA'].includes(this.tagName)) {
       event.preventDefault()
     }
-
     if (isDisabled(this)) {
       return
     }
-
-    const target = getElementFromSelector(this) || this.closest(`.${name}`)
+    const target = getElementFromSelector(this) || this.closest(`.${classPrefix(name)}`)
     const instance = component.getOrCreateInstance(target)
 
     // Method argument is left, for Alert and only, as it doesn't implement the 'hide' method

@@ -29,6 +29,10 @@
 
   const Popper__namespace = /*#__PURE__*/_interopNamespace(Popper);
 
+  const classPrefix = name => {
+    return "bs-" + name;
+  };
+
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): util/index.js
@@ -177,7 +181,7 @@
       return true;
     }
 
-    if (element.classList.contains('disabled')) {
+    if (element.classList.contains(classPrefix('disabled'))) {
       return true;
     }
 
@@ -185,7 +189,7 @@
       return element.disabled;
     }
 
-    return element.hasAttribute('disabled') && element.getAttribute('disabled') !== 'false';
+    return element.hasAttribute(classPrefix('disabled')) && element.getAttribute(classPrefix('disabled')) !== 'false';
   };
 
   const findShadowRoot = element => {
@@ -767,7 +771,7 @@
         return;
       }
 
-      const target = getElementFromSelector(this) || this.closest(`.${name}`);
+      const target = getElementFromSelector(this) || this.closest(`.${classPrefix(name)}`);
       const instance = component.getOrCreateInstance(target); // Method argument is left, for Alert and only, as it doesn't implement the 'hide' method
 
       instance[method]();
@@ -1076,10 +1080,6 @@
       return this.find(focusables, element).filter(el => !isDisabled(el) && isVisible(el));
     }
 
-  };
-
-  const classPrefix = name => {
-    return "bs-" + name;
   };
 
   /**
@@ -1962,7 +1962,7 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME$9 = 'dropdown';
+  const NAME$9 = classPrefix('dropdown');
   const DATA_KEY$8 = 'bs.dropdown';
   const EVENT_KEY$8 = `.${DATA_KEY$8}`;
   const DATA_API_KEY$4 = '.data-api';
@@ -1981,21 +1981,21 @@
   const EVENT_CLICK_DATA_API$3 = `click${EVENT_KEY$8}${DATA_API_KEY$4}`;
   const EVENT_KEYDOWN_DATA_API = `keydown${EVENT_KEY$8}${DATA_API_KEY$4}`;
   const EVENT_KEYUP_DATA_API = `keyup${EVENT_KEY$8}${DATA_API_KEY$4}`;
-  const CLASS_NAME_SHOW$6 = 'ns-show';
-  const CLASS_NAME_DROPUP = 'ns-dropup';
-  const CLASS_NAME_DROPEND = 'ns-dropend';
-  const CLASS_NAME_DROPSTART = 'ns-dropstart';
-  const CLASS_NAME_NAVBAR = 'ns-navbar';
+  const CLASS_NAME_SHOW$6 = classPrefix('show');
+  const CLASS_NAME_DROPUP = classPrefix('dropup');
+  const CLASS_NAME_DROPEND = classPrefix('dropend');
+  const CLASS_NAME_DROPSTART = classPrefix('dropstart');
+  const CLASS_NAME_NAVBAR = classPrefix('navbar');
   const SELECTOR_DATA_TOGGLE$3 = '[data-bs-toggle="dropdown"]';
-  const SELECTOR_MENU = '.ns-dropdown-menu';
-  const SELECTOR_NAVBAR_NAV = '.ns-navbar-nav';
-  const SELECTOR_VISIBLE_ITEMS = '.ns-dropdown-menu .ns-dropdown-item:not(.ns-disabled):not(:ns-disabled)';
-  const PLACEMENT_TOP = isRTL() ? 'ns-top-end' : 'ns-top-start';
-  const PLACEMENT_TOPEND = isRTL() ? 'ns-top-start' : 'ns-top-end';
-  const PLACEMENT_BOTTOM = isRTL() ? 'ns-bottom-end' : 'ns-bottom-start';
-  const PLACEMENT_BOTTOMEND = isRTL() ? 'ns-bottom-start' : 'ns-bottom-end';
-  const PLACEMENT_RIGHT = isRTL() ? 'ns-left-start' : 'ns-right-start';
-  const PLACEMENT_LEFT = isRTL() ? 'ns-right-start' : 'ns-left-start';
+  const SELECTOR_MENU = `.${classPrefix('dropdown-menu')}`;
+  const SELECTOR_NAVBAR_NAV = `.${classPrefix('navbar-nav')}`;
+  const SELECTOR_VISIBLE_ITEMS = `.${classPrefix('dropdown-menu')} .${classPrefix('dropdown-item')}:not(.${classPrefix('disabled')}):not(:${classPrefix('disabled')})`;
+  const PLACEMENT_TOP = isRTL() ? 'top-end' : 'top-start';
+  const PLACEMENT_TOPEND = isRTL() ? 'top-start' : 'top-end';
+  const PLACEMENT_BOTTOM = isRTL() ? 'bottom-end' : 'bottom-start';
+  const PLACEMENT_BOTTOMEND = isRTL() ? 'bottom-start' : 'bottom-end';
+  const PLACEMENT_RIGHT = isRTL() ? 'left-start' : 'right-start';
+  const PLACEMENT_LEFT = isRTL() ? 'right-start' : 'left-start';
   const Default$8 = {
     offset: [0, 2],
     boundary: 'clippingParents',
@@ -2523,7 +2523,7 @@
    * --------------------------------------------------------------------------
    */
   const Default$7 = {
-    className: 'modal-backdrop',
+    className: classPrefix('modal-backdrop'),
     isVisible: true,
     // if false, we use the backdrop helper without adding any element to the dom
     isAnimated: false,
@@ -2538,9 +2538,9 @@
     rootElement: '(element|string)',
     clickCallback: '(function|null)'
   };
-  const NAME$8 = 'backdrop';
-  const CLASS_NAME_FADE$4 = 'fade';
-  const CLASS_NAME_SHOW$5 = 'show';
+  const NAME$8 = classPrefix('backdrop');
+  const CLASS_NAME_FADE$4 = classPrefix('fade');
+  const CLASS_NAME_SHOW$5 = classPrefix('show');
   const EVENT_MOUSEDOWN = `mousedown.bs.${NAME$8}`;
 
   class Backdrop {
@@ -3200,9 +3200,9 @@
     keyboard: 'boolean',
     scroll: 'boolean'
   };
-  const CLASS_NAME_SHOW$3 = 'show';
-  const CLASS_NAME_BACKDROP = 'offcanvas-backdrop';
-  const OPEN_SELECTOR = '.offcanvas.show';
+  const CLASS_NAME_SHOW$3 = classPrefix('show');
+  const CLASS_NAME_BACKDROP = classPrefix('offcanvas-backdrop');
+  const OPEN_SELECTOR = `.${classPrefix('offcanvas')}.${classPrefix('show')}`;
   const EVENT_SHOW$2 = `show${EVENT_KEY$5}`;
   const EVENT_SHOWN$2 = `shown${EVENT_KEY$5}`;
   const EVENT_HIDE$2 = `hide${EVENT_KEY$5}`;
@@ -3648,7 +3648,6 @@
 
       this._config = this._getConfig(config);
       this.tip = null;
-      console.log("this._config:", this._config);
 
       this._setListeners();
     } // Getters

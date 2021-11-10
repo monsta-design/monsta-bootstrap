@@ -72,16 +72,16 @@ Use background utility classes to change the appearance of individual progress b
 
 {{< example >}}
 <div class="bs-progress">
-  <div class="bs-progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="bs-progress-bar bs-bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="bs-progress">
-  <div class="bs-progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="bs-progress-bar bs-bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="bs-progress">
-  <div class="bs-progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="bs-progress-bar bs-bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="bs-progress">
-  <div class="bs-progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="bs-progress-bar bs-bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 {{< /example >}}
 
@@ -92,8 +92,8 @@ Include multiple progress bars in a progress component if you need.
 {{< example >}}
 <div class="bs-progress">
   <div class="bs-progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="bs-progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="bs-progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="bs-progress-bar bs-bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="bs-progress-bar bs-bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 {{< /example >}}
 
@@ -103,19 +103,19 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 
 {{< example >}}
 <div class="bs-progress">
-  <div class="bs-progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="bs-progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-<div class="progress">
-  <div class="bs-progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="bs-progress-bar bs-progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="bs-progress">
-  <div class="bs-progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="bs-progress-bar bs-progress-bar-striped bs-bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <div class="bs-progress">
-  <div class="bs-progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="bs-progress-bar bs-progress-bar-striped bs-bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="bs-progress">
+  <div class="bs-progress-bar bs-progress-bar-striped bs-bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="bs-progress">
+  <div class="bs-progress-bar bs-progress-bar-striped bs-bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 {{< /example >}}
 
@@ -125,7 +125,7 @@ The striped gradient can also be animated. Add `.progress-bar-animated` to `.pro
 
 {{< example >}}
 <div class="bs-progress">
-  <div class="bs-progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+  <div class="bs-progress-bar bs-progress-bar-striped bs-progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
 </div>
 {{< /example >}}
 

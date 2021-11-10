@@ -15,6 +15,10 @@
   const Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
   const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
+  const classPrefix = name => {
+    return "bs-" + name;
+  };
+
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): util/index.js
@@ -88,7 +92,7 @@
       return true;
     }
 
-    if (element.classList.contains('disabled')) {
+    if (element.classList.contains(classPrefix('disabled'))) {
       return true;
     }
 
@@ -96,7 +100,7 @@
       return element.disabled;
     }
 
-    return element.hasAttribute('disabled') && element.getAttribute('disabled') !== 'false';
+    return element.hasAttribute(classPrefix('disabled')) && element.getAttribute(classPrefix('disabled')) !== 'false';
   };
   /**
    * Trick to restart an element's animation
@@ -180,7 +184,7 @@
         return;
       }
 
-      const target = getElementFromSelector(this) || this.closest(`.${name}`);
+      const target = getElementFromSelector(this) || this.closest(`.${classPrefix(name)}`);
       const instance = component.getOrCreateInstance(target); // Method argument is left, for Alert and only, as it doesn't implement the 'hide' method
 
       instance[method]();

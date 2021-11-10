@@ -15,6 +15,10 @@
   const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
   const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
+  const classPrefix = name => {
+    return "bs-" + name;
+  };
+
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): util/index.js
@@ -56,7 +60,7 @@
       return true;
     }
 
-    if (element.classList.contains('disabled')) {
+    if (element.classList.contains(classPrefix('disabled'))) {
       return true;
     }
 
@@ -64,7 +68,7 @@
       return element.disabled;
     }
 
-    return element.hasAttribute('disabled') && element.getAttribute('disabled') !== 'false';
+    return element.hasAttribute(classPrefix('disabled')) && element.getAttribute(classPrefix('disabled')) !== 'false';
   };
   /**
    * Trick to restart an element's animation

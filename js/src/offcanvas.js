@@ -19,7 +19,8 @@ import SelectorEngine from './dom/selector-engine'
 import Manipulator from './dom/manipulator'
 import Backdrop from './util/backdrop'
 import FocusTrap from './util/focustrap'
-import { enableDismissTrigger } from './util/component-functions'
+import {enableDismissTrigger} from './util/component-functions'
+import {classPrefix} from "./monsta";
 
 /**
  * ------------------------------------------------------------------------
@@ -46,9 +47,9 @@ const DefaultType = {
   scroll: 'boolean'
 }
 
-const CLASS_NAME_SHOW = 'show'
-const CLASS_NAME_BACKDROP = 'offcanvas-backdrop'
-const OPEN_SELECTOR = '.offcanvas.show'
+const CLASS_NAME_SHOW = classPrefix('show')
+const CLASS_NAME_BACKDROP = classPrefix('offcanvas-backdrop')
+const OPEN_SELECTOR = `.${classPrefix('offcanvas')}.${classPrefix('show')}`
 
 const EVENT_SHOW = `show${EVENT_KEY}`
 const EVENT_SHOWN = `shown${EVENT_KEY}`
@@ -97,7 +98,7 @@ class Offcanvas extends BaseComponent {
       return
     }
 
-    const showEvent = EventHandler.trigger(this._element, EVENT_SHOW, { relatedTarget })
+    const showEvent = EventHandler.trigger(this._element, EVENT_SHOW, {relatedTarget})
 
     if (showEvent.defaultPrevented) {
       return
@@ -122,7 +123,7 @@ class Offcanvas extends BaseComponent {
         this._focustrap.activate()
       }
 
-      EventHandler.trigger(this._element, EVENT_SHOWN, { relatedTarget })
+      EventHandler.trigger(this._element, EVENT_SHOWN, {relatedTarget})
     }
 
     this._queueCallback(completeCallBack, this._element, true)

@@ -13,6 +13,10 @@
 
   const Tooltip__default = /*#__PURE__*/_interopDefaultLegacy(Tooltip);
 
+  const classPrefix = name => {
+    return "bs-" + name;
+  };
+
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): util/index.js
@@ -66,10 +70,6 @@
         };
       }
     });
-  };
-
-  const classPrefix = name => {
-    return "bs-" + name;
   };
 
   /**

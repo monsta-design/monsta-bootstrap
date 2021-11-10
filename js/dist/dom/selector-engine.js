@@ -9,6 +9,10 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.SelectorEngine = factory());
 })(this, (function () { 'use strict';
 
+  const classPrefix = name => {
+    return "bs-" + name;
+  };
+
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): util/index.js
@@ -41,7 +45,7 @@
       return true;
     }
 
-    if (element.classList.contains('disabled')) {
+    if (element.classList.contains(classPrefix('disabled'))) {
       return true;
     }
 
@@ -49,7 +53,7 @@
       return element.disabled;
     }
 
-    return element.hasAttribute('disabled') && element.getAttribute('disabled') !== 'false';
+    return element.hasAttribute(classPrefix('disabled')) && element.getAttribute(classPrefix('disabled')) !== 'false';
   };
 
   /**

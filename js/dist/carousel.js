@@ -16,6 +16,10 @@
   const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
   const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
+  const classPrefix = name => {
+    return "bs-" + name;
+  };
+
   /**
    * --------------------------------------------------------------------------
    * Bootstrap (v5.1.3): util/index.js
@@ -186,10 +190,6 @@
     }
 
     return list[Math.max(0, Math.min(index, listLength - 1))];
-  };
-
-  const classPrefix = name => {
-    return "bs-" + name;
   };
 
   /**
