@@ -31,6 +31,7 @@
   var toastPlacement = document.getElementById('toastPlacement')
   if (toastPlacement) {
     document.getElementById('selectToastPlacement').addEventListener('change', function () {
+
       if (!toastPlacement.dataset.originalClass) {
         toastPlacement.dataset.originalClass = toastPlacement.className
       }
@@ -39,7 +40,7 @@
     })
   }
 
-  document.querySelectorAll('.bd-example .toast')
+  document.querySelectorAll('.bd-example .bs-toast')
     .forEach(function (toastNode) {
       var toast = new bootstrap.Toast(toastNode, {
         autohide: false
@@ -63,7 +64,7 @@
 
   function alert(message, type) {
     var wrapper = document.createElement('div')
-    wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+    wrapper.innerHTML = '<div class="bs-alert bs-alert-' + type + ' bs-alert-dismissible" role="alert">' + message + '<button type="button" class="bs-btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
 
     alertPlaceholder.append(wrapper)
   }

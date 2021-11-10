@@ -306,7 +306,7 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME = classPrefix('tooltip');
+  const NAME = 'tooltip';
   const DATA_KEY = 'bs.tooltip';
   const EVENT_KEY = `.${DATA_KEY}`;
   const CLASS_PREFIX = classPrefix('tooltip');

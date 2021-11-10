@@ -40,7 +40,7 @@ var alertTrigger = document.getElementById('liveAlertBtn')
 
 function alert(message, type) {
   var wrapper = document.createElement('div')
-  wrapper.innerHTML = '<div class="bs-alert bs-alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="bs-btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+  wrapper.innerHTML = '<div class="bs-alert bs-alert-' + type + ' bs-alert-dismissible" role="alert">' + message + '<button type="button" class="bs-btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
 
   alertPlaceholder.append(wrapper)
 }
@@ -83,8 +83,8 @@ Alerts can also contain additional HTML elements like headings, paragraphs and d
 Similarly, you can use [flexbox utilities]({{< docsref "/utilities/flex" >}}) and [Bootstrap Icons]({{< param icons >}}) to create alerts with icons. Depending on your icons and content, you may want to add more utilities or custom styles.
 
 {{< example >}}
-<div class="bs-alert bs-alert-primary d-flex align-items-center" role="alert">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bs-bi bs-bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+<div class="bs-alert bs-alert-primary bs-d-flex bs-align-items-center" role="alert">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill bs-flex-shrink-0 bs-me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
     <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
   </svg>
   <div>
@@ -114,7 +114,7 @@ Need more than one icon for your alerts? Consider using more Bootstrap Icons and
     An example alert with an icon
   </div>
 </div>
-<div class="bs-alert bs-alert-success d-flex align-items-center" role="alert">
+<div class="bs-alert bs-alert-success bs-d-flex align-items-center" role="alert">
   <svg class="bs-bi bs-flex-shrink-0 bs-me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
   <div>
     An example success alert with an icon

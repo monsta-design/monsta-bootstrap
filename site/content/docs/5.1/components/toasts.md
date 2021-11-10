@@ -203,15 +203,15 @@ Place toasts with custom CSS as you need them. The top right is often used for n
     <label for="selectToastPlacement">Toast placement</label>
     <select class="bs-form-select bs-mt-2" id="selectToastPlacement">
       <option value="" selected>Select a position...</option>
-      <option value="top-0 start-0">Top left</option>
-      <option value="top-0 start-50 translate-middle-x">Top center</option>
-      <option value="top-0 end-0">Top right</option>
-      <option value="top-50 start-0 translate-middle-y">Middle left</option>
-      <option value="top-50 start-50 translate-middle">Middle center</option>
-      <option value="top-50 end-0 translate-middle-y">Middle right</option>
-      <option value="bottom-0 start-0">Bottom left</option>
-      <option value="bottom-0 start-50 translate-middle-x">Bottom center</option>
-      <option value="bottom-0 end-0">Bottom right</option>
+      <option value="bs-top-0 bs-start-0">Top left</option>
+      <option value="bs-top-0 bs-start-50 translate-middle-x">Top center</option>
+      <option value="bs-top-0 bs-end-0">Top right</option>
+      <option value="bs-top-50 bs-start-0 translate-middle-y">Middle left</option>
+      <option value="bs-top-50 bs-start-50 translate-middle">Middle center</option>
+      <option value="bs-top-50 bs-end-0 translate-middle-y">Middle right</option>
+      <option value="bs-bottom-0 bs-start-0">Bottom left</option>
+      <option value="bs-bottom-0 bs-start-50 translate-middle-x">Bottom center</option>
+      <option value="bs-bottom-0 bs-end-0">Bottom right</option>
     </select>
   </div>
 </form>
@@ -239,14 +239,14 @@ For systems that generate more notifications, consider using a wrapping element 
   <!-- - `.toast-container` for spacing between toasts -->
   <!-- - `.position-absolute`, `top-0` & `end-0` to position the toasts in the upper right corner -->
   <!-- - `.p-3` to prevent the toasts from sticking to the edge of the container  -->
-  <div class="bs-toast-container position-absolute top-0 end-0 p-3">
+  <div class="bs-toast-container bs-position-absolute bs-top-0 bs-end-0 bs-p-3">
 
     <!-- Then put toasts within -->
     <div class="bs-toast" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header">
+      <div class="bs-toast-header">
         {{< placeholder width="20" height="20" background="#007aff" class="bs-rounded bs-me-2" text="false" title="false" >}}
         <strong class="bs-me-auto">Bootstrap</strong>
-        <small class="text-muted">just now</small>
+        <small class="bs-text-muted">just now</small>
         <button type="button" class="bs-btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
       <div class="bs-toast-body">

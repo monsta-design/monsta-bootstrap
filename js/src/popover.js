@@ -15,7 +15,7 @@ import {classPrefix} from "./monsta";
  * ------------------------------------------------------------------------
  */
 
-const NAME = classPrefix('popover')
+const NAME = 'popover'
 const DATA_KEY = 'bs.popover'
 const EVENT_KEY = `.${DATA_KEY}`
 const CLASS_PREFIX = classPrefix('popover')

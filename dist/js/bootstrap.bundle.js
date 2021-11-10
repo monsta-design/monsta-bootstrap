@@ -5318,7 +5318,7 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME$4 = classPrefix('tooltip');
+  const NAME$4 = 'tooltip';
   const DATA_KEY$4 = 'bs.tooltip';
   const EVENT_KEY$4 = `.${DATA_KEY$4}`;
   const CLASS_PREFIX$1 = classPrefix('tooltip');
@@ -6028,7 +6028,7 @@
    * ------------------------------------------------------------------------
    */
 
-  const NAME$3 = classPrefix('popover');
+  const NAME$3 = 'popover';
   const DATA_KEY$3 = 'bs.popover';
   const EVENT_KEY$3 = `.${DATA_KEY$3}`;
   const CLASS_PREFIX = classPrefix('popover');
@@ -6582,11 +6582,11 @@
   const EVENT_HIDDEN = `hidden${EVENT_KEY}`;
   const EVENT_SHOW = `show${EVENT_KEY}`;
   const EVENT_SHOWN = `shown${EVENT_KEY}`;
-  const CLASS_NAME_FADE = 'fade';
-  const CLASS_NAME_HIDE = 'hide'; // @deprecated - kept here only for backwards compatibility
+  const CLASS_NAME_FADE = classPrefix('fade');
+  const CLASS_NAME_HIDE = classPrefix('hide'); // @deprecated - kept here only for backwards compatibility
 
-  const CLASS_NAME_SHOW = 'show';
-  const CLASS_NAME_SHOWING = 'showing';
+  const CLASS_NAME_SHOW = classPrefix('show');
+  const CLASS_NAME_SHOWING = classPrefix('showing');
   const DefaultType = {
     animation: 'boolean',
     autohide: 'boolean',

@@ -13,7 +13,8 @@ import {
 import EventHandler from './dom/event-handler'
 import Manipulator from './dom/manipulator'
 import BaseComponent from './base-component'
-import { enableDismissTrigger } from './util/component-functions'
+import {enableDismissTrigger} from './util/component-functions'
+import {classPrefix} from "./monsta";
 
 /**
  * ------------------------------------------------------------------------
@@ -34,10 +35,10 @@ const EVENT_HIDDEN = `hidden${EVENT_KEY}`
 const EVENT_SHOW = `show${EVENT_KEY}`
 const EVENT_SHOWN = `shown${EVENT_KEY}`
 
-const CLASS_NAME_FADE = 'fade'
-const CLASS_NAME_HIDE = 'hide' // @deprecated - kept here only for backwards compatibility
-const CLASS_NAME_SHOW = 'show'
-const CLASS_NAME_SHOWING = 'showing'
+const CLASS_NAME_FADE = classPrefix('fade')
+const CLASS_NAME_HIDE = classPrefix('hide') // @deprecated - kept here only for backwards compatibility
+const CLASS_NAME_SHOW = classPrefix('show')
+const CLASS_NAME_SHOWING = classPrefix('showing')
 
 const DefaultType = {
   animation: 'boolean',
