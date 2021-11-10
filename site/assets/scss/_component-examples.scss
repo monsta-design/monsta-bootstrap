@@ -120,7 +120,7 @@
     margin-top: 1rem;
   }
 
-  > .dropdown-menu {
+  > .#{$prefix}dropdown-menu {
     position: static;
     display: block;
   }
