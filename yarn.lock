@@ -4406,10 +4406,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-linkinator@^2.14.0:
-  version "2.14.4"
-  resolved "https://registry.yarnpkg.com/linkinator/-/linkinator-2.14.4.tgz#951f51d975f8a268e7999ba7c0c3705af40168dd"
-  integrity sha512-ADxb8C9k9LUAHFZCsKZnB+TtxTqVPiL86zQpmMp9x+aarrhY9YBV12msb87C9IR9DBxaohonhIfMVvrJW4E7Wg==
+linkinator@^2.16.2:
+  version "2.16.2"
+  resolved "https://registry.yarnpkg.com/linkinator/-/linkinator-2.16.2.tgz#d3bd0f00c651b2058545d351b534e3cd689b894e"
+  integrity sha512-5tHSz6gMN0z25+Pk4lZnU0Edr1lJLNuk+MCfQa2NxF4f1rfKS8Lo3JEwxTciVzwVHHdBpydAgmWYOgylNlwyDQ==
   dependencies:
     chalk "^4.0.0"
     escape-html "^1.0.3"
@@ -4419,7 +4419,7 @@ linkinator@^2.14.0:
     jsonexport "^3.0.0"
     marked "^2.0.0"
     meow "^9.0.0"
-    mime "^2.5.0"
+    mime "^3.0.0"
     server-destroy "^1.0.1"
     update-notifier "^5.0.0"
 
@@ -4740,10 +4740,15 @@ mime-types@~2.1.24:
   dependencies:
     mime-db "1.50.0"
 
-mime@^2.5.0, mime@^2.5.2:
+mime@^2.5.2:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/mime/-/mime-2.5.2.tgz#6e3dc6cc2b9510643830e5f19d5cb753da5eeabe"
   integrity sha512-tqkh47FzKeCPD2PUiPB6pkbMzsCasjxAfC62/Wap5qrUWcb+sFasXUC5I3gYM5iBM8v/Qpn4UK0x+j0iHyFPDg==
+
+mime@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-3.0.0.tgz#b374550dca3a0c18443b0c950a6a58f1931cf7a7"
+  integrity sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==
 
 mimic-response@^1.0.0, mimic-response@^1.0.1:
   version "1.0.1"
