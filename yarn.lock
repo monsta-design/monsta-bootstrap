@@ -1933,7 +1933,7 @@ character-reference-invalid@^1.0.0:
   resolved "https://registry.yarnpkg.com/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz#083329cda0eae272ab3dbbf37e9a382c13af1560"
   integrity sha512-mKKUkUbhPpQlCOfIuZkvSEgktjPFIsZKRRbC6KWVEMvlzblj3i3asQv5ODsrwt0N3pHAEvjP8KTQPHkp0+6jOg==
 
-"chokidar@>=3.0.0 <4.0.0", chokidar@^3.2.2, chokidar@^3.3.0, chokidar@^3.3.1, chokidar@^3.4.0, chokidar@^3.5.1:
+"chokidar@>=3.0.0 <4.0.0", chokidar@^3.2.2, chokidar@^3.3.0, chokidar@^3.3.1, chokidar@^3.4.0, chokidar@^3.5.1, chokidar@^3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.2.tgz#dba3976fcadb016f66fd365021d91600d01c1e75"
   integrity sha512-ekGhOnNVPgT77r4K/U3GDhu+FQ2S8TnK/s2KbIGXi0SZWuwkZ2QNyfWdZW+TVfn84DpEP7rLeCt2UI6bJ8GwbQ==
@@ -1963,11 +1963,12 @@ ci-info@^3.2.0:
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-3.2.0.tgz#2876cb948a498797b5236f0095bc057d0dca38b6"
   integrity sha512-dVqRX7fLUm8J6FgHJ418XuIgDLZDkYcDFTeL6TA2gt5WlIZUQrrH6EZrNClwT/H0FateUsZkGIOPRrLbP+PR9A==
 
-clean-css-cli@^5.4.1:
-  version "5.4.2"
-  resolved "https://registry.yarnpkg.com/clean-css-cli/-/clean-css-cli-5.4.2.tgz#4b242e0bfd42f25af56633326fbf9c50744502c2"
-  integrity sha512-BYxVOuBQL8f2+yucOgmwUi1idpAQV4k9bxG6mxTrBikuwrkXBG5/Pq6tqCi4GZUtgvslMj8dGVtFSoXp9OLzeA==
+clean-css-cli@^5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/clean-css-cli/-/clean-css-cli-5.5.0.tgz#86a927e102149a2b950cf4edab045670a70c1a96"
+  integrity sha512-Vr9t8o59YaPcRw/4hyJjEh4zU/BlOtlJJ8465El6QMYWbkf5nN1mhAljX6FIb0bfpkGlYNFKPCyTz7oFCHOblQ==
   dependencies:
+    chokidar "^3.5.2"
     clean-css "^5.2.2"
     commander "7.x"
     glob "^7.1.6"
